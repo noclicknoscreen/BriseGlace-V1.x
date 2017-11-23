@@ -1,0 +1,21 @@
+{
+  "name": "p5_and_sockets",
+  "version": "1.0.0",
+  "description": "some sockest graphical stuffs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sockets",
+    "p5",
+    "node"
+  ],
+  "author": "Studio albert",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.4"
+  }
+}
