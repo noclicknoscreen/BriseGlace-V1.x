@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
 
-  background(100, 100, 100, 150);
+  background(100, 100, 100);
 
   fill('#ED225D');
   textFont(myFont);
@@ -32,7 +32,7 @@ function draw() {
 }
 
 function mouseClicked(){
-    whatsNewRequest();
+  whatsNewRequest();
 }
 
 /* ---------------------------------------------
@@ -50,6 +50,25 @@ function whatsNewRequest(){
 }
 
 function newTranscription(transcrData){
-  console.log("Acquiring new transcription : \n" + transcrData.results[0].alternatives[0].transcript);
-  myText = transcrData.results[0].alternatives[0].transcript;
+
+  var key, value;
+
+  //console.log("Acquiring new transcription : \n" + transcrData);
+
+  //if (typeof transcrData._text !== 'undefined') {
+    // Désormais, on sait que toto est bien
+    // défini et on peut poursuivre.
+    JSON.parse(transcrData, (key, value) =>{
+      if (key === '_text') {
+          console.log('[Real text] : ' + value)
+          myText = value;  // renvoie value * 2 pour les nombres
+      }
+      if (key === 'error') {
+          console.error('[Error] : ' + value)
+      }
+    });
+
+  //}else{
+    //console.log('Text undefined !!!!!!!!!!!!!!!!!!!');
+  //}
 }
