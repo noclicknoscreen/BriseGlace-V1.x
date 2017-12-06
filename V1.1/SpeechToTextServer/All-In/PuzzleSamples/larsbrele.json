@@ -1,0 +1,22 @@
+{
+    "wordToFind": "L'arsbrele",
+    "type": "hangman",
+    "clues": [
+	{
+	    "keyWord": "Château",
+	    "picture": "http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg"
+	},
+	{
+	    "keyWord": "Tissage de la soie",
+	    "picture": "http://static.apidae-tourisme.com/filestore/objets-touristiques/images/249/219/711673.jpg"
+	},
+	{
+	    "keyWord": "L'abbé Dalmace",
+	    "picture": "http://nouvl.evangelisation.free.fr/benedictin_45_02.jpg"
+	},
+	{
+	    "keyWord": "Vitaa",
+	    "picture": "https://www.quizz.biz/uploads/quizz/923148/orig/1.jpg"
+	}
+    ]
+}
