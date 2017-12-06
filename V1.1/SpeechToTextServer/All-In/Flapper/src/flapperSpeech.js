@@ -62,7 +62,8 @@ var FlapDemo = function(display_selector, input_selector, click_selector) {
         align: 'left',
         width: 20,
         on_anim_start: onAnimStart,
-        on_anim_end: onAnimEnd
+        on_anim_end: onAnimEnd,
+        transform: true
     };
 
     this.timers = [];
@@ -81,22 +82,6 @@ var FlapDemo = function(display_selector, input_selector, click_selector) {
     socket = io.connect('http://localhost:3000');
     socket.on('words', newTranscription);
 
-    $(click_selector).click(function(e){
-        var text = _this.cleanInput(_this.$typesomething.val());
-        _this.$typesomething.val('');
-
-        if (text.match(/what is the point/i) || text.match(/what's the point/i)) {
-            text = "WHAT'S THE POINT OF YOU?";
-        }
-
-        var buffers = _this.parseInput(text);
-
-        _this.stopDisplay();
-        _this.updateDisplay(buffers);
-
-        e.preventDefault();
-    });
-
     function newTranscription(transcrData){
 
       var key, value;
@@ -109,7 +94,16 @@ var FlapDemo = function(display_selector, input_selector, click_selector) {
         JSON.parse(transcrData, (key, value) =>{
           if (key === '_text') {
               console.log('[Real text] : ' + value)
-              myText = value.replace(/ /g, '\n');;  // renvoie value * 2 pour les nombres
+
+              var text = _this.cleanInput(value);
+
+              var buffers = _this.parseInput(text);
+
+              _this.stopDisplay();
+              _this.updateDisplay(buffers);
+
+              e.preventDefault();
+
           }
           if (key === 'error') {
               console.error('[Error] : ' + value)
