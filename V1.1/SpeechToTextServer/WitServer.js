@@ -51,7 +51,12 @@ record.start({
   */
   verbose:true,
   thresholdStart: 0.75,   // silence threshold to start recording, overrides threshold (rec only)
-  thresholdEnd  : 0.5     // silence threshold to end recording, overrides threshold (rec only)
+  thresholdEnd  : 0.5    // silence threshold to end recording, overrides threshold (rec only)
+  // threshold     : 0.65,       // silence threshold (rec only)
+  //silence       : '0.5',     // seconds of silence before ending
+  //recordProgram : 'sox'  // Defaults to 'rec' - also supports 'arecord' and 'sox'
+  // thresholdStart: 0.5,   // silence threshold to start recording, overrides threshold (rec only)
+  // thresholdEnd  : 0.5    // silence threshold to end recording, overrides threshold (rec only)
 })
 .on('error', console.error)
 .pipe(request.post({
