@@ -32,7 +32,7 @@
             .displays {
                 padding: 30px;
                 border: 10px solid #ccc;
-                background-color: #222;
+                background-color: #000;
                 border-radius: 30px;
                 box-shadow: 0 0 12px 4px #000 inset;
             }
@@ -89,9 +89,6 @@
             }
 
         </style>
-        <script>
-          var socket = io();
-        </script>
     </head>
     <body>
         <div class="page">
@@ -100,13 +97,14 @@
               <ul class="pics" id="polaroids">
               </ul><!--pics -->
             </div>
-            <div class="displays" style="margin-top:10%;">
-                <div class="activity"></div><input class="display M" />
+            <div style="margin-top:10%;">
+                <!-- <div class="activity"></div> -->
+                <input class="display M light" />
             </div>
-            <div class="inputarea">
+            <!-- <div class="inputarea">
                 <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
                 <div class="inline"><button id="showme">And Click Here</button></div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>

@@ -260,7 +260,6 @@
 /* THEME STYLES */
 
 /* DARK (default) */
-
 .flapper .digit {
     background-color: #222;
     border: 1px solid #333;
@@ -273,7 +272,6 @@
 }
 
 /* LIGHT */
-
 .flapper.light .digit {
     border: 1px solid #ddd;
     background-color: #eee;
