@@ -5,6 +5,11 @@ var fileList = []
 var currentPuzzle = null
 var maxImgSize = 400;
 
+function getCurrentResponse()
+{
+    return (currentPuzzle.wordToFind);
+}
+
 function popPolaroid()
 {
     var img = currentPuzzle.clues[cluesIndex]
@@ -48,7 +53,6 @@ function launchNewPuzzle() {
 	dataType: "json",
 	success: function(response) {
 	    currentPuzzle = response;
-	    popPolaroid();
 	}});
 }
 
