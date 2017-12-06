@@ -26,9 +26,10 @@ function draw() {
 
   fill('#ED225D');
   textFont(myFont);
-  textSize(48);
+  textSize(24);
   textAlign(CENTER);
-  text(myText, width / 2, height / 2);
+  text(myText, width / 2, 0);
+  
 }
 
 function mouseClicked(){
@@ -61,7 +62,7 @@ function newTranscription(transcrData){
     JSON.parse(transcrData, (key, value) =>{
       if (key === '_text') {
           console.log('[Real text] : ' + value)
-          myText = value;  // renvoie value * 2 pour les nombres
+          myText = value.replace(/ /g, '\n');;  // renvoie value * 2 pour les nombres
       }
       if (key === 'error') {
           console.error('[Error] : ' + value)
