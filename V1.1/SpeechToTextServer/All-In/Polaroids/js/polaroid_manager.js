@@ -17,7 +17,10 @@ function popPolaroid()
     var newLi = document.createElement("li");
     var newA = document.createElement("a");
     var newImg = document.createElement("img");
-    newImg.src = img.picture;
+    newA.href = "";
+    newA.title = img.keyWord;
+    newA.appendChild(newImg);
+    newLi.appendChild(newA);
     newImg.onload = function() {
 	var height = this.naturalHeight;
 	var width = this.naturalWidth;
@@ -30,18 +33,37 @@ function popPolaroid()
 	    this.style.height = "auto";
 	    this.style.width = maxImgSize.toString() + "px";
 	}
+	document.getElementById("polaroids").appendChild(newLi);
     }
-    newA.href = "";
-    newA.title = img.keyWord;
-    newA.appendChild(newImg);
-    newLi.appendChild(newA);
-    document.getElementById("polaroids").appendChild(newLi);
-    if (cluesIndex >= currentPuzzle.clues.length)
+    newImg.src = img.picture;
+    if (cluesIndex >= currentPuzzle.clues.length - 1)
 	return false;
     return true;
 }
 
+function preloadImages(puzzle) {
+    if (!preloadImages.list) {
+        preloadImages.list = [];
+    }
+    var list = preloadImages.list;
+    for (var i = 0; i < puzzle.clues.length; i++) {
+        var img_t = new Image();
+        img_t.onload = function() {
+            var index = list.indexOf(this);
+            if (index !== -1) {
+                list.splice(index, 1);
+            }
+        }
+        list.push(img_t);
+        img_t.src = puzzle.clues[i].picture;
+    }
+}
+
 function launchNewPuzzle() {
+    if (!fileList.length)
+	return ;
+    document.getElementById("polaroids").innerHTML = "";
+    cluesIndex = 0;
     puzzleIndex++;
 
     if (puzzleIndex >= fileList.length)
@@ -52,6 +74,7 @@ function launchNewPuzzle() {
 	url: addr + fileList[puzzleIndex],
 	dataType: "json",
 	success: function(response) {
+	    preloadImages(response);
 	    currentPuzzle = response;
 	}});
 }
