@@ -1,0 +1,22 @@
+{
+    "wordToFind": "LENTILLY",
+    "type": "hangman",
+    "clues": [
+	{
+	    "keyWord": "Château",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Ch%C3%A2teau_de_Cruzols_05.JPG"
+	},
+	{
+	    "keyWord": "Fanum",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Fanum_Oisseau.jpg"
+	},
+	{
+	    "keyWord": "Aqueduc",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/2/20/Aqueduc_de_la_Br%C3%A9venne_01.jpg"
+	},
+	{
+	    "keyWord": "Saint-Laurent",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Lentilly_-_Place_de_l%27%C3%A9glise.jpg"
+	}
+    ]
+}
