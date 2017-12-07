@@ -18,7 +18,8 @@
   <style type="text/css">
   body {
     font-family: Roboto Condensed;
-    color: #333;
+  color: #333;
+  background:#A6977C;
   }
 
   .page {
@@ -90,9 +91,20 @@
     background-color: #f00;
   }
 
+  #overlay {
+  width:100%;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 900;
+  opacity: 0.8;
+  }
+
   </style>
 </head>
 <body>
+  <img src="./Images/upper-mask.png" id="overlay" />
+  <script>document.getElementById("overlay").style.height = "" + "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight + "px";</script>
   <div class="page">
     <!-- <h1>Le Brise-Glace</h1> -->
     <div style="margin-bottom:10%;">
@@ -109,9 +121,11 @@
       <button type="button" onclick='document.getElementById("listeMots").innerHTML = "<li>Coffee</li><li>Tea</li><li>Milk</li>"'>Click Me!</button>
     </div>
     <!-- <div class="inputarea">
-    <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
-    <div class="inline"><button id="showme">And Click Here</button></div>
-  </div> -->
+	 <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
+	 <div class="inline"><button id="showme">And Click Here</button></div>
+    </div> -->
+    <!-- <input type="button" value="TEST polaroid" style="position: fixed; z-index:990;" onclick="popPolaroid();"/> -->
+    <!-- <input type="button" value="TEST puzzle" style="position: fixed; left: 50%;z-index:990;" onclick="launchNewPuzzle();"/> -->
 </div>
 </body>
 </html>
