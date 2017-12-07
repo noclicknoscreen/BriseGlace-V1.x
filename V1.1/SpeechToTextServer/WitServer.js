@@ -28,9 +28,9 @@ function recordSome(){
   console.log('Listening audio, press Ctrl+C to stop.');
   // Stop recording after three seconds
 
-  setTimeout(function () {
-    record.stop()
-  }, 3500);
+  // setTimeout(function () {
+  //   record.stop()
+  // }, 3500);
 
   record.start({
     /*

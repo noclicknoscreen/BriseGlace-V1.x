@@ -4,14 +4,14 @@
 
 .listeMotsCSS {
 
-  background-image: url('../../Images/Sup-Note-A01.png');
+  /*background-image: url('../../Images/Sup-Note-A01.png');
   background-position: left top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto;*/
 
   position: fixed;
-  left: 5%;
-  top: 45%;
+  left: 6%;
+  top: 60%;
 
   -ms-transform: rotate(-15deg); /* IE 9 */
   -webkit-transform: rotate(-15deg); /* Safari */
@@ -27,10 +27,10 @@
 
 }
 
-.listeMotsCSS:before{
+.listeMotsCSS:after{
   /*content: url('../../Images/Sup-Note-A01.png');*/
 }
 
-.listeMotsCSS.line{
+.listeMotsCSS li{
   margin-left: 80px;
 }
