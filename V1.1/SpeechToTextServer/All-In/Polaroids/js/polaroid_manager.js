@@ -3,7 +3,8 @@ var puzzleIndex = -1
 var cluesIndex = 0
 var fileList = []
 var currentPuzzle = null
-var maxImgSize = 400;
+var maxImgSize = 300;
+var amplitudeAngle = 40.0;
 
 function getCurrentResponse()
 {
@@ -33,6 +34,13 @@ function popPolaroid()
 	    this.style.height = "auto";
 	    this.style.width = maxImgSize.toString() + "px";
 	}
+	var angle = (Math.random() * amplitudeAngle) - (amplitudeAngle / 2);
+	newLi.style.transform = "rotate(" + angle.toString() + "deg)";
+	newLi.style["-moz-transform"] = "rotate(" + angle.toString() + "deg)";
+	newLi.style["-webkit-transform"] = "rotate(" + angle.toString() + "deg)";
+	newLi.style.position = "fixed";
+	newLi.style.left = "" + Math.random() * 70 + 15 + "%";
+	newLi.style.top = "" + Math.random() * 15 + "%";
 	document.getElementById("polaroids").appendChild(newLi);
     }
     newImg.src = img.picture;
