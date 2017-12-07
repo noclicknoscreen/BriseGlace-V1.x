@@ -2,17 +2,17 @@
 body {background:url(bg.png);}
 h1 {text-align:center;padding:10px;text-shadow:1px 1px #333;background-color:#000;color:#fff;}
 .pics {margin:auto;margin:0px auto;position:relative;height:500px;width:800px;}
-.pics a {
+.pics li {
     background:#fff;
-    display:inline;
-    float:left;
-    width:auto;
-    padding:10px 10px 30px 10px;
     text-align:center;
+    font-family: "DK Crayon Crumble";
+    text-transform: uppercase;
+    color: #063984;
+    letter-spacing: 5px;
     text-decoration:none;
-    color:#333;
     font-size:28px;
-    font-weight:bold;
+    border-radius:3px;
+    /* padding:10px 10px 30px 10px; */
     -webkit-box-shadow:10px 15px 30px rgba(60,60,60,1);
     -moz-box-shadow:10px 15px 30px rgba(60,60,60,1);
     box-shadow:10px 15px 30px rgba(60,60,60,1);
@@ -22,20 +22,13 @@ h1 {text-align:center;padding:10px;text-shadow:1px 1px #333;background-color:#00
     /* transition:all .30s; */
     position:absolute;
 }
-.pics img {display:block;padding-bottom:20px;}
+
+/* .pics img {display:block;padding-bottom:20px;} */
 /* .pics a:hover {z-index:100;} */
-.pics a:after {content:attr(title);}
+/* .pics a:after {content:attr(title);} */
 @font-face  {
     font-family: "DK Crayon Crumble";
     src: url("../Fonts/DK Crayon Crumble.ttf");
-}
-
-.pics a {
-    font-family: "DK Crayon Crumble";
-    text-transform: uppercase;
-    color: #063984;
-    letter-spacing: 5px;
-    font-weight: normal;
 }
 
 /* Pictures placement, scaling and rotation */

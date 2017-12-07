@@ -18,12 +18,23 @@ function popPolaroid()
     var img = currentPuzzle.clues[cluesIndex]
     cluesIndex++;
     var newLi = document.createElement("li");
-    var newA = document.createElement("a");
+    var newDiv = document.createElement("div");
     var newImg = document.createElement("img");
-    newA.href = "";
-    newA.title = img.keyWord;
-    newA.appendChild(newImg);
-    newLi.appendChild(newA);
+    var newMask = document.createElement("img");
+    newDiv.href = "";
+    newMask.style.position = "absolute";
+    newMask.style.top = "0%";
+    newMask.style.left = "0%";
+    newMask.src = "./Images/polaroid-mask.png";
+    newDiv.innerHtml = img.keyWord;
+    newDiv.style.overflow = "hidden";
+    newDiv.style.height = "" + newMask.naturalHeight + "px";
+    newDiv.style.width = "" + newMask.naturalWidth + "px";
+    newDiv.style["border-radius"] = "3px";
+    newMask.style["border-radius"] = "3px";
+    newDiv.appendChild(newMask);
+    newDiv.appendChild(newImg);
+    newLi.appendChild(newDiv);
     newImg.onload = function() {
 	var height = this.naturalHeight;
 	var width = this.naturalWidth;
