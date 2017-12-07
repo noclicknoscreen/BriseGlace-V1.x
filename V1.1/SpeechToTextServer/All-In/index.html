@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>FLAPPER DEMO</title>
+  <title>BRISE GLACE</title>
 
   <link href="Flapper/css/flapper.css" type="text/css" rel="stylesheet" />
   <link href="listeMots/css/listeMots.css" type="text/css" rel="stylesheet" />
@@ -94,24 +94,25 @@
 </head>
 <body>
   <div class="page">
-    <!-- <h1>Le Brise-Glace</h1> -->
+
+    <!-- Polaroids -->
     <div style="margin-bottom:10%;">
       <ul class="pics" id="polaroids">
-      </ul><!--pics -->
+      </ul>
     </div>
-    <div style="margin-top:10%;">
+
+    <!-- FlipFlap -->
+    <div style="margin-top:10%; z-index:999; position:fixed;">
       <!-- <div class="activity"></div> -->
       <input class="display M light" />
     </div>
+
+    <!-- Liste des mauvaises réponses -->
     <div class="listeMotsCSS">
       <ul id="listeMots">
       </ul>
-      <button type="button" onclick='document.getElementById("listeMots").innerHTML = "<li>Coffee</li><li>Tea</li><li>Milk</li>"'>Click Me!</button>
     </div>
-    <!-- <div class="inputarea">
-    <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
-    <div class="inline"><button id="showme">And Click Here</button></div>
-  </div> -->
-</div>
+
+  </div>
 </body>
 </html>
