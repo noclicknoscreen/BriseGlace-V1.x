@@ -18,8 +18,8 @@
   <style type="text/css">
   body {
     font-family: Roboto Condensed;
-  color: #333;
-  background:#A6977C;
+    color: #333;
+    background:#A6977C;
   }
 
   .page {
@@ -92,12 +92,12 @@
   }
 
   #overlay {
-  width:100%;
-  position: fixed;
-  left:0;
-  top:0;
-  z-index: 900;
-  opacity: 0.8;
+    width:100%;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 900;
+    opacity: 0.8;
   }
 
   </style>
@@ -114,22 +114,26 @@
     </div>
 
     <!-- FlipFlap -->
-    <div style="margin-top:10%; z-index:999; position:fixed;">
+    <div style="margin-top:10%; z-index:999; position:fixed; left:center; top: 60%;">
       <!-- <div class="activity"></div> -->
-      <input class="display M light" />
+      <input class="display M" />
     </div>
 
     <!-- Liste des mauvaises réponses -->
     <div class="listeMotsCSS">
-      <ul id="listeMots">
+      <ul class="listeMotsCSS.line" id="listeMots">
+        <li>Coffe</li>
+        <li>Coffe</li>
+        <li>Coffe</li>
+        <li>Coffe</li>
       </ul>
     </div>
     <!-- <div class="inputarea">
-	 <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
-	 <div class="inline"><button id="showme">And Click Here</button></div>
-    </div> -->
-    <!-- <input type="button" value="TEST polaroid" style="position: fixed; z-index:990;" onclick="popPolaroid();"/> -->
-    <!-- <input type="button" value="TEST puzzle" style="position: fixed; left: 50%;z-index:990;" onclick="launchNewPuzzle();"/> -->
+    <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
+    <div class="inline"><button id="showme">And Click Here</button></div>
+  </div> -->
+  <!-- <input type="button" value="TEST polaroid" style="position: fixed; z-index:990;" onclick="popPolaroid();"/> -->
+  <!-- <input type="button" value="TEST puzzle" style="position: fixed; left: 50%;z-index:990;" onclick="launchNewPuzzle();"/> -->
 </div>
 </body>
 </html>

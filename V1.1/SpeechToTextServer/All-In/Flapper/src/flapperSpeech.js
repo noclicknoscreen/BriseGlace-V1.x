@@ -90,15 +90,16 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
     // Désormais, on sait que toto est bien
     // défini et on peut poursuivre.
     var myJson = JSON.parse(transcrData);
-    console.log("Rough Datas : " + transcrData);
+    //console.log("Rough Datas : " + transcrData);
+
     for(element in myJson){
-      console.log("element : " + element);
+      //console.log("element : " + element);
 
       if (element == 'error') {
-        console.log('[Error] : ' + myJson.code);
+        //console.log('[Error] : ' + myJson.code);
       }
       if (element == 'outcomes') {
-        console.log('[Real text] : ' + myJson.outcomes[0]._text);
+        //console.log('[Real text] : ' + myJson.outcomes[0]._text);
 
         var text = _this.cleanInput(myJson.outcomes[0]._text);
         //var buffers = _this.parseInput(text);
@@ -115,34 +116,48 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
         for (i = 0; i < numWords; i++) {
 
           myWord = words[i];
-          console.log("Je compare ce mot ["+myWord+"]")
+          //console.log("Je compare ce mot ["+myWord+"]")
 
           if (myWord.localeCompare(getCurrentResponse()) === 0) {
             // start of e.g. time section, handled in nex loop
             foundOrNot = true;
             console.log("Trouvé :D +++++++++++++++++++ (Bonne Réponse="+getCurrentResponse()+")");
             break;
+
           } else {
             // phrase
-            aListeMots.push(myWord);
             console.log("Pas Trouvé :D --------------- (Bonne Réponse="+getCurrentResponse()+")");
+            aListeMots.push(myWord);
+
           }
         }
 
         if(foundOrNot === true){
           _this.stopDisplay();
           _this.updateDisplay(_this.parseInput(myWord));
+
         }else{
           console.log("Pop it !");
 
+          var smallArray = [];
           var htmlContent;
+
           // resize the words array
+          console.log("Taille du tableau des mots entendus : " + aListeMots.length);
+
           if(aListeMots.length > 10){
-            aListeMots = aListeMots.slice(aListeMots.length - 10, aListeMots.length - 1)
+            smallArray = aListeMots.slice(aListeMots.length - 10, aListeMots.length - 1)
+          }else{
+            smallArray = aListeMots;
           }
-          for(i = 0; i < aListeMots.length; i++){
-            htmlContent += '<li>'+aListeMots[i]+'</li>';
+
+          console.log("Taille du tableau des mauvaises réponses : " + smallArray.length);
+
+          for(i = 0; i < smallArray.length; i++){
+            console.log("Tableau des mauvaises réponses : " + smallArray[i]);
+            htmlContent += '<li> '+smallArray[i]+' </li>';
           }
+
           document.getElementById("listeMots").innerHTML = htmlContent;
 
           popPolaroid();
