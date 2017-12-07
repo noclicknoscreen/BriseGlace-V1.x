@@ -1,10 +1,12 @@
-var addr="http://localhost:3000/PuzzleSamples/"
-var puzzleIndex = -1
-var cluesIndex = 0
-var fileList = []
-var currentPuzzle = null
+var addr="http://localhost:3000/PuzzleSamples/";
+var puzzleIndex = -1;
+var cluesIndex = 0;
+var coordList = [];
+var fileList = [];
+var currentPuzzle = null;
 var maxImgSize = 300;
 var amplitudeAngle = 40.0;
+var minDistPol = 50;
 
 function getCurrentResponse()
 {
@@ -39,8 +41,25 @@ function popPolaroid()
 	newLi.style["-moz-transform"] = "rotate(" + angle.toString() + "deg)";
 	newLi.style["-webkit-transform"] = "rotate(" + angle.toString() + "deg)";
 	newLi.style.position = "fixed";
-	newLi.style.left = "" + Math.random() * 70 + 15 + "%";
-	newLi.style.top = "" + Math.random() * 15 + "%";
+	var haveGoodCoord = false;
+	var coord = null;
+	while (!haveGoodCoord) {
+	    coord = {
+		top: Math.random() * 15,
+		left: Math.random() * 70 + 15
+	    };
+	    if (coordList.length == 0)
+		break;
+	    for (var c of coordList) {
+		haveGoodCoord = false;
+		if (Math.pow(c.top - coord.top, 2) + Math.pow(c.left - coord.left, 2) < minDistPol)
+		    break;
+		haveGoodCoord = true;
+	    }
+	}
+	newLi.style.left = "" + coord.left + "%";
+	newLi.style.top = "" + coord.top + "%";
+	coordList.push(coord);
 	document.getElementById("polaroids").appendChild(newLi);
     }
     newImg.src = img.picture;
@@ -70,6 +89,7 @@ function preloadImages(puzzle) {
 function launchNewPuzzle() {
     if (!fileList.length)
 	return ;
+    coordList = [];
     document.getElementById("polaroids").innerHTML = "";
     cluesIndex = 0;
     puzzleIndex++;
