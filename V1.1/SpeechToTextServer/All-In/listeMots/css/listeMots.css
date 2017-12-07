@@ -1,0 +1,25 @@
+@import url(file://Fonts/DK Crayon Crumble.ttf);
+
+/* STRUCTURAL STYLES */
+
+.listeMotsCSS {
+
+  background-image: url('../../Images/Sup-Note-A01.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+
+  position: 'fixed';
+  left: 10%;
+  top:90%;
+  
+  font-family: DK Crayon Crumble, sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+.listeMotsCSS div{
+
+}

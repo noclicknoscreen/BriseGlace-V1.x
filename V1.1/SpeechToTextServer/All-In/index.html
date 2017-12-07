@@ -1,110 +1,117 @@
 <html>
-    <head>
-        <title>FLAPPER DEMO</title>
+<head>
+  <title>FLAPPER DEMO</title>
 
-        <link href="Flapper/css/flapper.css" type="text/css" rel="stylesheet" />
-        <link type="text/css" href="PolaroidGallery/gallerystyle.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+  <link href="Flapper/css/flapper.css" type="text/css" rel="stylesheet" />
+  <link href="listeMots/css/listeMots.css" type="text/css" rel="stylesheet" />
+  <link type="text/css" href="PolaroidGallery/gallerystyle.css" rel="stylesheet">
 
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script src="Flapper/transform/dist/jquery.transform-0.9.3.min.js"></script>
-        <script src="Flapper/src/jquery.flapper.js"></script>
-        <script src="Flapper/src/flapperSpeech.js"></script>
-	<script src="Polaroids/js/polaroid_manager.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
 
-        <style type="text/css">
-            body {
-                font-family: Roboto Condensed;
-                color: #333;
-            }
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="Flapper/transform/dist/jquery.transform-0.9.3.min.js"></script>
+  <script src="Flapper/src/jquery.flapper.js"></script>
+  <script src="Flapper/src/flapperSpeech.js"></script>
+  <script src="Polaroids/js/polaroid_manager.js"></script>
 
-            .page {
-                width: 1000px;
-                margin: 30px auto 0;
-            }
+  <style type="text/css">
+  body {
+    font-family: Roboto Condensed;
+    color: #333;
+  }
 
-            h1 {
-                text-align: center;
-                font-size: 24px;
-            }
+  .page {
+    width: 1000px;
+    margin: 30px auto 0;
+  }
 
-            .displays {
-                padding: 30px;
-                border: 10px solid #ccc;
-                background-color: #000;
-                border-radius: 30px;
-                box-shadow: 0 0 12px 4px #000 inset;
-            }
+  h1 {
+    text-align: center;
+    font-size: 24px;
+  }
 
-            .flapper {
-                margin-bottom: 2px;
-                text-align: center;
-            }
+  .displays {
+    padding: 30px;
+    border: 10px solid #ccc;
+    background-color: #000;
+    border-radius: 30px;
+    box-shadow: 0 0 12px 4px #000 inset;
+  }
 
-            .inputarea {
-                margin: 24px 0;
-            }
+  .flapper {
+    margin-bottom: 2px;
+    text-align: center;
+  }
 
-            #typesomething,
-            #showme {
-                font-family: Roboto Condensed;
-                font-size: 18px;
-                padding: 14px;
-                background-color: #EEE;
-                color: #333;
-                border: 0;
-                height: 170px;
-            }
+  .inputarea {
+    margin: 24px 0;
+  }
 
-            #typesomething {
-                width: 300px;
-            }
+  #typesomething,
+  #showme {
+    font-family: Roboto Condensed;
+    font-size: 18px;
+    padding: 14px;
+    background-color: #EEE;
+    color: #333;
+    border: 0;
+    height: 170px;
+  }
 
-            #showme:hover {
-                background-color: #DDD;
-            }
+  #typesomething {
+    width: 300px;
+  }
 
-            #showme:active {
-                background-color: #CCC;
-            }
+  #showme:hover {
+    background-color: #DDD;
+  }
 
-            div.inline {
-                display: inline-block;
-                vertical-align: bottom;
-            }
+  #showme:active {
+    background-color: #CCC;
+  }
 
-            div.activity {
-                width: 12px;
-                height: 12px;
-                border-radius: 6px;
-                background-color: #250000;
-                position: relative;
-                top: 33px;
-                left: -15px;
-            }
+  div.inline {
+    display: inline-block;
+    vertical-align: bottom;
+  }
 
-            div.activity.active {
-                background-color: #f00;
-            }
+  div.activity {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #250000;
+    position: relative;
+    top: 33px;
+    left: -15px;
+  }
 
-        </style>
-    </head>
-    <body>
-        <div class="page">
-            <!-- <h1>Le Brise-Glace</h1> -->
-            <div style="margin-bottom:10%;">
-              <ul class="pics" id="polaroids">
-              </ul><!--pics -->
-            </div>
-            <div style="margin-top:10%;">
-                <!-- <div class="activity"></div> -->
-                <input class="display M light" />
-            </div>
-            <!-- <div class="inputarea">
-                <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
-                <div class="inline"><button id="showme">And Click Here</button></div>
-            </div> -->
-        </div>
-    </body>
+  div.activity.active {
+    background-color: #f00;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- <h1>Le Brise-Glace</h1> -->
+    <div style="margin-bottom:10%;">
+      <ul class="pics" id="polaroids">
+      </ul><!--pics -->
+    </div>
+    <div style="margin-top:10%;">
+      <!-- <div class="activity"></div> -->
+      <input class="display M light" />
+    </div>
+    <div class="listeMotsCSS">
+      <ul id="listeMots">
+      </ul>
+      <button type="button" onclick='document.getElementById("listeMots").innerHTML = "<li>Coffee</li><li>Tea</li><li>Milk</li>"'>Click Me!</button>
+    </div>
+    <!-- <div class="inputarea">
+    <div class="inline"><textarea id="typesomething" placeholder="Type Something Here..." rows="6" cols="20"></textarea></div>
+    <div class="inline"><button id="showme">And Click Here</button></div>
+  </div> -->
+</div>
+</body>
 </html>

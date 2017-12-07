@@ -1,6 +1,8 @@
 //var io = require('socket.io');
 var socket;
 
+var aListeMots = [];
+
 var FlapBuffer = function(wrap, num_lines) {
   this.wrap = wrap;
   this.num_lines = num_lines;
@@ -85,16 +87,20 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
 
   function newTranscription(transcrData){
 
-    var key, value;
-
     // Désormais, on sait que toto est bien
     // défini et on peut poursuivre.
-    JSON.parse(transcrData, (key, value) =>{
+    var myJson = JSON.parse(transcrData);
+    console.log("Rough Datas : " + transcrData);
+    for(element in myJson){
+      console.log("element : " + element);
 
-      if (key === '_text') {
+      if (element == 'error') {
+        console.log('[Error] : ' + myJson.code);
+      }
+      if (element == 'outcomes') {
+        console.log('[Real text] : ' + myJson.outcomes[0]._text);
 
-        console.log('[Real text] : ' + value)
-        var text = _this.cleanInput(value);
+        var text = _this.cleanInput(myJson.outcomes[0]._text);
         //var buffers = _this.parseInput(text);
 
         console.log('[Text cleaned] : ' + text)
@@ -118,6 +124,7 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
             break;
           } else {
             // phrase
+            aListeMots.push(myWord);
             console.log("Pas Trouvé :D --------------- (Bonne Réponse="+getCurrentResponse()+")");
           }
         }
@@ -126,18 +133,22 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
           _this.stopDisplay();
           _this.updateDisplay(_this.parseInput(myWord));
         }else{
+          console.log("Pop it !");
+
+          var htmlContent;
+          // resize the words array
+          if(aListeMots.length > 10){
+            aListeMots = aListeMots.slice(aListeMots.length - 10, aListeMots.length - 1)
+          }
+          for(i = 0; i < aListeMots.length; i++){
+            htmlContent += '<li>'+aListeMots[i]+'</li>';
+          }
+          document.getElementById("listeMots").innerHTML = htmlContent;
+
           popPolaroid();
         }
-
       }
-      if (key === 'error') {
-        console.error('[Error] : ' + value)
-      }
-    });
-
-    //}else{
-    //console.log('Text undefined !!!!!!!!!!!!!!!!!!!');
-    //}
+    }
   }
 
 };
