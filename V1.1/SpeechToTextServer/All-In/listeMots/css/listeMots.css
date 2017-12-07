@@ -11,22 +11,26 @@
 
   position: fixed;
   left: 5%;
-  top: 60%;
+  top: 45%;
 
   -ms-transform: rotate(-15deg); /* IE 9 */
   -webkit-transform: rotate(-15deg); /* Safari */
-  transform: rotate(-15deg); /* Standard syntax */
+  transform: rotate(-15deg);
 
   font-family: DK Crayon Crumble, sans-serif;
-  font-size: 36px;
+  font-size: 24px;
+  color: #063984;
+  letter-spacing:5px;
+  font-weight: normal;
   text-transform: uppercase;
-
-  /*box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;*/
+  text-decoration: line-through;
 
 }
 
 .listeMotsCSS:before{
-  content: url('../../Images/Sup-Note-A01.png');
+  /*content: url('../../Images/Sup-Note-A01.png');*/
+}
+
+.listeMotsCSS.line{
+  margin-left: 80px;
 }

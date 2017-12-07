@@ -30,7 +30,7 @@ function recordSome(){
 
   setTimeout(function () {
     record.stop()
-  }, 10000);
+  }, 3500);
 
   record.start({
     /*
@@ -44,7 +44,7 @@ function recordSome(){
     device        : null   // recording device (e.g.: 'plughw:1')
     */
     verbose:true,
-    thresholdStart: 0.75,   // silence threshold to start recording, overrides threshold (rec only)
+    thresholdStart: 0.5,   // silence threshold to start recording, overrides threshold (rec only)
     thresholdEnd  : 0.5    // silence threshold to end recording, overrides threshold (rec only)
     // threshold     : 0.65,       // silence threshold (rec only)
     //silence       : '0.5',     // seconds of silence before ending
