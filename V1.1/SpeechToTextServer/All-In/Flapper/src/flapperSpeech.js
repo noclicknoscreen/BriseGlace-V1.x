@@ -140,7 +140,6 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
           console.log("Pop it !");
 
           var smallArray = [];
-          var htmlContent;
 
           // resize the words array
           console.log("Taille du tableau des mots entendus : " + aListeMots.length);
@@ -153,6 +152,7 @@ var FlapperSpeech = function(display_selector, input_selector, click_selector) {
 
           console.log("Taille du tableau des mauvaises réponses : " + smallArray.length);
 
+          var htmlContent = '';
           for(i = 0; i < smallArray.length; i++){
             console.log("Tableau des mauvaises réponses : " + smallArray[i]);
             htmlContent += '<li> '+smallArray[i]+' </li>';

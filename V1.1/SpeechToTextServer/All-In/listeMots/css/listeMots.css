@@ -4,10 +4,10 @@
 
 .listeMotsCSS {
 
-  /*background-image: url('../../Images/Sup-Note-A01.png');
+  background-image: url('../../Images/Sup-Note-A01.png');
   background-position: left top;
   background-repeat: no-repeat;
-  background-size: auto;*/
+  background-size: auto;
 
   position: fixed;
   left: 5%;
@@ -27,8 +27,8 @@
 
 }
 
-.listeMotsCSS:after{
-  content: url('../../Images/Sup-Note-A01.png');
+.listeMotsCSS:before{
+  /*content: url('../../Images/Sup-Note-A01.png');*/
 }
 
 .listeMotsCSS.line{
