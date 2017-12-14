@@ -1,0 +1,34 @@
+{
+    "wordToFind": "LENTILLY",
+    "type": "hangman",
+    "clues": [
+	{
+	    "keyWord": "Le Château de Cruzol",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/Lentilly_-_Tours_de_Cruzol.jpg"
+	},
+	{
+	    "keyWord": "Le mont Mercruy",
+	    "picture": "https://c1.staticflickr.com/4/3741/9932845804_e1eeec3958_b.jpg"
+	},
+	{
+	    "keyWord": "Tirailleur Sénégalais",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/d/db/Morocco%2C_Fes.jpg"
+	},
+	{
+	    "keyWord": "Le blason",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Blason_ville_fr_Lentilly_%28Rh%C3%B4ne%29.svg"
+	},
+	{
+	    "keyWord": "Vue du village",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/1/19/1200pix-CM-vue-generale-1-11-2009_%289a%29.jpg"
+	},
+	{
+	    "keyWord": "Champion Olympique de poursuite",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Daniel_Rebillard_1969_Paraguay_stamp.jpg"
+	},
+	{
+	    "keyWord": "Graveur",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Jjboissieu.jpg"
+	}
+    ]
+}
