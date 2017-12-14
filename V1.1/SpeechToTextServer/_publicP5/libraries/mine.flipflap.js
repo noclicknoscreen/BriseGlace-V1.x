@@ -20,13 +20,17 @@ flipFlap.prototype.setup = function(_answer) {
 
 };
 
-flipFlap.prototype.draw = function() {
+flipFlap.prototype.draw = function(_FullText) {
 
   translate(width / 2, 0.8 * height);
 
   textFont(this.myFont);
   textSize(size);
   textAlign(CENTER);
+
+  for(i = 0; i < _FullText.length; i++){
+      this.letters[i].change(_FullText[i]);
+  }
 
   for(i = 0; i < this.letters.length; i++){
       this.letters[i].draw(i * letterStep);
@@ -60,4 +64,9 @@ flipFlapLetter.prototype.draw = function(_position) {
   noStroke();
   text(this.char.toLocaleUpperCase(),_position, 0.23 * yLetterSize);
 
+};
+
+flipFlapLetter.prototype.change = function(_newChar) {
+  console.log('Changing char ['+this.char+'] to ['+ _newChar + ']');
+  this.char = _newChar;
 };

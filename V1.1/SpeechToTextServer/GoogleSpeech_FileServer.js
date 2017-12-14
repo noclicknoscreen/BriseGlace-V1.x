@@ -17,7 +17,7 @@ var clientDir = '_publicP5';
 var io = require('socket.io');
 var mySocket = io(server);
 
-//app.use(express.static(clientDir));
+app.use(express.static(clientDir));
 mySocket.sockets.on('connection', newConnection);
 
 function newConnection(socket){
@@ -65,8 +65,8 @@ function startRecording()
     // device        : null   // recording device (e.g.: 'plughw:1')
     sampleRate : sampleRate,
     verbose : true,
-    silence       : '0.25',  // seconds of silence before ending
-    threshold     : 0.9,   // silence threshold (rec only)
+    silence       : '0.5',  // seconds of silence before ending
+    threshold     : 0.8,   // silence threshold (rec only)
     // thresholdStart: 0.5,  // silence threshold to start recording, overrides threshold (rec only)
     // thresholdEnd  : 0.5,   // silence threshold to end recording, overrides threshold (rec only)
 

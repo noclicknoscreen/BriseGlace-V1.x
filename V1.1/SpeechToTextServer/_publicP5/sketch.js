@@ -36,9 +36,9 @@ function preload() {
   myFlipFlap.preload();
 
   // enigmas
-/*  myEnigmas = new enigmas();
+  myEnigmas = new enigmas();
   myEnigmas.preload();
-*/
+
   // Overlay
   imgOverlay = loadImage("assets/Images/upper-mask.png");
 
@@ -50,12 +50,13 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   background('#b89664');
 
-  socket = io.connect('http://192.168.81.141:3000');
+  // socket = io.connect('http://192.168.81.141:3000');
+  socket = io.connect('http://localhost:3000');
   socket.on('words', newTranscription);
 
   myText = 'P5.js';
 
-  myFlipFlap.setup('toto');
+  myFlipFlap.setup(myEnigmas.emptyWord());
 
 }
 
@@ -69,7 +70,7 @@ function draw() {
   // // Gallery ----------------------------------------------------------
   myGallery.draw();
   // // FLIP FLAP ----------------------------------------------------------
-  myFlipFlap.draw("L'arbresle");
+  myFlipFlap.draw(myEnigmas.currentAnswer());
   //
   // // Overlay
   blendMode(BLEND);
@@ -98,6 +99,8 @@ function newTranscription(transcrData){
   if(transcrData !== ''){
 
      myAnswers.add(transcrData);
+
+     myEnigmas.nextHint();
 
     // var res = transcrData.split(' ');
     // var nb = res.length;

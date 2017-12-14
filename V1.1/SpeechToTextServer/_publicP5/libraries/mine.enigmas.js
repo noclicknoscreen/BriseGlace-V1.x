@@ -1,41 +1,19 @@
 
 //var index;
+var idxHint;
 
 // FLIP FLAP Class -----------------------------------------------------------------------------------------------
 function enigmas() {
   var index;
   var enigma;
   var idxCurrentEnigma = 0;
+  this.idxHint = 0;
 };
 
 // Public --------------------------------------------------------------------------------------------------------
 enigmas.prototype.preload = function() {
   // Load the whole list of enigmas
-  this.loadEnigmas();
-  this.nextEnigma(this.idxCurrentEnigma);
-};
-
-enigmas.prototype.loadEnigmas = function (){
-
-  const testFolder = './tests/*.json';
-
-  fs.readdir(testFolder, (err, files) => {
-    files.forEach(file => {
-      console.log(file);
-    });
-  });
-
-  // this.index = loadJSON('assets/Enigmas/index.json');
-  // console.log('index.json OK');
-  //
-  // if(this.index.data.length > 0){
-  //   this.idxCurrentEnigma = floor(random(this.index.data.length));
-  //   console.log('loading enigma n° : ' + this.idxCurrentEnigma);
-  //
-  // }else{
-  //   console.error('index.json is empty');
-  // };
-
+  this.nextEnigma('larbresle.json');
 };
 
 enigmas.prototype.errorJson = function (error){
@@ -45,31 +23,44 @@ enigmas.prototype.errorJson = function (error){
 enigmas.prototype.wordToFind = function() {
 };
 
-enigmas.prototype.nextEnigma = function(_newIndex) {
-
-  var path = 'assets/Enigmas/' + this.index.data[_newIndex];
-  console.log('Enigma path : ' + path)
-
-  this.enigma = loadJSON(path);
-
-  if(this.enigma === undefined){
-    console.log('Error loading ' + path)
-
-  }else{
-    console.log('Enigma loaded');
-    console.log('wordToFind : ' + this.enigma.wordToFind);
-    console.log('type : ' + this.enigma.type);
-  }
-
+enigmas.prototype.nextEnigma = function(_path) {
+  this.enigma = loadJSON('assets/Enigmas/' + _path);
 };
 
 enigmas.prototype.hintPicture = function(_index) {
 };
 
-enigmas.prototype.hintPicture = function(_index) {
+enigmas.prototype.hintAnswer = function(_index) {
 };
 
 enigmas.prototype.hintKeyword = function(_index) {
 };
+
+enigmas.prototype.nextHint = function() {
+
+  this.idxHint++;
+
+  if(this.idxHint > this.enigma.hints.length){
+    this.idxHint = 0;
+  }
+
+  console.log("L'indice en cours est : " + this.idxHint);
+
+};
+
+enigmas.prototype.emptyWord = function() {
+  return this.enigma.emptyWord;
+};
+
+enigmas.prototype.currentAnswer = function() {
+
+  if(this.idxHint < this.enigma.hints.length){
+    return this.enigma.hints[this.idxHint].answer;
+  }else{
+    return "toto-tutu";
+  }
+
+};
+
 
 // Private --------------------------------------------------------------------------------------------------------
