@@ -36,9 +36,9 @@ function preload() {
   myFlipFlap.preload();
 
   // enigmas
-  myEnigmas = new enigmas();
+/*  myEnigmas = new enigmas();
   myEnigmas.preload();
-
+*/
   // Overlay
   imgOverlay = loadImage("assets/Images/upper-mask.png");
 
@@ -50,7 +50,7 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   background('#b89664');
 
-  socket = io.connect('http://localhost:3000');
+  socket = io.connect('http://192.168.81.41:3000');
   socket.on('words', newTranscription);
 
   myText = 'P5.js';
