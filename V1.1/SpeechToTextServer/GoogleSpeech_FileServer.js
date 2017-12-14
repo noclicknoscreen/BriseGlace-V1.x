@@ -48,7 +48,7 @@ function listenX(socket){
 function startRecording()
 {
 
-  tmpFileName = tmp.tmpNameSync({ template: 'tmp/tmp-XXXXXX.wav' });
+  tmpFileName = tmp.tmpNameSync({ template: '/tmp/tmp-XXXXXX.wav' });
   console.log("Enregistrement sur ce fichier : " + tmpFileName);
 
   file = fs.createWriteStream(tmpFileName, { encoding: 'binary' });
