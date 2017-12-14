@@ -50,7 +50,7 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   background('#b89664');
 
-  socket = io.connect('http://192.168.81.41:3000');
+  socket = io.connect('http://192.168.81.141:3000');
   socket.on('words', newTranscription);
 
   myText = 'P5.js';

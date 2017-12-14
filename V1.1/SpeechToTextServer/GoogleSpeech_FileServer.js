@@ -17,7 +17,7 @@ var clientDir = '_publicP5';
 var io = require('socket.io');
 var mySocket = io(server);
 
-app.use(express.static(clientDir));
+//app.use(express.static(clientDir));
 mySocket.sockets.on('connection', newConnection);
 
 function newConnection(socket){
