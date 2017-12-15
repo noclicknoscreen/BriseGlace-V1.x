@@ -1,4 +1,4 @@
-var addr="http://192.168.1.84:3000/PuzzleSamples/";
+var addr="http://192.168.1.84:3000/assets/Enigmas/";
 var puzzleIndex = -1;
 var cluesIndex = 0;
 var coordList = [];
