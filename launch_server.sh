@@ -1,8 +1,11 @@
 #!/bin/sh
 
-SERVER_FILE="./V1.1/SpeechToTextServer/GoogleSpeech_FileServer.js"
+SERVER_DIR="./V1.1/SpeechToTextServer/"
+SERVER_FILE="./GoogleSpeech_FileServer.js"
 
 export GOOGLE_APPLICATION_CREDENTIALS="BriseGlace-DevToken.json"
+
+cd ${SERVER_DIR}
 
 echo "Launch server ..."
 
