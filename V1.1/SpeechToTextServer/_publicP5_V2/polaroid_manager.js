@@ -116,6 +116,8 @@ function launchNewPuzzle() {
 	    preloadImages(response);
 	    currentPuzzle = response;
 	    popPolaroid();
+	    popPolaroid();
+	    popPolaroid();
 	}});
 }
 
