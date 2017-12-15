@@ -25,7 +25,7 @@ function popPolaroid()
     newMask.style.position = "absolute";
     newMask.style.top = "0%";
     newMask.style.left = "0%";
-    newMask.src = "./Images/polaroid-mask.png";
+    newMask.src = "./assets/Images/polaroid-mask.png";
     newDiv.innerHtml = img.keyWord;
     newDiv.style.overflow = "hidden";
     newDiv.style.height = "" + newMask.naturalHeight + "px";
@@ -115,6 +115,7 @@ function launchNewPuzzle() {
 	success: function(response) {
 	    preloadImages(response);
 	    currentPuzzle = response;
+	    popPolaroid();
 	}});
 }
 
