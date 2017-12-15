@@ -32,9 +32,11 @@ function popPolaroid()
     newDiv.style.width = "" + newMask.naturalWidth + "px";
     newDiv.style["border-radius"] = "3px";
     newMask.style["border-radius"] = "3px";
+
     newDiv.appendChild(newMask);
     newDiv.appendChild(newImg);
     newLi.appendChild(newDiv);
+
     newImg.onload = function() {
 	var height = this.naturalHeight;
 	var width = this.naturalWidth;

@@ -104,7 +104,7 @@ link.prototype.onePola = function(_keyWord, _path){
   newDiv.appendChild(newImg);
   newLi.appendChild(newDiv);
 
-  document.getElementById("GalleryPola").appendChild(newImg);
+  document.getElementById("GalleryPola").appendChild(newDiv);
 
 };
 

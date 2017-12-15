@@ -1,0 +1,54 @@
+
+.gallery{
+
+  background:#fff;
+  color: #063984;
+
+  text-align:center;
+  font-family: "DK Crayon Crumble";
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-decoration:none;
+  font-size:28px;
+  border-radius:3px;
+
+}
+
+.gallery ul{
+  list-style-type:none;
+}
+
+.gallery img {
+  display:block;
+}
+
+.gallery div{
+  text-align:center;
+}
+
+/*Animation d'entrée-sortie des photos*/
+@keyframes inAndOut {
+  /* On entre par la gauche */
+  0%{
+    transform:translate(-2000px,0px);
+    -moz-transform:translate(-2000px,0px);
+    -webkit-transform:translate(-2000px,0px);
+  }
+  /* On reste un peu au milieu */
+  10%, 90%{
+    transform:translate(0px,0px);
+    -moz-transform:translate(0px,0px);
+    -webkit-transform:translate(0px,0px);
+  }
+  /* On entre par la gauche */
+  100%{
+    transform:translate(2000px,0px);
+    -moz-transform:translate(2000px,0px);
+    -webkit-transform:translate(2000px,0px);
+  }
+}
+
+@font-face  {
+    font-family: "DK Crayon Crumble";
+    src: url("../Fonts/DK Crayon Crumble.ttf");
+}
