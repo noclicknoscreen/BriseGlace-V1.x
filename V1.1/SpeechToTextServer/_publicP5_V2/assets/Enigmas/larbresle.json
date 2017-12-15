@@ -1,0 +1,37 @@
+{
+  "wordToFind": "L'ARBRESLE",
+  "emptyWord": "_'________",
+  "type": "hangman",
+  "hints": [
+    {
+      "answer":"L'______L_",
+      "keyWord": "Machine à coudre",
+      "picture": "http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg"
+    },
+    {
+      "answer":"L'_R_R__L_",
+      "keyWord": "Pont",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg"
+    },
+    {
+      "answer":"L'_RBR__L_",
+      "keyWord": "Château",
+      "picture": "http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg"
+    },
+    {
+      "answer":"L'ARBR__L_",
+      "keyWord": "La Brévenne",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG"
+    },
+    {
+      "answer":"L'ARBRE_LE",
+      "keyWord": "Blason",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg"
+    },
+    {
+      "answer":"L'ARBRESLE",
+      "keyWord": "Vu de la ville",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG"
+    }
+  ]
+}

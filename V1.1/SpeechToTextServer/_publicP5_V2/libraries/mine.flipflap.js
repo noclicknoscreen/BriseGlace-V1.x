@@ -67,6 +67,6 @@ flipFlapLetter.prototype.draw = function(_position) {
 };
 
 flipFlapLetter.prototype.change = function(_newChar) {
-  console.log('Changing char ['+ this.char +'] to ['+ _newChar + ']');
+  console.log('Changing char ['+this.char+'] to ['+ _newChar + ']');
   this.char = _newChar;
 };
