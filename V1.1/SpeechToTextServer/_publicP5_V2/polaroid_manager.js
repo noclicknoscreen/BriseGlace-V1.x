@@ -15,7 +15,7 @@ function getCurrentResponse()
 
 function popPolaroid()
 {
-    var img = currentPuzzle.clues[cluesIndex]
+    var img = currentPuzzle.hints[cluesIndex]
     cluesIndex++;
     var newLi = document.createElement("li");
     var newDiv = document.createElement("div");
@@ -74,7 +74,7 @@ function popPolaroid()
 	document.getElementById("polaroids").appendChild(newLi);
     }
     newImg.src = img.picture;
-    if (cluesIndex >= currentPuzzle.clues.length - 1)
+    if (cluesIndex >= currentPuzzle.hints.length - 1)
 	return false;
     return true;
 }
@@ -84,7 +84,7 @@ function preloadImages(puzzle) {
         preloadImages.list = [];
     }
     var list = preloadImages.list;
-    for (var i = 0; i < puzzle.clues.length; i++) {
+    for (var i = 0; i < puzzle.hints.length; i++) {
         var img_t = new Image();
         img_t.onload = function() {
             var index = list.indexOf(this);
@@ -93,7 +93,7 @@ function preloadImages(puzzle) {
             }
         }
         list.push(img_t);
-        img_t.src = puzzle.clues[i].picture;
+        img_t.src = puzzle.hints[i].picture;
     }
 }
 
