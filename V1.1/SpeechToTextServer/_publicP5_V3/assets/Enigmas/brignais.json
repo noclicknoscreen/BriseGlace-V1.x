@@ -1,0 +1,41 @@
+{
+    "wordToFind": "BRIGNAIS",
+    "type": "hangman",
+    "clues": [
+	{
+	    "answer":"B_______",
+	    "keyWord": "La guerre de 100 ans",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/8/81/Brigniais.jpg"
+	},
+	{
+	    "answer":"B___N___",
+	    "keyWord": "Sa gare en 1993",
+	    "picture": "https://c2.staticflickr.com/4/3941/15449767249_6d784e3c61_b.jpg"
+	},
+	{
+	    "answer":"B_I_N_I_",
+	    "keyWord": "Aqueduc",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Brignais_-_Aqueduc_du_Gier_-1.JPG"
+	},
+	{
+	    "answer":"BRI_N_I_",
+	    "keyWord": "Omnibus",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/0/0c/SF_859_-_BRIGNAIS_-_La_Place.JPG"
+	},
+	{
+	    "answer":"BRI_N_IS",
+	    "keyWord": "Blason",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/4/43/Blason_ville_fr_Brignais_%28Rh%C3%B4ne%29.svg"
+	},
+	{
+	    "answer":"BRIGN_IS",
+	    "keyWord": "Vu de la ville",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/9/92/Brignais_vue_du_pont_vieux.jpg"
+	},
+	{
+	    "answer":"BRIGNAIS",
+	    "keyWord": "Le pont",
+	    "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Brignais_Garon.jpg"
+	}
+    ]
+}

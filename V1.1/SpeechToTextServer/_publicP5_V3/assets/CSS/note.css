@@ -1,0 +1,39 @@
+.note {
+  position: fixed;
+  bottom: -200px;
+  left:10px;
+
+  transform:rotate(-15deg) scale(0.75,0.75);
+  -ms-transform: rotate(-15deg) scale(0.75,0.75); /* IE 9 */
+  -webkit-transform: rotate(-15deg) scale(0.75,0.75); /* Safari */
+
+  color: #AAACAF;
+
+  font-family: "DK Crayon Crumble";
+  font-size:28px;
+
+  text-align:left;
+  text-transform: uppercase;
+  text-decoration:none;
+
+  letter-spacing: 5px;
+  line-height: 97%;
+
+}
+
+.note ul {
+  position: fixed;
+  list-style-type:none;
+
+  top:35px;
+  left:50px;
+}
+
+.last {
+  color: #332F30;
+}
+
+@font-face  {
+    font-family: "DK Crayon Crumble";
+    src: url("../Fonts/DK Crayon Crumble.ttf");
+}
