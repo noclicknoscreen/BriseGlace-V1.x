@@ -4,7 +4,11 @@ const maxAsciiCode = 90;
 
 function startFlapper(_word){
 
-  for(idxLetter=0; idxLetter<_word.length; idxLetter++){
+  var word = _word.toUpperCase();
+
+  document.getElementById('masterFlapper').innerHTML = '';
+
+  for(idxLetter=0; idxLetter<word.length; idxLetter++){
 
     var divDigit = document.createElement('div');
     var divBackTop = document.createElement('div');
@@ -26,13 +30,12 @@ function startFlapper(_word){
 
   }
 
-  $('.flapper .digit').each(function(index) {
+  $('.flapper .digit').each(function(index, value) {
 
-    console.log( index + ": " + $( this ).text() );
 
     var flap = new FlapDigit($(this));
-    var rand = Math.floor(Math.random() * 9) + 1;
-    flap.cycleTo(_word[index]);
+    flap.cycleTo(word[index]);
+    // console.log( index + ": " + word[index]);
 
     // setInterval(function() {
     //   var rand = Math.floor(Math.random() * 9) + 1;
@@ -70,7 +73,7 @@ $(document).ready(function() {
     initialize: function() {
       this.$prev.html('');
       this.$next.html('');
-      // console.log(this);
+      console.log(this);
     },
 
     increment: function() {

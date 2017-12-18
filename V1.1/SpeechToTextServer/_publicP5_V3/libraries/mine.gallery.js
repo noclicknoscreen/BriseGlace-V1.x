@@ -1,15 +1,18 @@
 
-function startGallery(){
+function startGallery(_allClues){
 
   var idxCreation = 0;
 
   // Pop all polas
-  popAPola('Machine à coudre','http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg',idxCreation++);
-  popAPola('Pont','https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg',idxCreation++);
-  popAPola('Château',"http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg",idxCreation++);
-  // popAPola('La Brévenne','https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG',idxCreation++);
-  popAPola('Blason','https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg',idxCreation++);
-  popAPola('Vue de la ville','https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG',idxCreation++);
+  for(clue in _allClues){
+    popAPola(_allClues[clue].keyWord, _allClues[clue].picture,idxCreation++);
+  }
+  // popAPola('Machine à coudre','http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg',idxCreation++);
+  // popAPola('Pont','https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg',idxCreation++);
+  // popAPola('Château',"http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg",idxCreation++);
+  // // popAPola('La Brévenne','https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG',idxCreation++);
+  // popAPola('Blason','https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg',idxCreation++);
+  // popAPola('Vue de la ville','https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG',idxCreation++);
 
 }
 
@@ -18,6 +21,8 @@ function stopGallery(){
 }
 
 function popAPola(_text, _link, _idxCreated){
+
+  console.log('Adding clues [text,link,index] : ['+_text+','+_link+','+_idxCreated+']')
 
   var maxImgSize = 300;
   var angleAmplitude = 10.0;

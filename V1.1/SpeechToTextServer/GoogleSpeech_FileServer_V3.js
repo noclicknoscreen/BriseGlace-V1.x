@@ -116,6 +116,7 @@ function startRecognition(myPath)
     encoding: 'LINEAR16',
     sampleRateHertz: sampleRate,
     languageCode: 'fr-FR',
+    profanityFilter: true,
   };
   const request = {
     audio: audio,
