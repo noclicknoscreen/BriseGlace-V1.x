@@ -12,8 +12,11 @@ function preload() {
   // Answers ----------------------------------------------------------
   startAnswers();
 
-  // Gallery
+  // Gallery ----------------------------------------------------------
   startGallery();
+
+  // Gallery ----------------------------------------------------------
+  startFlapper("L'ARBRESLE");
 
 }
 
@@ -63,26 +66,10 @@ Socket events
 ----------------------------------------------- */
 function newTranscription(transcrData){
 
-  // var key, value;
-  // console.log('[Trancription recue] : ' + transcrData);
-  //
-  // myText = transcrData;
-  //
-  // if(transcrData !== ''){
-  //
-  //    myAnswers.add(transcrData);
-  //
-  //    myEnigmas.nextHint();
-  //
-  //   // var res = transcrData.split(' ');
-  //   // var nb = res.length;
-  //   //
-  //   // for (i = 0; i < nb; i++) {
-  //   //   myAnswers.add(res[i]);
-  //   // }
-  //
-  // }
-  //
-  // socket.emit('listen');
+  console.log('[Trancription recue] : ' + transcrData);
+
+  if(transcrData !== ''){
+    addOneAnswer(transcrData);
+  }
 
 }

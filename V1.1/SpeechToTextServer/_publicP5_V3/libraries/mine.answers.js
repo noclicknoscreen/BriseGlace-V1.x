@@ -1,9 +1,9 @@
 
 const maxWords = 10;
 
-  var myFont;
-  var answersDisplayed = [];
-  var allAnswers = [];
+var myFont;
+var answersDisplayed = [];
+var allAnswers = [];
 
 function startAnswers() {
 
@@ -11,6 +11,10 @@ function startAnswers() {
 
 function addOneAnswer(_newAnswerText) {
 
+  if(allAnswers.includes(_newAnswerText)){
+      // allready said !!!!
+  }else{
+    // never said -> add it !
     allAnswers.push(_newAnswerText);
 
     // ------------------------------------------------------------------------------------------------------------
@@ -33,5 +37,6 @@ function addOneAnswer(_newAnswerText) {
       console.log('Changing li ['+liId +'] into ['+ answersDisplayed[i] + ']');
 
     }
+  }
 
 };
