@@ -11,10 +11,13 @@
   text-decoration:none;
   font-size:28px;
 
-  position:  'fixed';
-  left:     '0px';
-  top:      '0px';
+  /*position:  'fixed';
+  left:     0px;
+  top:      0px;*/
+  /*width : 100%;
+  height: 100%;*/
 
+  z-index : 1;
   /*display: block;*/
 
 }
@@ -35,9 +38,9 @@
 @keyframes inAndOut {
   /* On entre par la gauche */
   0%{
-    transform:translate(-2000px,0px);
-    -moz-transform:translate(-2000px,0px);
-    -webkit-transform:translate(-2000px,0px);
+  transform:translate(0px,1400px);
+  -moz-transform:translate(0px,1400px);
+  -webkit-transform:translate(0px,1400px);
   }
   /* On reste un peu au milieu */
   10%, 90%{
@@ -47,9 +50,9 @@
   }
   /* On entre par la gauche */
   100%{
-    transform:translate(2000px,0px);
-    -moz-transform:translate(2000px,0px);
-    -webkit-transform:translate(2000px,0px);
+    transform:translate(0px,-1000px);
+    -moz-transform:translate(0px,-1000px);
+    -webkit-transform:translate(0px,-1000px);
   }
 }
 

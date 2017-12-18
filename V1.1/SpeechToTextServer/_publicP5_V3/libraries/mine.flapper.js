@@ -115,8 +115,8 @@ $(document).ready(function() {
       var _this = this;
       _this.targetAsciiCode = _letter.charCodeAt(0);
 
-      console.log('Cycle to letter : ' + _letter + ', ascii code:' + _this.currentAsciiCode);
-      console.log('Target is : ' + String.fromCharCode(_this.targetAsciiCode) + ', ascii code:' + _this.targetAsciiCode);
+      // console.log('Cycle to letter : ' + _letter + ', ascii code:' + _this.currentAsciiCode);
+      // console.log('Target is : ' + String.fromCharCode(_this.targetAsciiCode) + ', ascii code:' + _this.targetAsciiCode);
 
       if (this.interval_timer) {
         clearInterval(this.interval_timer);
@@ -125,7 +125,7 @@ $(document).ready(function() {
 
       this.interval_timer = setInterval(function(){
 
-        console.log('Comparing ['+_this.targetAsciiCode+'->'+String.fromCharCode(_this.targetAsciiCode)+'] and ['+_this.currentAsciiCode+'->'+String.fromCharCode(_this.currentAsciiCode)+']')
+        // console.log('Comparing ['+_this.targetAsciiCode+'->'+String.fromCharCode(_this.targetAsciiCode)+'] and ['+_this.currentAsciiCode+'->'+String.fromCharCode(_this.currentAsciiCode)+']')
 
         if (_this.targetAsciiCode === _this.currentAsciiCode) {
           clearInterval(_this.interval_timer);

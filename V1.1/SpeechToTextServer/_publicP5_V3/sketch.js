@@ -58,6 +58,12 @@ function keyReleased(){
   }else{
     wordTyped += key;
   }
+
+  if (keyCode == ' ') {
+    var fs = fullscreen();
+    fullscreen(!fs);
+  }
+
   return false; // prevent default
 }
 
