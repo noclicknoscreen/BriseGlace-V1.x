@@ -36,18 +36,16 @@ function listenX(socket){
 // -----------------------------------------------------------------------------
 
 // ------------------------------------------------------
-// CORE SERVER SECTION ---------------------------------------------------------
-//startRecording();
-
-// ------------------------------------------------------
-
-// ------------------------------------------------------
 // Functions section
 // ------------------------------------------------------
 
 // The name of the audio file to transcribe
 function startRecording()
 {
+
+  if(recordTimeout !== undefined){
+    clearTimeout(recordTimeout);
+  }
 
   tmpFileName = tmp.tmpNameSync({ template: '/tmp/tmp-XXXXXX.wav' });
   console.log("Enregistrement sur ce fichier : " + tmpFileName);

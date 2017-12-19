@@ -1,4 +1,8 @@
 
+var timerPola;
+var indiceNewPola;
+var allClues;
+
 function showGallery(){
   w3.show("#Gallery");
 };
@@ -8,14 +12,46 @@ function hideGallery(){
 
 function startGallery(_allClues){
 
+  if(indiceNewPola === undefined){
+    indiceNewPola = 0;
+  }
+  allClues = _allClues;
+
   var idxCreation = 0;
   document.getElementById("GalleryPic").innerHTML = '';
-  // Pop all polas
-  for(clue in _allClues){
-    popAPola(_allClues[clue].keyWord, _allClues[clue].picture,idxCreation++);
-  }
 
-}
+  clearTimeout(timerPola);
+
+  timerPola = setInterval(function(){
+
+    popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
+
+    if(indiceNewPola >= allClues.length){
+      indiceNewPola = 0;
+    };
+
+  }, 10000);
+
+  // // On tire au sort 3 indices différents
+  // var rndIndices = [];
+  // for(idxIndice = 0; idxIndice<3; idxIndice++){
+  //   do{
+  //     var newIndice = floor(random(0,1) * _allClues.length);
+  //     console.log('Nouvel indice : ' + newIndice);
+  //   }while(rndIndices.indexOf(newIndice) > 0);
+  //   rndIndices.push(newIndice);
+  //
+  // }
+  // for(x in rndIndices){
+  //   popAPola(_allClues[x].keyWord, _allClues[x].picture,idxCreation++);
+  // }
+
+  // Pop all polas
+  // for(clue in _allClues){
+  //   popAPola(_allClues[clue].keyWord, _allClues[clue].picture,idxCreation++);
+  // }
+
+};
 
 function stopGallery(){
   document.getElementById("page_ul").innerHtml('');
@@ -60,7 +96,7 @@ function popAPola(_text, _link, _idxCreated){
   newPic.style.display= 'block';
   // newPic.style.backgroundColor= '#fff';
   newPic.style.margin= 'auto';
-  newPic.style.zIndex = '2';
+  // newPic.style.zIndex = '2';
   //
   newPic.onload = function() {
     var height = this.naturalHeight;
@@ -81,20 +117,21 @@ function popAPola(_text, _link, _idxCreated){
   newPicContent.style.width = '400px';
   newPicContent.style.height = '400px';
   newPicContent.style.backgroundColor= '#fff';
+  newShadow.style.zIndex = '2';
 
   // Image (Masque Pola)---------------------------------------------------------
   newShadow.src = 'assets/Images/Polaroid-A02_O.svg';
   newShadow.style.position = "absolute";
   newShadow.style.left = "5px";
-  newShadow.style.top = "7px";
+  newShadow.style.top = "12px";
   newShadow.style.opacity = "0.3";
   newShadow.style.zIndex = '1';
 
   // List ----------------------------------------------------------
-  // var minX = 0.05 * document.getElementById("Gallery").clientWidth;
-  // var maxX = 0.75 * document.getElementById("Gallery").clientWidth;
-  var minX = 100;
-  var maxX = 800;
+  var minX = 0.25 * displayWidth;
+  var maxX = 0.75 * displayWidth;
+  // var minX = 100;
+  // var maxX = 800;
 
   var minY = 50;
   var maxY = 350;
@@ -122,18 +159,21 @@ function popAPola(_text, _link, _idxCreated){
 
   // Div Master pour l'animation d'entrée/sortie --------------------
   var rndDuration = floor(random(25,40));
-  var rndDelay = _idxCreated * floor(random(10,15));
-  console.log('animation timings is : ' + rndDuration + ',' + rndDelay);
+  // var rndDelay = _idxCreated * floor(random(10,15));
+  // var rndDuration = 40;
+  // var rndDelay = _idxCreated * 15;
+  console.log('animation timings is : ' + rndDuration);
 
   // newMasterDiv.style.backgroundColor= '#fff';
   // newMasterDiv.style.width = '400px';
   // newMasterDiv.style.height = '400px';
   newMasterDiv.style.animationName = 'inAndOut';
   newMasterDiv.style.animationDuration = rndDuration.toString() + 's';
-  newMasterDiv.style.animationDelay = rndDelay.toString() + 's';
+  // newMasterDiv.style.animationDelay = rndDelay.toString() + 's';
   newMasterDiv.style.animationTimingFunction="ease-in-out" ;
   newMasterDiv.style.animationFillMode="both" ;
-  newMasterDiv.style.animationIterationCount='infinite';
+  // newMasterDiv.style.animationIterationCount='infinite';
+  // newMasterDiv.style.zIndex= (_idxCreated + 100).toString();
 
   // On met tout ensemble
   newMasterDiv.appendChild(newDiv);

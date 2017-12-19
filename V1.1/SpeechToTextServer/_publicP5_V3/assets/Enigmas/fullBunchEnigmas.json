@@ -2,7 +2,6 @@
   "enigmas": [
     {
       "finalAnswer": "BRIGNAIS",
-      "displayAnswer": "BRIGNAIS",
       "emptyWord": "........",
       "type": "motus",
       "clues": [
@@ -27,7 +26,7 @@
           "picture": "https://upload.wikimedia.org/wikipedia/commons/4/43/Blason_ville_fr_Brignais_%28Rh%C3%B4ne%29.svg"
         },
         {
-          "keyWord": "Vu de la ville",
+          "keyWord": "Vue de la ville",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/9/92/Brignais_vue_du_pont_vieux.jpg"
         },
         {
@@ -37,8 +36,7 @@
       ]
     },
     {
-      "finalAnswer": "ARBRESLE",
-      "displayAnswer": "L'ARBRESLE",
+      "finalAnswer": "L'ARBRESLE",
       "emptyWord": ".'........",
       "type": "motus",
       "clues": [
@@ -70,7 +68,6 @@
     },
     {
       "finalAnswer": "LENTILLY",
-      "displayAnswer": "LENTILLY",
       "emptyWord": "........",
       "type": "motus",
       "clues": [

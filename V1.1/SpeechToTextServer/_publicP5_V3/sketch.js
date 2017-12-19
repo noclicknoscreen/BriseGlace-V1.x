@@ -1,7 +1,7 @@
 
 var socket;
 var wordTyped;
-var finalAnswer;
+var myFinalAnswer;
 
 var isGameStarted;
 
@@ -26,15 +26,6 @@ function setup() {
 function draw() {
 
   background('#fff');
-
-  // Answers ----------------------------------------------------------
-  // myAnswers.draw();
-  // image(imgBackground, answerPosX, answerPosY);
-
-  // ---------------------------------------------------
-  textSize(32);
-  textAlign(CENTER);
-  text(wordTyped, 0.5 * width, 0.9 * height);
 
 }
 
@@ -66,7 +57,22 @@ function newTranscription(transcrData){
 
   if(transcrData !== ''){
       if(isGameStarted === true){
-        hangmanTranscript(transcrData);
+
+        var result = false;
+
+        if(enigmaType() === 'motus'){
+          result = motusTranscript(transcrData);
+          // result = hangmanTranscript(transcrData);
+        }else if (enigmaType() === 'hangman') {
+          result = hangmanTranscript(transcrData);
+        }
+
+        if(result===true){
+          endTheGame();
+        }else {
+          addOneAnswer(transcrData);
+        }
+
       }else{
         addOneAnswer(transcrData);
         startForReal();
@@ -75,6 +81,9 @@ function newTranscription(transcrData){
 
 }
 
+// ---------------------------------------------------------------------------------------
+// Game : Pendu
+// On essaie des mots jusqu'à trouver la bonne réponse
 function hangmanTranscript(_transcription){
 
   var upTranscrData = _transcription.toUpperCase();
@@ -83,19 +92,61 @@ function hangmanTranscript(_transcription){
 
   console.log('Compare data=' + upTranscrData + '; answer=' + upFinalAnswer);
 
-  if(pos > 0){
-    // ---------------------------------------------------
-    textSize(32);
-    textAlign(CENTER);
-    fill('#F00');
-    text('GAGNE !!!!!!!!!!!!', 0.5 * width, 0.5 * height);
-    console.log('GAGNE !!!!!!!!!!!!!!!!!!!!!');
+  // ---------------------------------------------------
+  return compareAnswers(motusAnswer);
 
-    startFlapper(displayAnswer());
-    endTheGame();
+}
+
+// ---------------------------------------------------------------------------------------
+// Game : Motus
+// On garde les lettres à la bonne place jusqu'à avoir complété tout le mot
+
+var motusAnswer = '';
+
+function motusTranscript(_transcription){
+
+  var tempMotusAnswer = '';
+
+  var upTranscrData = _transcription.toUpperCase();
+  upTranscrData = upTranscrData.trim();
+  upTranscrData = upTranscrData.replace('"','');
+
+  var upFinalAnswer = myFinalAnswer.toUpperCase();
+
+  for(idxLetter=0;idxLetter<upFinalAnswer.length;idxLetter++){
+
+      console.log('Comparaison ['+idxLetter+'] : ' + upTranscrData[idxLetter] + ' is equal to ' + upFinalAnswer[idxLetter] + '?');
+
+      if(upTranscrData[idxLetter] === upFinalAnswer[idxLetter]){
+        console.log('Find letter ['+idxLetter+'] = ' + upTranscrData[idxLetter]);
+        tempMotusAnswer += upTranscrData[idxLetter];
+
+      }else {
+        tempMotusAnswer += motusAnswer[idxLetter];
+        wonOrLost = false;
+
+      }
+  }
+
+  motusAnswer = tempMotusAnswer;
+  console.log('Motus answer = ' + motusAnswer);
+  startFlapper(motusAnswer);
+
+  // ---------------------------------------------------
+  return compareAnswers(motusAnswer);
+
+}
+
+function compareAnswers(_data){
+  // on recherche si le mot est trouvé
+  var pos = _data.toUpperCase().search(finalAnswer().toUpperCase());
+  console.log('Compare motus=' + _data.toUpperCase() + ' <-> answer=' + finalAnswer().toUpperCase() + ' result=' + pos);
+
+  if(pos >= 0){
+    return true;
 
   }else {
-    addOneAnswer(_transcription);
+    return false;
   }
 }
 
@@ -109,6 +160,8 @@ function hangmanTranscript(_transcription){
 function freshStart(){
 
   myFinalAnswer = finalAnswer();
+  motusAnswer = emptyWord();
+
   // Load fake word -------------------------------------
   startFlapper(emptyWord());
   // Load answer -------------------------------------
@@ -149,6 +202,9 @@ function startForReal(){
 function endTheGame(){
 
   isGameStarted = false;
+  motusAnswer = '';
+
+  startFlapper(finalAnswer());
 
   // --
   hideGallery();
@@ -162,7 +218,7 @@ function endTheGame(){
 
   var timerRelaunch = setTimeout(function(){
     setFirstLine('Re-jouons ensemble...');
-    setSecondLine('Trouvons le mot caché !');
+    setSecondLine('Trouvons le mot caché grâce aux photos !');
     setThirdLine('');
     newEnigma();
     freshStart();

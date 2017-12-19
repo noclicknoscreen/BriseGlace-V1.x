@@ -3,6 +3,8 @@ var loadCallback;
 var theEnigma;
 var allEnigmas;
 
+var motusAnswer;
+
 // FLIP FLAP Class -----------------------------------------------------------------------------------------------
 function loadEnigmas(_path, _loadCallback) {
   console.log("Trying to load : " + _path);
@@ -25,7 +27,6 @@ function enigmasLoaded(_allEnigmas) {
 
     newEnigma();
 
-    // theEnigma = _allEnigmas.enigmas[rndIndex];
     // Call the back at top level
     loadCallback();
 
@@ -53,12 +54,7 @@ function newEnigma(){
 }
 
 function finalAnswer() {
-  // console.log('Enigma callback called !!!!! answer is : ' + theEnigma.finalAnswer);
-  return theEnigma.finalAnswer;
-};
-function displayAnswer() {
-  // console.log('Enigma callback called !!!!! answer is : ' + theEnigma.finalAnswer);
-  return theEnigma.displayAnswer;
+    return theEnigma.finalAnswer;
 };
 
 function emptyWord() {
@@ -68,6 +64,10 @@ function emptyWord() {
 
 function clues() {
   return theEnigma.clues;
+};
+
+function enigmaType() {
+  return theEnigma.type;
 };
 
 //
