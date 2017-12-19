@@ -1,0 +1,43 @@
+
+/* STRUCTURAL STYLES */
+
+.message {
+    font-family: "DK Crayon Crumble";
+    font-size: 54px;
+
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+
+    z-index : 0;
+
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:center;
+    left:center;
+
+    /* Text */
+    text-align: left;
+    vertical-align: middle;
+}
+.message ul{
+  list-style-type:none;
+}
+#MasterLines {
+
+  position:relative;
+  top:30%;
+  left:auto;
+}
+#FirstLine {
+  position:relative;
+  left:30%;
+}
+#SecondLine {
+  position:relative;
+  left:50%;
+}
+#ThirdLine {
+  font-size: 200%;
+}

@@ -1,18 +1,19 @@
 
+function showGallery(){
+  w3.show("#Gallery");
+};
+function hideGallery(){
+  w3.hide("#Gallery");
+};
+
 function startGallery(_allClues){
 
   var idxCreation = 0;
-
+  document.getElementById("GalleryPic").innerHTML = '';
   // Pop all polas
   for(clue in _allClues){
     popAPola(_allClues[clue].keyWord, _allClues[clue].picture,idxCreation++);
   }
-  // popAPola('Machine à coudre','http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg',idxCreation++);
-  // popAPola('Pont','https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg',idxCreation++);
-  // popAPola('Château',"http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg",idxCreation++);
-  // // popAPola('La Brévenne','https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG',idxCreation++);
-  // popAPola('Blason','https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg',idxCreation++);
-  // popAPola('Vue de la ville','https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG',idxCreation++);
 
 }
 
@@ -24,15 +25,15 @@ function popAPola(_text, _link, _idxCreated){
 
   console.log('Adding clues [text,link,index] : ['+_text+','+_link+','+_idxCreated+']')
 
-  var maxImgSize = 300;
   var angleAmplitude = 10.0;
 
   var newLi = document.createElement("li");
   var newDiv = document.createElement("div");
   var newMasterDiv = document.createElement("div");
-  var newImg = document.createElement("img");
-  var newMsk = document.createElement("img");
-  var newShadow = document.createElement("img");
+  var newPicContent = document.createElement("div");
+  var newPic = document.createElement("img");       // Illustration picked on internet
+  var newPolaMask = document.createElement("img");  // Polaroid Mask
+  var newShadow = document.createElement("img");    // Dropped shadow
 
   // Text ----------------------------------------------------------
   // Mot clé accompagnant l'image
@@ -47,20 +48,39 @@ function popAPola(_text, _link, _idxCreated){
   newDiv.style.zIndex = '4';
 
   // Image (Masque Pola)---------------------------------------------------------
-  newMsk.src = 'assets/Images/Polaroid-A02.svg';
-  newMsk.style.position = "absolute";
-  newMsk.style.left = "0px";
-  newMsk.style.top = "0px";
-  newMsk.style.zIndex = '3';
+  newPolaMask.src = 'assets/Images/Polaroid-A02.svg';
+  newPolaMask.style.position = "absolute";
+  newPolaMask.style.left = "0px";
+  newPolaMask.style.top = "0px";
+  newPolaMask.style.zIndex = '3';
 
   // Image (Image piochée sur le net)---------------------------------------------------------
-  newImg.src = _link;
-  newImg.style.position = "absolute";
-  newImg.style.left = "20px";
-  newImg.style.top = "20px";
-  newImg.style.width = '400px';
-  newImg.style.height = '400px';
-  newImg.style.zIndex = '2';
+  const maxSize = 400;
+  newPic.src = _link;
+  newPic.style.display= 'block';
+  // newPic.style.backgroundColor= '#fff';
+  newPic.style.margin= 'auto';
+  newPic.style.zIndex = '2';
+  //
+  newPic.onload = function() {
+    var height = this.naturalHeight;
+    var width = this.naturalWidth;
+
+    if (height > width) {
+      newPic.style.maxWidth = maxSize.toString() + "px";
+    }
+    else{
+      newPic.style.maxHeight = maxSize.toString() + "px";
+    }
+  }
+
+  newPicContent.style.position = "absolute";
+  newPicContent.style.overflow = "hidden";
+  newPicContent.style.left = "20px";
+  newPicContent.style.top = "20px";
+  newPicContent.style.width = '400px';
+  newPicContent.style.height = '400px';
+  newPicContent.style.backgroundColor= '#fff';
 
   // Image (Masque Pola)---------------------------------------------------------
   newShadow.src = 'assets/Images/Polaroid-A02_O.svg';
@@ -97,22 +117,30 @@ function popAPola(_text, _link, _idxCreated){
   newLi.style.left = '0px';
   newLi.style.top = '0px';
 
+
   // Div Master pour l'animation d'entrée/sortie --------------------
-  newMasterDiv.style.position = 'absolute';
-  newMasterDiv.style.top = '50%';
+  var rndDuration = floor(random(25,40));
+  var rndDelay = _idxCreated * floor(random(10,15));
+  console.log('animation timings is : ' + rndDuration + ',' + rndDelay);
+
+  // newMasterDiv.style.backgroundColor= '#fff';
+  // newMasterDiv.style.width = '400px';
+  // newMasterDiv.style.height = '400px';
   newMasterDiv.style.animationName = 'inAndOut';
-  newMasterDiv.style.animationDuration = '60s';
-  newMasterDiv.style.animationDelay = (_idxCreated*20).toString() + 's';
+  newMasterDiv.style.animationDuration = rndDuration.toString() + 's';
+  newMasterDiv.style.animationDelay = rndDelay.toString() + 's';
   newMasterDiv.style.animationTimingFunction="ease-in-out" ;
   newMasterDiv.style.animationFillMode="both" ;
+  newMasterDiv.style.animationIterationCount='infinite';
 
   // On met tout ensemble
   newMasterDiv.appendChild(newDiv);
-  newMasterDiv.appendChild(newMsk);
-  newMasterDiv.appendChild(newImg);
+  newMasterDiv.appendChild(newPolaMask);
+  newPicContent.appendChild(newPic);
+  newMasterDiv.appendChild(newPicContent);
   newMasterDiv.appendChild(newShadow);
   newLi.appendChild(newMasterDiv);
 
-  document.getElementById("galleryPic").appendChild(newLi);
+  document.getElementById("GalleryPic").appendChild(newLi);
 
 }

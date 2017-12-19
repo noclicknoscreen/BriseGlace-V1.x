@@ -7,6 +7,7 @@ var record = require('node-record-lpcm16');
 var fs = require('fs');
 var file;
 const sampleRate = 16000;
+var recordTimeout;
 
 // Socket decalrations ---------------------------------------------------------
 var express = require('express');
@@ -79,10 +80,10 @@ function startRecording()
   })
   .pipe(file);
 
-  //Stop recording after three seconds
-  // setTimeout(function () {
-  //   record.stop();
-  // }, 5000)
+  // Stop recording after three seconds
+  recordTimeout = setTimeout(function () {
+    record.stop();
+  }, 20000)
 
 }
 
@@ -103,6 +104,9 @@ function startRecognition(myPath)
 {
 
   console.log('Lancement reconnaissance sur ce fichier : ' + myPath);
+
+  // Stops the timeout, it will restart after a new startRecording
+  clearTimeout(recordTimeout);
 
   // Reads a local audio file and converts it to base64
   const newFile = fs.readFileSync(myPath);

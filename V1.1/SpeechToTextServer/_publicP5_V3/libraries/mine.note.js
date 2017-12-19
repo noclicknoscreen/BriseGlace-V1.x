@@ -5,9 +5,26 @@ var myFont;
 var answersDisplayed = [];
 var allAnswers = [];
 
-function startAnswers() {
-
+function showNote(){
+    w3.show("#Note");
 };
+function hideNote(){
+    w3.hide("#Note");
+};
+
+function freshStartNote(){
+
+  allAnswers.splice(0,allAnswers.length);
+
+  for (i = 0; i < 10; i++) {
+    // Get the  list element
+    var changedLi = document.getElementById('Answer' + i);
+    // Change the content
+    changedLi.innerHTML = '';
+    changedLi.removeAttribute('class');
+  }
+};
+
 
 function addOneAnswer(_newAnswerText) {
 

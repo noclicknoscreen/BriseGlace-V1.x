@@ -3,7 +3,7 @@
 
 .flapper {
     font-family: "Prestige Elite";
-    font-weight: 300;
+    /*font-weight: 300;*/
     box-sizing: content-box;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -289,9 +289,4 @@
     color: #222;
     padding: 0px;
     background-color: #f6f6f6;
-}
-
-@font-face  {
-    font-family: "Prestige Elite";
-    src: url("../Fonts/prestigeelitestd_bd.ttf");
 }

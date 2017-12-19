@@ -2,11 +2,18 @@
 const minAsciiCode = 33;
 const maxAsciiCode = 90;
 
+function showMasterFlapper(){
+    w3.show("#MasterFlapper");
+};
+function hideMasterFlapper(){
+    w3.hide("#MasterFlapper");
+};
+
 function startFlapper(_word){
 
   var word = _word.toUpperCase();
 
-  document.getElementById('masterFlapper').innerHTML = '';
+  document.getElementById('MasterFlapper').innerHTML = '';
 
   for(idxLetter=0; idxLetter<word.length; idxLetter++){
 
@@ -26,7 +33,7 @@ function startFlapper(_word){
     divDigit.appendChild(divBackBottom);
     divDigit.appendChild(divFrontTop);
     divDigit.appendChild(divFrontBottom);
-    document.getElementById('masterFlapper').appendChild(divDigit);
+    document.getElementById('MasterFlapper').appendChild(divDigit);
 
   }
 
