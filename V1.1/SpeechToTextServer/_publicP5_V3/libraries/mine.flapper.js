@@ -12,8 +12,12 @@ function hideMasterFlapper(){
 function startFlapper(_word){
 
   var word = _word.toUpperCase();
+  var MasterFlapper = document.getElementById('MasterFlapper');
 
-  document.getElementById('MasterFlapper').innerHTML = '';
+  MasterFlapper.innerHTML = '';
+  var middlePos = 0.5 * MasterFlapper.clientWidth;
+  var realPos = middlePos -  0.5*_word.length*72;
+  MasterFlapper.style.left = realPos.toString() + 'px';
 
   for(idxLetter=0; idxLetter<word.length; idxLetter++){
 
@@ -56,11 +60,15 @@ function startFlapper(_word){
 $(document).ready(function() {
 
   FlapDigit = function($ele) {
+    this.digits = ['&nbsp;', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', "'", '-', ' '];
+    this.pos = 0;
+    this.target = this.digits[0];
+
     // this.digits = ['&nbsp;', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '.', ',', ':', '$'];
     // this.pos = 0;
     // this.target = this.digits[0];
-    this.targetAsciiCode = minAsciiCode;
-    this.currentAsciiCode = minAsciiCode;
+    // this.targetAsciiCode = minAsciiCode;
+    // this.currentAsciiCode = minAsciiCode;
     this.interval = 150;
     this.timeout;
     this.animate = true;
@@ -78,8 +86,8 @@ $(document).ready(function() {
   FlapDigit.prototype = {
 
     initialize: function() {
-      this.$prev.html('');
-      this.$next.html('');
+      this.$prev.html(this.digits[this.pos]);
+      this.$next.html(this.digits[this.pos]);
       console.log(this);
     },
 
@@ -87,14 +95,14 @@ $(document).ready(function() {
       var _this = this;
 
       // Increment eache character
-      var next = this.currentAsciiCode + 1;
-      if (next >= maxAsciiCode) {
-        next = minAsciiCode;
+      var next = this.pos + 1;
+      if (next >= this.digits.length) {
+        next = 0;
       }
 
       // There display the letters
-      this.$prev.show().html(String.fromCharCode(this.currentAsciiCode));
-      this.$next.hide().html(String.fromCharCode(next));
+      this.$prev.show().html(this.digits[this.pos]);
+      this.$next.hide().html(this.digits[next]);
 
       var speed1 = Math.floor(Math.random() * this.interval * .4 + this.interval * .3);
       var speed2 = Math.floor(Math.random() * this.interval * .1 + this.interval * .2);
@@ -117,16 +125,18 @@ $(document).ready(function() {
         }, speed);
       }
 
-      this.currentAsciiCode = next;
+      this.pos = next;
 
     },
 
     cycleTo: function(_letter) {
       var _this = this;
-      _this.targetAsciiCode = _letter.charCodeAt(0);
 
-      // console.log('Cycle to letter : ' + _letter + ', ascii code:' + _this.currentAsciiCode);
-      // console.log('Target is : ' + String.fromCharCode(_this.targetAsciiCode) + ', ascii code:' + _this.targetAsciiCode);
+      var myPos = this.digits.indexOf(_letter);
+      if(myPos < 0){
+        // We not found the letter into the array, so get the empty one
+        myPos = 0;
+      }
 
       if (this.interval_timer) {
         clearInterval(this.interval_timer);
@@ -135,9 +145,7 @@ $(document).ready(function() {
 
       this.interval_timer = setInterval(function(){
 
-        // console.log('Comparing ['+_this.targetAsciiCode+'->'+String.fromCharCode(_this.targetAsciiCode)+'] and ['+_this.currentAsciiCode+'->'+String.fromCharCode(_this.currentAsciiCode)+']')
-
-        if (_this.targetAsciiCode === _this.currentAsciiCode) {
+        if (_this.pos === myPos) {
           clearInterval(_this.interval_timer);
           _this.interval_timer = null;
         } else {
