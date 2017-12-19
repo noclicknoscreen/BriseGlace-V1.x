@@ -36,7 +36,9 @@
 }
 #SecondLine {
   position:relative;
-  left:50%;
+  text-align: center;
+  max-width: 600px;
+  left:20%;
 }
 #ThirdLine {
   font-size: 200%;

@@ -68,9 +68,9 @@ function newTranscription(transcrData){
       if(isGameStarted === true){
         hangmanTranscript(transcrData);
       }else{
+        addOneAnswer(transcrData);
         startForReal();
       }
-      addOneAnswer(transcrData);
   }
 
 }
@@ -94,6 +94,8 @@ function hangmanTranscript(_transcription){
     startFlapper(displayAnswer());
     endTheGame();
 
+  }else {
+    addOneAnswer(_transcription);
   }
 }
 
@@ -162,6 +164,7 @@ function endTheGame(){
     setFirstLine('Re-jouons ensemble...');
     setSecondLine('Trouvons le mot caché !');
     setThirdLine('');
+    newEnigma();
     freshStart();
     clearTimeout(timerRelaunch);
   }, 10000);

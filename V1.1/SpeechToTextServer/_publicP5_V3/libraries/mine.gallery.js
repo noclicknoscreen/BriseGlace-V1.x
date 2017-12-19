@@ -91,8 +91,10 @@ function popAPola(_text, _link, _idxCreated){
   newShadow.style.zIndex = '1';
 
   // List ----------------------------------------------------------
-  var minX = 0.05 * document.getElementById("Gallery").clientWidth;
-  var maxX = 0.75 * document.getElementById("Gallery").clientWidth;
+  // var minX = 0.05 * document.getElementById("Gallery").clientWidth;
+  // var maxX = 0.75 * document.getElementById("Gallery").clientWidth;
+  var minX = 100;
+  var maxX = 800;
 
   var minY = 50;
   var maxY = 350;

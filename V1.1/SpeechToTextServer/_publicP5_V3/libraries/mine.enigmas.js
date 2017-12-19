@@ -1,6 +1,7 @@
 
 var loadCallback;
 var theEnigma;
+var allEnigmas;
 
 // FLIP FLAP Class -----------------------------------------------------------------------------------------------
 function loadEnigmas(_path, _loadCallback) {
@@ -20,30 +21,36 @@ function loadEnigmas(_path, _loadCallback) {
 function enigmasLoaded(_allEnigmas) {
     console.log("Good loading enigmas file");
 
-    // Enigmas
-    var limit = _allEnigmas.enigmas.length;
-    var rndIndex = floor(random() * limit);
-    var choice = 0;
-    console.log('load one enigma index='+rndIndex+' limit was: ' + limit);
+    allEnigmas = _allEnigmas;
 
-    for (x in _allEnigmas.enigmas) {
-      if(choice === rndIndex){
-        theEnigma = _allEnigmas.enigmas[x];
-        console.log('Enigma chosen +++++ ['+x+']: ' + _allEnigmas.enigmas[x].finalAnswer);
-        break;
-      }else{
-        console.log('Enigma rejected --- ['+x+']: ' + _allEnigmas.enigmas[x].finalAnswer);
-      }
-
-      choice++;
-
-    }
+    newEnigma();
 
     // theEnigma = _allEnigmas.enigmas[rndIndex];
     // Call the back at top level
     loadCallback();
 
 };
+
+function newEnigma(){
+  // Enigmas
+  var limit = allEnigmas.enigmas.length;
+  var rndIndex = floor(random() * limit);
+  var choice = 0;
+  console.log('load one enigma index='+rndIndex+' limit was: ' + limit);
+
+  for (x in allEnigmas.enigmas) {
+    if(choice === rndIndex){
+      theEnigma = allEnigmas.enigmas[x];
+      console.log('Enigma chosen +++++ ['+x+']: ' + allEnigmas.enigmas[x].finalAnswer);
+      break;
+    }else{
+      console.log('Enigma rejected --- ['+x+']: ' + allEnigmas.enigmas[x].finalAnswer);
+    }
+
+    choice++;
+
+  }
+}
 
 function finalAnswer() {
   // console.log('Enigma callback called !!!!! answer is : ' + theEnigma.finalAnswer);
