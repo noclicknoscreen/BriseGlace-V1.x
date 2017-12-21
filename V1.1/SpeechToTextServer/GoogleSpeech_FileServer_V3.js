@@ -72,7 +72,9 @@ function startRecording()
   })
   .on('end', function () {
     console.log('Fin du streaming.');
+    mySocket.emit('talking');
     startRecognition(tmpFileName);
+    mySocket.emit('endTalking');
     // Then restart
     //startRecording();
   })

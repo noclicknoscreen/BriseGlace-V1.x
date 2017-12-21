@@ -5,6 +5,8 @@ var myFinalAnswer;
 
 var isGameStarted;
 
+var drawFeedBack;
+
 function setup() {
 
   loadEnigmas('assets/Enigmas/fullBunchEnigmas.json', enigmaLoaded);
@@ -15,11 +17,18 @@ function setup() {
   // Load sockets waiting some words----------------------------------
   socket = io.connect('http://localhost:3000');
   socket.on('words', newTranscription);
+  socket.on('talking', function(){
+    drawFeedBack = true;
+  });
+  socket.on('endTalking', function(){
+    drawFeedBack = false;
+  });
 
   wordTyped = '';
 
   // Hide all of them ----------------------------------------------------------
   // freshStart();
+  drawFeedBack = false;
 
 }
 
@@ -27,7 +36,11 @@ function draw() {
 
   background('#fff');
 
-}
+  if(drawFeedBack == true){
+    fill('#f0f');
+    nostroke();
+    rect(width/2, height/2, 10, 10);}
+  };
 
 function keyReleased(){
 
@@ -56,27 +69,27 @@ function newTranscription(transcrData){
   console.log('[Trancription recue] : ' + transcrData);
 
   if(transcrData !== ''){
-      if(isGameStarted === true){
+    if(isGameStarted === true){
 
-        var result = false;
+      var result = false;
 
-        if(enigmaType() === 'motus'){
-          result = motusTranscript(transcrData);
-          // result = hangmanTranscript(transcrData);
-        }else if (enigmaType() === 'hangman') {
-          result = hangmanTranscript(transcrData);
-        }
-
-        if(result===true){
-          endTheGame();
-        }else {
-          addOneAnswer(transcrData);
-        }
-
-      }else{
-        addOneAnswer(transcrData);
-        startForReal();
+      if(enigmaType() === 'motus'){
+        result = motusTranscript(transcrData);
+        // result = hangmanTranscript(transcrData);
+      }else if (enigmaType() === 'hangman') {
+        result = hangmanTranscript(transcrData);
       }
+
+      if(result===true){
+        endTheGame();
+      }else {
+        addOneAnswer(transcrData);
+      }
+
+    }else{
+      addOneAnswer(transcrData);
+      startForReal();
+    }
   }
 
 }
@@ -115,17 +128,17 @@ function motusTranscript(_transcription){
 
   for(idxLetter=0;idxLetter<upFinalAnswer.length;idxLetter++){
 
-      console.log('Comparaison ['+idxLetter+'] : ' + upTranscrData[idxLetter] + ' is equal to ' + upFinalAnswer[idxLetter] + '?');
+    console.log('Comparaison ['+idxLetter+'] : ' + upTranscrData[idxLetter] + ' is equal to ' + upFinalAnswer[idxLetter] + '?');
 
-      if(upTranscrData[idxLetter] === upFinalAnswer[idxLetter]){
-        console.log('Find letter ['+idxLetter+'] = ' + upTranscrData[idxLetter]);
-        tempMotusAnswer += upTranscrData[idxLetter];
+    if(upTranscrData[idxLetter] === upFinalAnswer[idxLetter]){
+      console.log('Find letter ['+idxLetter+'] = ' + upTranscrData[idxLetter]);
+      tempMotusAnswer += upTranscrData[idxLetter];
 
-      }else {
-        tempMotusAnswer += motusAnswer[idxLetter];
-        wonOrLost = false;
+    }else {
+      tempMotusAnswer += motusAnswer[idxLetter];
+      wonOrLost = false;
 
-      }
+    }
   }
 
   motusAnswer = tempMotusAnswer;
@@ -157,6 +170,7 @@ function compareAnswers(_data){
 //
 // ------------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------------
+var timerFreshStart;
 function freshStart(){
 
   myFinalAnswer = finalAnswer();
@@ -164,8 +178,6 @@ function freshStart(){
 
   // Load fake word -------------------------------------
   startFlapper(emptyWord());
-  // Load answer -------------------------------------
-  startGallery(clues());
 
   // --
   hideGallery();
@@ -178,7 +190,7 @@ function freshStart(){
 
   isGameStarted = false;
 
-  var timerFreshStart = setTimeout(function(){
+  timerFreshStart = setTimeout(function(){
     showMasterFlapper();
     clearTimeout(timerFreshStart);
   }, 3000);
@@ -188,6 +200,8 @@ function freshStart(){
 function startForReal(){
   // ---
   showGallery();
+  startGallery(clues());
+
   freshStartNote();
   showNote();
   showMasterFlapper();
@@ -199,6 +213,7 @@ function startForReal(){
 
 }
 
+var timerRelaunch;
 function endTheGame(){
 
   isGameStarted = false;
@@ -212,19 +227,29 @@ function endTheGame(){
   // ---
 
   showMessage();
-  setFirstLine('Bravo !');
-  setSecondLine('Attention à ne pas rater votre train.');
+  // setFirstLine('Bravo !');
+  // setSecondLine('Attention à ne pas rater votre train.');
+
+  setFirstLine('Vous partez à ' + finalAnswer().toString() + ' ?');
+  setSecondLine(enigmaContent().toString());
+
   setThirdLine('Bon Voyage !');
 
-  var timerRelaunch = setTimeout(function(){
+
+
+  timerRelaunch = setTimeout(function(){
     setFirstLine('Re-jouons ensemble...');
     setSecondLine('Trouvons le mot caché grâce aux photos !');
     setThirdLine('');
     newEnigma();
     freshStart();
-    clearTimeout(timerRelaunch);
+
   }, 10000);
 
+
+  // clearTimeout(timerRelaunch);
+  // clearTimeout(timerFreshStart);
+  //
 }
 
 function enigmaLoaded(){

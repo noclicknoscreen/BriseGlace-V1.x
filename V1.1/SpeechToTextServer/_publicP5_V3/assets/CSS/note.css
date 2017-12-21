@@ -14,7 +14,6 @@
 
   text-align:left;
   text-transform: uppercase;
-  text-decoration:none;
 
   letter-spacing: 5px;
   line-height: 97%;
@@ -29,6 +28,10 @@
 
   top:35px;
   left:50px;
+}
+
+.note li {
+  text-decoration-line: line-through;
 }
 
 .last {

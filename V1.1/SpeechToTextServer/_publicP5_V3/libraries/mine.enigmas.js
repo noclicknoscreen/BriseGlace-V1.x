@@ -66,6 +66,10 @@ function clues() {
   return theEnigma.clues;
 };
 
+function enigmaContent() {
+  return theEnigma.content;
+};
+
 function enigmaType() {
   return theEnigma.type;
 };

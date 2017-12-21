@@ -3,7 +3,7 @@
 
 .message {
     font-family: "DK Crayon Crumble";
-    font-size: 54px;
+    font-size: 70px;
 
     box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -19,7 +19,6 @@
 
     /* Text */
     text-align: left;
-    vertical-align: middle;
 }
 .message ul{
   list-style-type:none;
@@ -27,11 +26,13 @@
 #MasterLines {
 
   position:relative;
-  top:20%;
-  left:15%;
+  top:30%;
+  left:20%;
 
   animation-name: fadeIn;
   animation-duration: 2s;
+
+  vertical-align: middle;
 
 }
 #FirstLine {
@@ -41,12 +42,14 @@
 #SecondLine {
   position:relative;
   /*text-align: left;*/
-  max-width: 800px;
-  left:20%;
+  max-width: 1100px;
+  left:5%;
 }
 #ThirdLine {
   /*text-align: left;*/
   font-size: 200%;
+  position:relative;
+  left:10%;
 }
 
 @@keyframes fadeIn {
@@ -54,6 +57,6 @@
     opacity: 0%;
   }
   to{
-      opacity: 100%;
+    opacity: 100%;
   }
 }

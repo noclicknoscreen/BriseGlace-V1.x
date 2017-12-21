@@ -20,8 +20,10 @@ function startGallery(_allClues){
   var idxCreation = 0;
   document.getElementById("GalleryPic").innerHTML = '';
 
-  clearTimeout(timerPola);
+  // Pop a pola, then pop another every 10 seconds
+  popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
 
+  clearTimeout(timerPola);
   timerPola = setInterval(function(){
 
     popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
@@ -159,21 +161,14 @@ function popAPola(_text, _link, _idxCreated){
 
   // Div Master pour l'animation d'entrée/sortie --------------------
   var rndDuration = floor(random(25,40));
-  // var rndDelay = _idxCreated * floor(random(10,15));
-  // var rndDuration = 40;
-  // var rndDelay = _idxCreated * 15;
   console.log('animation timings is : ' + rndDuration);
 
-  // newMasterDiv.style.backgroundColor= '#fff';
-  // newMasterDiv.style.width = '400px';
-  // newMasterDiv.style.height = '400px';
   newMasterDiv.style.animationName = 'inAndOut';
   newMasterDiv.style.animationDuration = rndDuration.toString() + 's';
-  // newMasterDiv.style.animationDelay = rndDelay.toString() + 's';
   newMasterDiv.style.animationTimingFunction="ease-in-out" ;
   newMasterDiv.style.animationFillMode="both" ;
-  // newMasterDiv.style.animationIterationCount='infinite';
-  // newMasterDiv.style.zIndex= (_idxCreated + 100).toString();
+  newMasterDiv.addEventListener("webkitAnimationEnd", function(){ deletePola(newLi); });
+  newMasterDiv.addEventListener("animationend", function(){ deletePola(newLi); });
 
   // On met tout ensemble
   newMasterDiv.appendChild(newDiv);
@@ -185,4 +180,9 @@ function popAPola(_text, _link, _idxCreated){
 
   document.getElementById("GalleryPic").appendChild(newLi);
 
-}
+};
+
+function deletePola(_newLi){
+  console.log('Animation end on : ' + _newLi + ' : Remove !');
+  document.getElementById("GalleryPic").removeChild(_newLi);
+};

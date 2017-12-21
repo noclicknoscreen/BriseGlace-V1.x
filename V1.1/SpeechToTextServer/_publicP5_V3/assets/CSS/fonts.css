@@ -7,3 +7,9 @@
     font-family: "Prestige Elite";
     src: url("../Fonts/prestigeelitestd_bd.ttf");
 }
+
+
+@font-face  {
+    font-family: "Helvetica";
+    src: url("../Fonts/HELVETICANEUE-CONDENSEDBL 2.TTF");
+}

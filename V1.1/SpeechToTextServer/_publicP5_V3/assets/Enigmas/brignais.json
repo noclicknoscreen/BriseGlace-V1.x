@@ -1,6 +1,7 @@
 {
     "wordToFind": "BRIGNAIS",
     "type": "hangman",
+    "content": "Si vous prenez le train de 15h07, vous y serez pour le goûter.",
     "clues": [
 	{
 	    "answer":"B_______",
