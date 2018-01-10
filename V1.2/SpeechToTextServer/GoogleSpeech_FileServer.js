@@ -66,8 +66,8 @@ function startRecording()
     verbose : true,
     silence       : '0.5',  // seconds of silence before ending
     threshold     : 0.8,   // silence threshold (rec only)
-    // thresholdStart: 0.5,  // silence threshold to start recording, overrides threshold (rec only)
-    // thresholdEnd  : 0.5,   // silence threshold to end recording, overrides threshold (rec only)
+    //thresholdStart: 0.3,  // silence threshold to start recording, overrides threshold (rec only)
+    //thresholdEnd  : 0.9,   // silence threshold to end recording, overrides threshold (rec only)
 
   })
   .on('end', function () {
