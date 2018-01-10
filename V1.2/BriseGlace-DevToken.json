@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "avid-booth-186618",
+  "private_key_id": "ef2b26017437dd7ec864994ed742bbda53c9f4f7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDv7+Sc4+xaydhn\nAlbFathjXe+AyEVAWGWRwzx67efhgCibsKxHb9jkOwjjJGWzW+gCV0lOVCt/ejzd\n2/VQyyMvKhMTOUIECWGD4nmEB36IbudyXAnZbmTO4m1ly0nAvKYeKIfB5u6Zxh2o\n+voLhymPWAzqVFRhHYPnvojPL3fo3qwT/tdwP+EcMiQXCrXt4/+Sgapr/c+LZ6IA\niybXDBm01Jvnj1c4DKbPxo2l1UzfPJqMP9N0C/IIPIBPrg/g1xyaMlsciOYhxMwY\nkYOtaCyGLDt/jAiEgfyZvTUdPUZij7O9srNafvtrxSsNZuaxa9zY9LyhP8vmErBh\nRGNZJ1i7AgMBAAECggEABnf/shaz5+3RojcamDovNYeAXGp7nF9iLaOj3R8//kgr\nXlOinBX/NPgFJm4ex87qviq/Yvs7SPzGduBX7CLRdK/YmLKHKHCz3I+Bb6Emww5x\ngTQEQqEY2qvuxqzon3XaIgLn8oYgA8lRl2R5RVCEOv46R1t8dKuaX+f+CLKbl3Eo\ngHhg+WYvLRYOuL2oCHrk3XTfU7GSxSyJXFVGEJUa3MFBFEgUnJGwmGw4HYfgbKxH\niWYlQUW5cOIivq0MNEVS0QkoE1nCRpqsfvVturrtB/MgXN4Iff2cCZsfGuy+Q0kb\nsrOiJ/fHw3RyGxD8qsJrxQeY8VOHpirRbXFvjoZ8QQKBgQD47oIZ9bFOW2Voxehx\nf1INv/laDzGjzxIexm14CCX9TksGKtLdXHXuvycjiiMXLttCjGUrh6+UJN9e4YYH\nieke/TsbcBalKagR+OwXqEJDS/ZAJLjWny4Z4U3FmNcxLqayijyNZxpRghoeOIEF\nbd2C6Do8jE4sNScidKIongk9sQKBgQD2wAC7jAA+HaOD0nKNNcTIRPeaTUbfIHig\nbsNYHzjwLo/SsH6HKF4by6rEO3GYrh78s9mxHpNJ1ntabjf4saIa9QdxonT687l/\nMQspekh+RSrUG3fIgsocFKxg5JgCdbc/DBWoYADsagpSKJTIFxhWF4Vxfc5a9jSK\nLw9tIAy8KwKBgAb4TqZBbdx+zKEZYX/EC90csfOml0I56wz3i1sgB0hHZ+xdSJgw\nHZE4wvTIymC8zCDZ439LhkwEmEiE0gbmAqP+fSgwhEHNn8oZCStEZ86Qku2K2a4Q\nuO66kz3kIKpc3wgCvN1MtLzxgp+z/1DSmbAvpmnJl+q+9kCNuXifrCyRAoGANcx9\nHGcU8nYh3a73vOQZSJUI60KoDiQVSN19h+wezPdJ8mT64Vsi0aqhS/Gt/d0Q8oYA\nE8cX1ASIlpnraDTKpFgCTHtgSAr1yc6WoW+A+M753I80maoyiNbVErckkXy6/GsV\nGcX8zY79OxaQAeRPMQ4l0S3d3SVLJUnHckKHpEsCgYAK4vLpFIaI9dYTh6nQU5cf\nBmx3JDDJcf831b6wOQQopWEDZkXVqpWIhDFlCbYAT2ht1yZ6q5EigcyKYY5k51x0\nGEP5Ucot2KRzg+jDQxkSIsRcgS529KGKYsMkXgdePPYz4hobu37nNq4MyJUC2Rjl\nbyJIQMnBvIeKKvUpszmoHA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "studio-albert@avid-booth-186618.iam.gserviceaccount.com",
+  "client_id": "114311793439043557502",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/studio-albert%40avid-booth-186618.iam.gserviceaccount.com"
+}

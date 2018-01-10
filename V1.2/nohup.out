@@ -1,0 +1,719 @@
+module.js:327
+    throw err;
+    ^
+
+Error: Cannot find module '/home/briseglace/BriseGlace-V1.x/V1.2/~/BriseGlace-V1.x/V1.2/SpeechToTextServer/GoogleSpeech_FileServer.js'
+    at Function.Module._resolveFilename (module.js:325:15)
+    at Function.Module._load (module.js:276:25)
+    at Function.Module.runMain (module.js:441:10)
+    at startup (node.js:139:18)
+    at node.js:990:3
+module.js:327
+    throw err;
+    ^
+
+Error: Cannot find module '/home/briseglace/BriseGlace-V1.x/V1.2/~/BriseGlace-V1.x/V1.2/SpeechToTextServer/GoogleSpeech_FileServer.js'
+    at Function.Module._resolveFilename (module.js:325:15)
+    at Function.Module._load (module.js:276:25)
+    at Function.Module.runMain (module.js:441:10)
+    at startup (node.js:139:18)
+    at node.js:990:3
+Nouvelle connection : 83ZbLGvuRRAgHtQbAAAA
+Enregistrement sur ce fichier : /tmp/tmp-VSnCAP.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20066ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-VSnCAP.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-bnvJyj.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20260ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-bnvJyj.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-JlVRC8.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20020ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-JlVRC8.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-yo3x39.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20261ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-yo3x39.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-cNHbrG.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20019ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-cNHbrG.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-TtquCw.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20020ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-TtquCw.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-HGYYdr.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-HGYYdr.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-7vRt0K.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20021ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-7vRt0K.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-UWH8kk.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20024ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-UWH8kk.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-1mO4Ct.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20262ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-1mO4Ct.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-lAy0vr.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20262ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-lAy0vr.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-omqrUv.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20026ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-omqrUv.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-cNJtLu.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20261ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-cNJtLu.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-uO1VlF.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-uO1VlF.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-fJ7vLg.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20261ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-fJ7vLg.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-FWWu3t.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20019ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-FWWu3t.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-MI0nHZ.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20019ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-MI0nHZ.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-uzkqZh.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20021ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-uzkqZh.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-5hGu8q.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20022ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-5hGu8q.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-fzmhte.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20019ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-fzmhte.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-KWhEJ5.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20261ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-KWhEJ5.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-va37Q2.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20025ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-va37Q2.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-eNyo6B.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20256ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-eNyo6B.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-Eegche.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20021ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-Eegche.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-yv07ea.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20021ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-yv07ea.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-ahiqJQ.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20259ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-ahiqJQ.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-EUTE9y.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20261ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-EUTE9y.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-3Bi73Y.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20259ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-3Bi73Y.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-WLTTem.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20022ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-WLTTem.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-FGb8vZ.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-FGb8vZ.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-EBibOk.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20020ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-EBibOk.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-0Zb4Mf.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-0Zb4Mf.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-1y7DXG.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-1y7DXG.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-56QqXU.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20260ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-56QqXU.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-2OGIVa.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-2OGIVa.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-zhpqj2.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20025ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-zhpqj2.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-Ulkk8w.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20260ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-Ulkk8w.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-adWBJI.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-adWBJI.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-m35Ce5.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20257ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-m35Ce5.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-cDDLX3.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20257ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-cDDLX3.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-dY17R4.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-dY17R4.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-TRZ4yn.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20260ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-TRZ4yn.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-zOtbUq.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20023ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-zOtbUq.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-cbKPJb.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20020ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-cbKPJb.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-ZpEfAK.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20265ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-ZpEfAK.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-gj9kE4.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20022ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-gj9kE4.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-3Dp05a.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20019ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-3Dp05a.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-7228wi.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20256ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-7228wi.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-Dt5Yxf.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20261ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-Dt5Yxf.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-oFY5LI.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20258ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-oFY5LI.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-wvX0WM.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20023ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-wvX0WM.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-4XUlhs.wav
+Recording with sample rate 16000...
+Nouvelle connection : uskCNSdiue2nIsJTAAAB
+Enregistrement sur ce fichier : /tmp/tmp-2UQ854.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20027ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-2UQ854.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-0gtvLs.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20033ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-0gtvLs.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-jcNM6w.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20012ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-jcNM6w.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-vPC5r1.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20818ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-vPC5r1.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-Ocz9we.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20188ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-Ocz9we.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-8fl3s2.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20190ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-8fl3s2.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-C26uke.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20215ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-C26uke.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-41nu91.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20211ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-41nu91.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-ZyAoIU.wav
+Recording with sample rate 16000...
+Nouvelle connection : LMgiiZ0Eop1yhqD-AAAC
+Enregistrement sur ce fichier : /tmp/tmp-OK9Tsa.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20838ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-OK9Tsa.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-fwJnwL.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20386ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-fwJnwL.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-d5gPh4.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20183ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-d5gPh4.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-B7hOwe.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20581ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-B7hOwe.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-dxN4ft.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20340ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-dxN4ft.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-kwj4LD.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20145ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-kwj4LD.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-Hedft9.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20204ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-Hedft9.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-d3fKrM.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20021ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-d3fKrM.wav
+Nouvelle connection : Tg3qybWfU86gTSRRAAAD
+Enregistrement sur ce fichier : /tmp/tmp-27Y4rm.wav
+Recording with sample rate 16000...
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-gILo2S.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20193ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-gILo2S.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-v4e3lK.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20176ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-v4e3lK.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-pW0to7.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20209ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-pW0to7.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-WaulBN.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20206ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-WaulBN.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-a4z05P.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20140ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-a4z05P.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-p37u7S.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20192ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-p37u7S.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-T7Aq1t.wav
+Recording with sample rate 16000...
+Nouvelle connection : fsxuquJwf2dz79AZAAAE
+Enregistrement sur ce fichier : /tmp/tmp-SR2lto.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20093ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-SR2lto.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-chu2UK.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20100ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-chu2UK.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-9uUtBq.wav
+Recording with sample rate 16000...
+Recording 44 bytes
+End Recording: 20087ms
+Fin du streaming.
+Lancement reconnaissance sur ce fichier : /tmp/tmp-9uUtBq.wav
+--------------------------------------------------------
+Transcription vide ------------------------------------
+--------------------------------------------------------
+Enregistrement sur ce fichier : /tmp/tmp-PS1Tyn.wav
+Recording with sample rate 16000...
