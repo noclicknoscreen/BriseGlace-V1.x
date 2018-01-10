@@ -1,106 +1,46 @@
 {
   "enigmas": [
     {
-      "finalAnswer": "BRIGNAIS",
-      "emptyWord": "........",
-      "content": "Si vous prenez le train de 15h07, vous y serez pour le goûter.",
+      "finalAnswer": "YVES-ARMEL",
+      "emptyWord": "....-.....",
+      "content": "Bonne route pour la suite !",
       "type": "motus",
       "clues": [
         {
-          "keyWord": "La guerre de 100 ans",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/8/81/Brigniais.jpg"
+          "keyWord": "Visionnaire",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/14/Albert_Einstein_1947.jpg"
         },
         {
-          "keyWord": "Sa gare en 1993",
-          "picture": "https://c2.staticflickr.com/4/3941/15449767249_6d784e3c61_b.jpg"
+          "keyWord": "Passionné",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/Thelonious_Monk%2C_Minton%27s_Playhouse%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb_06191%29.jpg"
         },
         {
-          "keyWord": "Aqueduc",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Brignais_-_Aqueduc_du_Gier_-1.JPG"
-        },
-        {
-          "keyWord": "Omnibus",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/0/0c/SF_859_-_BRIGNAIS_-_La_Place.JPG"
-        },
-        {
-          "keyWord": "Blason",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/4/43/Blason_ville_fr_Brignais_%28Rh%C3%B4ne%29.svg"
-        },
-        {
-          "keyWord": "Vue de la ville",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/9/92/Brignais_vue_du_pont_vieux.jpg"
-        },
-        {
-          "keyWord": "Le pont",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Brignais_Garon.jpg"
+          "keyWord": "Spirituel",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/4/46/JohannesPaul2-portrait.jpg"
         }
       ]
     },
     {
-      "finalAnswer": "L'ARBRESLE",
-      "emptyWord": ".'........",
-      "content": "Si vous prenez le train de 14h42, vous y serez pour le goûter.",
+      "finalAnswer": "ERASME",
+      "emptyWord": "......",
+      "content": "Bonne route pour la suite !",
       "type": "motus",
       "clues": [
         {
-          "keyWord": "Machine à coudre",
-          "picture": "http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg"
+          "keyWord": "Petit suisse",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Petit-suisse_assiette.jpg"
         },
         {
-          "keyWord": "Pont",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg"
+          "keyWord": "C'est de la Bâle",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/13/Balles.JPG"
         },
         {
-          "keyWord": "Château",
-          "picture": "http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg"
+          "keyWord": "Philosophe ?",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/12/Bernard-Henri_L%C3%A9vy_redux.jpg"
         },
         {
-          "keyWord": "La Brévenne",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG"
-        },
-        {
-          "keyWord": "Blason",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg"
-        },
-        {
-          "keyWord": "Vue de la ville",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG"
-        }
-      ]
-    },
-    {
-      "finalAnswer": "LENTILLY",
-      "emptyWord": "........",
-      "content": "Si vous prenez le train de 14h42, vous y serez pour le goûter.",
-      "type": "motus",
-      "clues": [
-        {
-          "keyWord": "Le Château de Cruzol",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/Lentilly_-_Tours_de_Cruzol.jpg"
-        },
-        {
-          "keyWord": "Le mont Mercruy",
-          "picture": "https://c1.staticflickr.com/4/3741/9932845804_e1eeec3958_b.jpg"
-        },
-        {
-          "keyWord": "Tirailleur Sénégalais",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/db/Morocco%2C_Fes.jpg"
-        },
-        {
-          "keyWord": "Le blason",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Blason_ville_fr_Lentilly_%28Rh%C3%B4ne%29.svg"
-        },
-        {
-          "keyWord": "Vue du village",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/19/1200pix-CM-vue-generale-1-11-2009_%289a%29.jpg"
-        },
-        {
-          "keyWord": "Champion Olympique de poursuite",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Daniel_Rebillard_1969_Paraguay_stamp.jpg"
-        },
-        {
-          "keyWord": "Graveur",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Jjboissieu.jpg"
+          "keyWord": "La loge de Liane Foly",
+          "picture": "https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fwww.2Efemmeactuelle.2Efr.2Fvar.2Ffemmeactuelle.2Fstorage.2Fimages.2Fbeaute.2Fnews-beaute.2Fliane-foly-coupe-de-cheveux-37905.2F14492593-1-fre-FR.2Fliane-foly-pourquoi-sa-coupe-la-rajeunit.2Ejpg/748x372/quality/80/crop-from/center/liane-foly-pourquoi-sa-coupe-la-rajeunit.jpeg"
         }
       ]
     }
