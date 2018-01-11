@@ -6,7 +6,8 @@ rm -f nohup.out
 
 # Run speech to text server
 cd "../SpeechToTextServer"
-nohup node GoogleSpeech_FileServer.js &
+# nohup node GoogleSpeech_FileServer.js &
+gnome-terminal -e "node GoogleSpeech_FileServer.js"
 
 #!/bin/sh
 # Run chromium start
