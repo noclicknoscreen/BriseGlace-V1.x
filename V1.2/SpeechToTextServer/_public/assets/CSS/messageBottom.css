@@ -1,0 +1,25 @@
+
+/* STRUCTURAL STYLES */
+
+.messageBottom {
+    font-family: "DK Crayon Crumble";
+    font-size: 40px;
+
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+
+    z-index : 0;
+
+    position:absolute;
+    width:100%;
+    height:25%;
+    top:80%;
+    /*left:center;*/
+
+    /* Text */
+    text-align: center;
+}
+.messageBottom ul{
+  list-style-type:none;
+}

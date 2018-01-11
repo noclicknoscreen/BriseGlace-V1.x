@@ -12,27 +12,27 @@ function hideGallery(){
 
 function startGallery(_allClues){
 
-  if(indiceNewPola === undefined){
-    indiceNewPola = 0;
-  }
+  // if(indiceNewPola === undefined){
+  //   indiceNewPola = 0;
+  // }
   allClues = _allClues;
 
   var idxCreation = 0;
   document.getElementById("GalleryPic").innerHTML = '';
 
-  // Pop a pola, then pop another every 10 seconds
-  popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
-
-  clearTimeout(timerPola);
-  timerPola = setInterval(function(){
-
-    popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
-
-    if(indiceNewPola >= allClues.length){
-      indiceNewPola = 0;
-    };
-
-  }, 10000);
+  // // Pop a pola, then pop another every 10 seconds
+  // popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
+  //
+  // clearTimeout(timerPola);
+  // timerPola = setInterval(function(){
+  //
+  //   popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
+  //
+  //   if(indiceNewPola >= allClues.length){
+  //     indiceNewPola = 0;
+  //   };
+  //
+  // }, 10000);
 
   // // On tire au sort 3 indices différents
   // var rndIndices = [];
@@ -57,6 +57,21 @@ function startGallery(_allClues){
 
 function stopGallery(){
   document.getElementById("page_ul").innerHtml('');
+}
+
+function popTheNextPola(){
+
+  if(indiceNewPola === undefined){
+    indiceNewPola = 0;
+  }
+
+  // Pop a pola, then pop another every 10 seconds
+  popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
+
+  if(indiceNewPola >= allClues.length){
+    indiceNewPola = 0;
+  };
+
 }
 
 function popAPola(_text, _link, _idxCreated){
@@ -160,15 +175,15 @@ function popAPola(_text, _link, _idxCreated){
 
 
   // Div Master pour l'animation d'entrée/sortie --------------------
-  var rndDuration = floor(random(25,40));
+  var rndDuration = floor(random(8,6));
   console.log('animation timings is : ' + rndDuration);
 
   newMasterDiv.style.animationName = 'inAndOut';
   newMasterDiv.style.animationDuration = rndDuration.toString() + 's';
   newMasterDiv.style.animationTimingFunction="ease-in-out" ;
-  newMasterDiv.style.animationFillMode="both" ;
-  newMasterDiv.addEventListener("webkitAnimationEnd", function(){ deletePola(newLi); });
-  newMasterDiv.addEventListener("animationend", function(){ deletePola(newLi); });
+  newMasterDiv.style.animationFillMode="forwards" ;
+  // newMasterDiv.addEventListener("webkitAnimationEnd", function(){ deletePola(newLi); });
+  // newMasterDiv.addEventListener("animationend", function(){ deletePola(newLi); });
 
   // On met tout ensemble
   newMasterDiv.appendChild(newDiv);

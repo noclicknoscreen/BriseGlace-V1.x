@@ -7,7 +7,7 @@ var record = require('node-record-lpcm16');
 var fs = require('fs');
 var file;
 const sampleRate = 16000;
-var recordTimeout;
+// var recordTimeout;
 
 // Socket decalrations ---------------------------------------------------------
 var express = require('express');
@@ -43,9 +43,9 @@ function listenX(socket){
 function startRecording()
 {
 
-  if(recordTimeout !== undefined){
-    clearTimeout(recordTimeout);
-  }
+  // if(recordTimeout !== undefined){
+  //   clearTimeout(recordTimeout);
+  // }
 
   tmpFileName = tmp.tmpNameSync({ template: '/tmp/tmp-XXXXXX.wav' });
   console.log("Enregistrement sur ce fichier : " + tmpFileName);
@@ -81,9 +81,9 @@ function startRecording()
   .pipe(file);
 
   // Stop recording after three seconds
-  recordTimeout = setTimeout(function () {
-    record.stop();
-  }, 20000)
+  // recordTimeout = setTimeout(function () {
+  //   record.stop();
+  // }, 20000)
 
 }
 
@@ -106,7 +106,7 @@ function startRecognition(myPath)
   console.log('Lancement reconnaissance sur ce fichier : ' + myPath);
 
   // Stops the timeout, it will restart after a new startRecording
-  clearTimeout(recordTimeout);
+  // clearTimeout(recordTimeout);
 
   // Reads a local audio file and converts it to base64
   const newFile = fs.readFileSync(myPath);
@@ -145,6 +145,8 @@ function startRecognition(myPath)
       console.log('++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
 
     }else{
+      mySocket.emit('empty');
+
       console.log('--------------------------------------------------------');
       console.log('Transcription vide ------------------------------------');
       console.log('--------------------------------------------------------');

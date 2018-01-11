@@ -16,6 +16,9 @@ function startFlapper(_word){
 
   MasterFlapper.innerHTML = '';
   var middlePos = 0.5 * MasterFlapper.clientWidth;
+  if(middlePos === 0){
+    middlePos = 0.5 * 1920;
+  }
   var realPos = middlePos -  0.5*_word.length*72;
   MasterFlapper.style.left = realPos.toString() + 'px';
 

@@ -17,6 +17,7 @@ function setup() {
   // Load sockets waiting some words----------------------------------
   socket = io.connect('http://localhost:3000');
   socket.on('words', newTranscription);
+  socket.on('empty', emptyTranscription);
   socket.on('talking', function(){
     drawFeedBack = true;
   });
@@ -64,12 +65,63 @@ function keyReleased(){
 /* ---------------------------------------------
 Socket events
 ----------------------------------------------- */
+var messageBottomEmpty = [
+  "Parlez un peu plus fort, s'il vous plait !",
+  "Comment ?",
+  "Je n'ai pas entendu...",
+  "Rapprochez vous de mon oreille.",
+  "Que dites-vous ?",
+  "Je n'ai pas bien compris."
+];
+var idxMessageBottomEmpty = 0;
+
+function emptyTranscription(){
+
+  console.log('[Trancription vide]');
+
+  var messageBottom = document.getElementById('messageBottomLine');
+  messageBottom.innerHTML = messageBottomEmpty[idxMessageBottomEmpty];
+
+  idxMessageBottomEmpty++;
+  if(idxMessageBottomEmpty >= messageBottomEmpty.length){
+    idxMessageBottomEmpty = 0;
+  }
+
+}
+
+/* ---------------------------------------------
+Socket events
+----------------------------------------------- */
+var messageBottomYes = [
+  "Bien joué.",
+  "Essayons ce mot.",
+  "Je n'aurais pas dit ça...",
+  "Essayons pour voir.",
+  "Bien tenté.",
+  "Curieuse proposition !",
+  "Vous chauffez.",
+  "Vous y êtes presque.",
+  "Encore un effort."
+];
+var idxMessageBottomYes = 0;
+
 function newTranscription(transcrData){
 
   console.log('[Trancription recue] : ' + transcrData);
 
   if(transcrData !== ''){
+
+    var messageBottom = document.getElementById('messageBottomLine');
+    messageBottom.innerHTML = messageBottomYes[idxMessageBottomYes];
+
+    idxMessageBottomYes++;
+    if(idxMessageBottomYes >= messageBottomYes.length){
+      idxMessageBottomYes = 0;
+    }
+
     if(isGameStarted === true){
+
+      popTheNextPola();
 
       var result = false;
 
@@ -87,8 +139,9 @@ function newTranscription(transcrData){
       }
 
     }else{
-      addOneAnswer(transcrData);
       startForReal();
+      addOneAnswer(transcrData);
+      popTheNextPola();
     }
   }
 
@@ -232,9 +285,10 @@ function endTheGame(){
 
   setFirstLine('Vous partez à ' + finalAnswer().toString() + ' ?');
   setSecondLine(enigmaContent().toString());
-
   setThirdLine('Bon Voyage !');
 
+  var messageBottom = document.getElementById('messageBottomLine');
+  messageBottom.innerHTML = '';
 
 
   timerRelaunch = setTimeout(function(){
