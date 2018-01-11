@@ -1,14 +1,16 @@
 #!/bin/bash
 
+cd "$(echo $0 | rev | cut -d "/" -f 2- | rev)"
+
 rm -f nohup.out
 
 # Run speech to text server
-cd "/home/erasme/BriseGlace-V1.x/V1.2/SpeechToTextServer"
+cd "../SpeechToTextServer"
 nohup node GoogleSpeech_FileServer.js &
 
 #!/bin/sh
 # Run chromium start
-cd "/home/erasme/BriseGlace-V1.x/V1.2/Scripts"
+cd "../Scripts"
 ./startChromium.sh &
 
 # Run window manager
