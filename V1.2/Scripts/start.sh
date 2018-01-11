@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(echo $0 | rev | cut -d "/" -f 2- | rev)"
+
 rm -f nohup.out
 
 # Run speech to text server
