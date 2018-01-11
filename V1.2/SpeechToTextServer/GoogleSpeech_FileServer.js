@@ -13,7 +13,7 @@ var recordTimeout;
 var express = require('express');
 var app = express();
 var server = app.listen(3000);
-var clientDir = '/home/briseglace/BriseGlace-V1.x/V1.2/SpeechToTextServer/_public';
+var clientDir = './_public';
 
 var io = require('socket.io');
 var mySocket = io(server);
