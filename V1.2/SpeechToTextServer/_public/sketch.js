@@ -319,7 +319,7 @@ function draw() {
       document.getElementById("GalleryPic").innerHTML = '';
       var eClues = clues();
       var indice = floor(random() * eClues.length);
-      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [50, 150]);
+      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [20, 150]);
 
       setTimeout(function(){
 	  document.getElementById("GalleryPic").innerHTML = '';
@@ -348,7 +348,7 @@ function draw() {
 	  // clearTimeout(timerRelaunch);
 	  // clearTimeout(timerFreshStart);
 	  //
-      }, 5000);
+      }, 10000);
   }
 
   function enigmaLoaded(){
