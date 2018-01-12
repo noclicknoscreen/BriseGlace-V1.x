@@ -49,6 +49,8 @@
   max-width: 1100px;
   text-align: center;
   height: auto;
+  font-size: 150%;
+  left: -20%;
 }
 #ThirdLine {
   /*text-align: left;*/
