@@ -176,20 +176,28 @@ function draw() {
     upTranscrData = upTranscrData.replace('"','');
 
     var upFinalAnswer = suppressAccents(myFinalAnswer).toUpperCase();
-
     var wordTab = upFinalAnswer.split(" ");
     var motusAnswerIdx = 0;
+    var tmpAnswer = "";
 
     for (var i = 0 ; i < wordTab.length ; ++i) {
 	if (upTranscrData.search(wordTab[i]) >= 0)
 	    for (var j = 0 ; j < wordTab[i].length ; ++j) {
-		motusAnswer[motusAnswerIdx + j] = wordTab[i][j];
+		tmpAnswer += wordTab[i][j];
+	    }
+	else
+	    for (var j = 0 ; j < wordTab[i].length ; ++j) {
+		tmpAnswer += motusAnswer[motusAnswerIdx + j];
 	    }
 	motusAnswerIdx += wordTab[i].length + 1;
+	if (motusAnswerIdx < motusAnswer.length)
+	    tmpAnswer += ' ';
     }
 
-    var motusAnswerIdx = 0;
+    motusAnswerIdx = 0;
     var dataWordTab = upTranscrData.split(" ");
+    motusAnswer = tmpAnswer;
+    tmpAnswer = "";
 
     for (var i = 0 ; i < dataWordTab.length ; ++i) {
 	if (i >= wordTab.length)
@@ -197,12 +205,17 @@ function draw() {
 	var j = 0;
 	while (j < dataWordTab[i].length && j < wordTab[i].length) {
 	    if (dataWordTab[i][j] == wordTab[i][j])
-		motusAnswer[j + motusAnswerIdx] = wordTab[i][j];
+		tmpAnswer += wordTab[i][j];
+	    else
+		tmpAnswer += motusAnswer[motusAnswerIdx + j];
 	    ++j;
 	}
 	motusAnswerIdx += wordTab[i].length + 1;
+	if (motusAnswerIdx < motusAnswer.length)
+	    tmpAnswer += ' ';
     }
 
+    motusAnswer = tmpAnswer;
     console.log('Motus answer = ' + motusAnswer);
     startFlapper(motusAnswer);
 
