@@ -160,7 +160,7 @@ function popAPola(_text, _link, _idxCreated, _coord = null){
     } else {
 	var posX = _coord[0];
 	var posY = _coord[1];
-	var angle = 0;
+	var angle = _coord[2];
     }
 
   var transform = '';

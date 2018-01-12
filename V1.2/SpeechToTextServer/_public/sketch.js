@@ -319,7 +319,7 @@ function draw() {
       document.getElementById("GalleryPic").innerHTML = '';
       var eClues = clues();
       var indice = floor(random() * eClues.length);
-      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [20, 150]);
+      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [25, 150, 7]);
 
       setTimeout(function(){
 	  document.getElementById("GalleryPic").innerHTML = '';
