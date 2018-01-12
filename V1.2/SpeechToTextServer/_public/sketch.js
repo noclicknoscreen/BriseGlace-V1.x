@@ -319,9 +319,10 @@ function draw() {
       document.getElementById("GalleryPic").innerHTML = '';
       var eClues = clues();
       var indice = floor(random() * eClues.length);
-      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [0, 0]);
+      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [50, 150]);
 
       setTimeout(function(){
+	  document.getElementById("GalleryPic").innerHTML = '';
 	  showMessage();
 	  // setFirstLine('Bravo !');
 	  // setSecondLine('Attention à ne pas rater votre train.');
