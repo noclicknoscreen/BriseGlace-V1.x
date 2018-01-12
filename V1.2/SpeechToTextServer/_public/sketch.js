@@ -69,7 +69,7 @@ function draw() {
     "Parlez un peu plus fort, s'il vous plait !",
     "Comment ?",
     "Je n'ai pas entendu...",
-    "Rapprochez vous de mon oreille.",
+    "Rapprochez-vous de mon oreille.",
     "Que dites-vous ?",
     "Je n'ai pas bien compris."
   ];

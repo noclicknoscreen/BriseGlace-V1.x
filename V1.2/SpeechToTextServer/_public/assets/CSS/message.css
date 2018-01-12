@@ -34,23 +34,27 @@
   animation-duration: 2s;
 
   vertical-align: middle;
+  line-height: 20px;
 
 }
 #FirstLine {
   position:relative;
   left:0%;
+  height: auto;
 }
 #SecondLine {
   position:relative;
   /*text-align: left;*/
   max-width: 1100px;
   left:5%;
+  height: auto;
 }
 #ThirdLine {
   /*text-align: left;*/
   font-size: 200%;
   position:relative;
   left:10%;
+  height: auto;
 }
 
 @@keyframes fadeIn {
