@@ -171,30 +171,38 @@ function draw() {
 
   function motusTranscript(_transcription){
 
-    var tempMotusAnswer = '';
-
     var upTranscrData = suppressAccents(_transcription).toUpperCase();
     upTranscrData = upTranscrData.trim();
     upTranscrData = upTranscrData.replace('"','');
 
     var upFinalAnswer = suppressAccents(myFinalAnswer).toUpperCase();
 
-    for(idxLetter=0;idxLetter<upFinalAnswer.length;idxLetter++){
+    var wordTab = upFinalAnswer.split(" ");
+    var motusAnswerIdx = 0;
 
-      console.log('Comparaison ['+idxLetter+'] : ' + upTranscrData[idxLetter] + ' is equal to ' + upFinalAnswer[idxLetter] + '?');
-
-      if(upTranscrData[idxLetter] === upFinalAnswer[idxLetter]){
-        console.log('Find letter ['+idxLetter+'] = ' + upTranscrData[idxLetter]);
-        tempMotusAnswer += upTranscrData[idxLetter];
-
-      }else {
-        tempMotusAnswer += motusAnswer[idxLetter];
-        wonOrLost = false;
-
-      }
+    for (var i = 0 ; i < wordTab.length ; ++i) {
+	if (upTranscrData.search(wordTab[i]) >= 0)
+	    for (var j = 0 ; j < wordTab[i].length ; ++j) {
+		motusAnswer[motusAnswerIdx + j] = wordTab[i][j];
+	    }
+	motusAnswerIdx += wordTab[i].length + 1;
     }
 
-    motusAnswer = tempMotusAnswer;
+    var motusAnswerIdx = 0;
+    var dataWordTab = upTranscrData.split(" ");
+
+    for (var i = 0 ; i < dataWordTab.length ; ++i) {
+	if (i >= wordTab.length)
+	    break;
+	var j = 0;
+	while (j < dataWordTab[i].length && j < wordTab[i].length) {
+	    if (dataWordTab[i][j] == wordTab[i][j])
+		motusAnswer[j + motusAnswerIdx] = wordTab[i][j];
+	    ++j;
+	}
+	motusAnswerIdx += wordTab[i].length + 1;
+    }
+
     console.log('Motus answer = ' + motusAnswer);
     startFlapper(motusAnswer);
 

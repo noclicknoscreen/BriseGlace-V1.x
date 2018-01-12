@@ -41,8 +41,9 @@ function startFlapper(_word){
     divDigit.appendChild(divBackBottom);
     divDigit.appendChild(divFrontTop);
     divDigit.appendChild(divFrontBottom);
+      if (word[idxLetter] == ' ')
+	  divDigit.style.visibility = 'hidden';
     document.getElementById('MasterFlapper').appendChild(divDigit);
-
   }
 
   $('.flapper .digit').each(function(index, value) {
