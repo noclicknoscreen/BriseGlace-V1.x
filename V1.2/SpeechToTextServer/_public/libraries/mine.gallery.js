@@ -74,7 +74,7 @@ function popTheNextPola(){
 
 }
 
-function popAPola(_text, _link, _idxCreated){
+function popAPola(_text, _link, _idxCreated, _coord = null){
 
   console.log('Adding clues [text,link,index] : ['+_text+','+_link+','+_idxCreated+']')
 
@@ -153,9 +153,15 @@ function popAPola(_text, _link, _idxCreated){
   var minY = 50;
   var maxY = 350;
 
-  var posX = floor(random(minX, maxX));
-  var posY = floor(random(minY, maxY));
-  var angle = floor(random(-1 * angleAmplitude, angleAmplitude));
+    if (!_coord) {
+	var posX = floor(random(minX, maxX));
+	var posY = floor(random(minY, maxY));
+	var angle = floor(random(-1 * angleAmplitude, angleAmplitude));
+    } else {
+	var posX = _coord[0];
+	var posY = _coord[1];
+	var angle = 0;
+    }
 
   var transform = '';
   transform += 'translate(' + posX + 'px,' + posY + 'px)';
