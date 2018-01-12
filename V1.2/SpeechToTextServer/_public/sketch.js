@@ -321,7 +321,7 @@ function draw() {
       var indice = floor(random() * eClues.length);
       popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [0, 0]);
 
-      setTimeout(funtion(){
+      setTimeout(function(){
 	  showMessage();
 	  // setFirstLine('Bravo !');
 	  // setSecondLine('Attention à ne pas rater votre train.');
