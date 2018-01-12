@@ -199,12 +199,10 @@ function draw() {
     motusAnswer = tmpAnswer;
     tmpAnswer = "";
 
-    for (var i = 0 ; i < dataWordTab.length ; ++i) {
-	if (i >= wordTab.length)
-	    break;
+    for (var i = 0 ; i < wordTab.length ; ++i) {
 	var j = 0;
-	while (j < dataWordTab[i].length && j < wordTab[i].length) {
-	    if (dataWordTab[i][j] == wordTab[i][j])
+	while (j < wordTab[i].length) {
+	    if (i < dataWordTab.length && j < dataWordTab[i].length && dataWordTab[i][j] == wordTab[i][j])
 		tmpAnswer += wordTab[i][j];
 	    else
 		tmpAnswer += motusAnswer[motusAnswerIdx + j];
