@@ -317,38 +317,31 @@ function draw() {
       // ---
       // choose an indice and print his desc
       document.getElementById("GalleryPic").innerHTML = '';
-      var eClues = clues();
-      var indice = floor(random() * eClues.length);
-      popAPola(eClues[indice].keyWord, eClues[indice].picture, -1, [25, 150, 7]);
+      showMessage();
+      // setFirstLine('Bravo !');
+      // setSecondLine('Attention à ne pas rater votre train.');
 
-      setTimeout(function(){
-	  document.getElementById("GalleryPic").innerHTML = '';
-	  showMessage();
-	  // setFirstLine('Bravo !');
-	  // setSecondLine('Attention à ne pas rater votre train.');
+      setFirstLine('Vous partez à ' + finalAnswer().toString() + ' ?');
+      setSecondLine(enigmaContent().toString());
+      setThirdLine('Bon Voyage !');
 
-	  setFirstLine('Vous partez à ' + finalAnswer().toString() + ' ?');
-	  setSecondLine(enigmaContent().toString());
-	  setThirdLine('Bon Voyage !');
-
-	  var messageBottom = document.getElementById('messageBottomLine');
-	  messageBottom.innerHTML = '';
+      var messageBottom = document.getElementById('messageBottomLine');
+      messageBottom.innerHTML = '';
 
 
-	  timerRelaunch = setTimeout(function(){
-	      setFirstLine('Re-jouons ensemble...');
-	      setSecondLine('Trouvons le mot caché grâce aux photos !');
-	      setThirdLine('');
-	      newEnigma();
-	      freshStart();
+      timerRelaunch = setTimeout(function(){
+	  setFirstLine('Re-jouons ensemble...');
+	  setSecondLine('Trouvons le mot caché grâce aux photos !');
+	  setThirdLine('');
+	  newEnigma();
+	  freshStart();
 
-	  }, 10000);
-
-
-	  // clearTimeout(timerRelaunch);
-	  // clearTimeout(timerFreshStart);
-	  //
       }, 10000);
+
+
+      // clearTimeout(timerRelaunch);
+      // clearTimeout(timerFreshStart);
+      //
   }
 
   function enigmaLoaded(){

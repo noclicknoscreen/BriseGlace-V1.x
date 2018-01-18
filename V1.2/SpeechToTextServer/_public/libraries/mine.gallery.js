@@ -16,6 +16,8 @@ function startGallery(_allClues){
   //   indiceNewPola = 0;
   // }
   allClues = _allClues;
+  // stack for unexplained clues
+  var cluesStack = [];
 
   var idxCreation = 0;
   document.getElementById("GalleryPic").innerHTML = '';
@@ -67,6 +69,7 @@ function popTheNextPola(){
 
   // Pop a pola, then pop another every 10 seconds
   popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
+  cluesStack.push(allClues[indiceNewPola]);
 
   if(indiceNewPola >= allClues.length){
     indiceNewPola = 0;
@@ -74,7 +77,21 @@ function popTheNextPola(){
 
 }
 
-function popAPola(_text, _link, _idxCreated, _coord = null){
+function getUnexplainedClue() {
+    var returned = null;
+    if (cluesStack.length) {
+	returned = cluesStack[0];
+	cluesStack.splice(0, 1);
+    }
+    return (returned);
+}
+
+/*
+** @params
+** _coord -> allow to choose position and angle. if null, position and angle are chosen randomly
+** _animated -> choose to animate or not the polaroid entry
+*/
+function popAPola(_text, _link, _idxCreated, _coord = null, _animated = true) {
 
   console.log('Adding clues [text,link,index] : ['+_text+','+_link+','+_idxCreated+']')
 
@@ -184,10 +201,12 @@ function popAPola(_text, _link, _idxCreated, _coord = null){
   var rndDuration = floor(random(8,6));
   console.log('animation timings is : ' + rndDuration);
 
-  newMasterDiv.style.animationName = 'inAndOut';
-  newMasterDiv.style.animationDuration = rndDuration.toString() + 's';
-  newMasterDiv.style.animationTimingFunction="ease-in-out" ;
-  newMasterDiv.style.animationFillMode="forwards" ;
+    if (_animated) {
+	newMasterDiv.style.animationName = 'inAndOut';
+	newMasterDiv.style.animationDuration = rndDuration.toString() + 's';
+	newMasterDiv.style.animationTimingFunction="ease-in-out" ;
+	newMasterDiv.style.animationFillMode="forwards" ;
+    }
   // newMasterDiv.addEventListener("webkitAnimationEnd", function(){ deletePola(newLi); });
   // newMasterDiv.addEventListener("animationend", function(){ deletePola(newLi); });
 
