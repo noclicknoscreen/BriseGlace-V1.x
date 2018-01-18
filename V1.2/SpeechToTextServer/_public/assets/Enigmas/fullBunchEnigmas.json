@@ -13,19 +13,23 @@
       "clues": [
         {
           "keyWord": "Petit suisse",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Petit-suisse_assiette.jpg"
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Petit-suisse_assiette.jpg",
+	  "desc": "Il y vit jusqu'à sa mort."
         },
         {
           "keyWord": "C'est de la Bâle",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/13/Balles.JPG"
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/13/Balles.JPG",
+	  "desc": "Il disparaît le 12 Juillet 1536."
         },
         {
           "keyWord": "Philosophe",
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/3/37/Auguste_Rodin_-_Grubleren_2005-02.jpg"
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/3/37/Auguste_Rodin_-_Grubleren_2005-02.jpg",
+	  "desc": "Homme de lettre, polémiste et théologien."
         },
         {
           "keyWord": "La loge de Liane Foly",
-          "picture": "https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fwww.2Efemmeactuelle.2Efr.2Fvar.2Ffemmeactuelle.2Fstorage.2Fimages.2Fbeaute.2Fnews-beaute.2Fliane-foly-coupe-de-cheveux-37905.2F14492593-1-fre-FR.2Fliane-foly-pourquoi-sa-coupe-la-rajeunit.2Ejpg/748x372/quality/80/crop-from/center/liane-foly-pourquoi-sa-coupe-la-rajeunit.jpeg"
+          "picture": "https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fwww.2Efemmeactuelle.2Efr.2Fvar.2Ffemmeactuelle.2Fstorage.2Fimages.2Fbeaute.2Fnews-beaute.2Fliane-foly-coupe-de-cheveux-37905.2F14492593-1-fre-FR.2Fliane-foly-pourquoi-sa-coupe-la-rajeunit.2Ejpg/748x372/quality/80/crop-from/center/liane-foly-pourquoi-sa-coupe-la-rajeunit.jpeg",
+	  "desc": "Essentiellement connu pour cet ouvrage satirique datant de 1511."
         }
       ]
     },
@@ -43,12 +47,12 @@
         {
           "keyWord": "Pôle Pixel",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Villeurbanne_-_P%C3%B4le_Pixel_2014-004.JPG",
-          "desc": "Film d'animation réalisé au Pôle Pixel"
+          "desc": "Film d'animation réalisé au Pôle Pixel."
         },
         {
           "keyWord": "FIFA",
           "picture": "https://medias.unifrance.org/medias/150/117/161174/format_web/festival-international-du-film-d-animation-d-annecy-2018.jpg",
-          "desc": "Cristal d'or et Prix du public au Festival international du film d'animation d'Annecy en 2016"
+          "desc": "Cristal d'or et Prix du public au Festival international du film d'animation d'Annecy en 2016."
         },
         {
           "keyWord": "César",
@@ -58,7 +62,7 @@
         {
           "keyWord": "Courgette",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/3/30/0.2014_Cucurbita_pepo_subsp._pepo_convar._giromontiina_-_Sanok.JPG",
-          "desc": "L'actrice principale !"
+          "desc": "L'actrice principale de ce film d'animation !"
         }
       ]
     },
@@ -81,7 +85,7 @@
         {
           "keyWord": "Sa gare en 1993",
           "picture": "https://c2.staticflickr.com/4/3941/15449767249_6d784e3c61_b.jpg",
-          "desc": "Les autorails bicaisses « X 4500 » ont transporter les usagés de français de 1963 à 2010."
+          "desc": "Les autorails bicaisses « X 4500 » ont transporté les usagés de cette commune jusqu'à St Paul de 1963 à 2010."
         },
         {
           "keyWord": "Aqueduc",
@@ -91,7 +95,7 @@
         {
           "keyWord": "Omnibus",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/0/0c/SF_859_-_BRIGNAIS_-_La_Place.JPG",
-          "desc": "La ville fut desservie par les omnibus de la Compagnie Lyonnaise d'Omnibus, voitures et voies ferrées (CLO) puis les tramways de l'OTL dès 1856 jusqu'aux années 1930."
+          "desc": "Cette ville fut desservie par les omnibus de la Compagnie Lyonnaise d'Omnibus, voitures et voies ferrées (CLO) puis les tramways de l'OTL dès 1856 jusqu'aux années 1930."
         },
         {
           "keyWord": "Blason",
@@ -106,7 +110,7 @@
         {
           "keyWord": "Le pont",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Brignais_Garon.jpg",
-          "desc": "Il permet de passer le « Garon », rivière traversant notre commune."
+          "desc": "Il permet de passer le « Garon », rivière traversant cette commune."
         }
       ]
     },
@@ -134,7 +138,7 @@
         {
           "keyWord": "Château",
           "picture": "http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg",
-          "desc": "Le bourg est fortifié par l'abbé Dalmace au xie siècle et devient une des principales places fortes protégeant l'abbaye."
+          "desc": "Le bourg de cette commune est fortifié par l'abbé Dalmace au xie siècle et devient une des principales places fortes protégeant l'abbaye."
         },
         {
           "keyWord": "La Brévenne",

@@ -56,6 +56,21 @@
   }*/
 }
 
+@keyframes fadeIn {
+    0%{
+	opacity: 0;
+    }
+    100%{
+	opactity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    100%{
+	opacity: 0;
+    }
+}
+
 #PicDesc
 {
     position: fixed;

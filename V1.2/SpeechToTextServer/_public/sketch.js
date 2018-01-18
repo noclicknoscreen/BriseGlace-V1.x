@@ -106,6 +106,23 @@ function draw() {
   ];
   var idxMessageBottomYes = 0;
 
+function makeFadeIn(name, time) {
+  var original = document.getElementById(name);
+  original.style.animationName = 'fadeIn';
+  original.style.animationDuration = '' + time + 's';
+  original.style.animationTimingFunction="ease-in-out" ;
+  original.style.animationFillMode="forwards" ;
+}
+
+function makeFadeOut(name, time) {
+  var original = document.getElementById(name);
+  original.style.opacity = '1';
+  original.style.animationName = 'fadeOut';
+  original.style.animationDuration = '' + time + 's';
+  original.style.animationTimingFunction="ease-in-out" ;
+  original.style.animationFillMode="forwards" ;
+}
+
   function newTranscription(transcrData){
 
     console.log('[Trancription recue] : ' + transcrData);
@@ -129,32 +146,49 @@ function draw() {
 	  popTheNextPola();
 	  console.log("next");
 	} else {
+	  // there is a clue to explain
 	  console.log("explain");
-	  hideGallery();
-	  popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 100, 0], false, "ExternPic");
-	  document.getElementById("PicDesc").innerHTML = toExplain.desc;
-	  timeout = 5;
+
+	  var fadeOutDuration = 2;
+	  makeFadeOut("GalleryPic", fadeOutDuration);
+	  setTimeout(function () {
+	    // hide main gallery
+	    hideGallery();
+
+	    //pop pola and description corresponding to the clue and make animation
+	    popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 100, 0], false, "ExternPic");
+	    document.getElementById("PicDesc").innerHTML = toExplain.desc;
+	    makeFadeIn("clue", 2);
+	  }, fadeOutDuration * 1000);
+	  timeout = 10;
 	}
 
+	var result = false;
+
+        if(enigmaGameType() === 'motus'){
+          result = motusTranscript(transcrData);
+          // result = hangmanTranscript(transcrData);
+        }else if (enigmaGameType() === 'hangman') {
+          result = hangmanTranscript(transcrData);
+        }
+
 	setTimeout(function () {
-	  document.getElementById("ExternPic").innerHTML = "";
-	  document.getElementById("PicDesc").innerHTML = "";
-	  showGallery();
-	  var result = false;
-
-          if(enigmaGameType() === 'motus'){
-            result = motusTranscript(transcrData);
-            // result = hangmanTranscript(transcrData);
-          }else if (enigmaGameType() === 'hangman') {
-            result = hangmanTranscript(transcrData);
-          }
-
-          if(result===true){
-            endTheGame();
-          }else {
-            addOneAnswer(transcrData);
-          }
+	  var fadeOutDuration = 2;
+	  makeFadeOut("clue", fadeOutDuration);
+	  setTimeout(function () {
+	    document.getElementById("clue").style.animation = "";
+	    document.getElementById("PicDesc").innerHTML = "";
+	    document.getElementById("ExternPic").innerHTML = "";
+	    makeFadeIn("GalleryPic", 2);
+	    showGallery();
+            if(result===true){
+              endTheGame();
+            }
+	  }, fadeOutDuration * 1000);
 	}, timeout * 1000);
+        if(!result){
+          addOneAnswer(transcrData);
+        }
       }else{
         startForReal();
         addOneAnswer(transcrData);
