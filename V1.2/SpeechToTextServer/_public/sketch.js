@@ -144,7 +144,7 @@ function makeFadeOut(name, time) {
 	    hideGallery();
 
 	    //pop pola and description corresponding to the clue and make animation
-	    popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 100, floor(random(-1 * 10, 10))], false, "ExternPic");
+	    popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 140, floor(random(-1 * 10, 10))], false, "ExternPic");
 	    document.getElementById("PicDesc").innerHTML = toExplain.desc;
 	    makeFadeIn("clue", 2);
 	  }, fadeOutDuration * 1000);
