@@ -3,8 +3,13 @@
     {
       "finalAnswer": "ERASME",
       "emptyWord": "......",
-      "content": "Lieu d'innovation !",
-      "type": "motus",
+      "wordType": "un philosophe",
+      "gameType": "motus",
+      "finalContent": [
+        "Vous êtes à Erasme.",
+        "Lieu d'innovation !",
+        ""
+      ],
       "clues": [
         {
           "keyWord": "Petit suisse",
@@ -27,152 +32,172 @@
     {
       "finalAnswer": "MA VIE DE COURGETTE",
       "emptyWord": ".. ... .. .........",
-      "content": "\"Autobiographie d’une courgette\", une aventure extraordinaire pour les petits comme les grands !",
-      "type": "motus",
+      "wordType": "un film",
+      "gameType": "motus",
+      "finalContent": [
+        "Autobiographie d’une courgette,",
+        "une aventure extraordinaire pour les petits comme les grands.",
+        "Bon film !"
+      ],
       "clues": [
         {
           "keyWord": "Pôle Pixel",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Villeurbanne_-_P%C3%B4le_Pixel_2014-004.JPG",
-	    "desc": "Film d'animation réalisé au Pôle Pixel"
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Villeurbanne_-_P%C3%B4le_Pixel_2014-004.JPG",
+          "desc": "Film d'animation réalisé au Pôle Pixel"
         },
         {
           "keyWord": "FIFA",
-            "picture": "https://medias.unifrance.org/medias/150/117/161174/format_web/festival-international-du-film-d-animation-d-annecy-2018.jpg",
-	    "desc": "Cristal d'or et Prix du public au Festival international du film d'animation d'Annecy en 2016"
+          "picture": "https://medias.unifrance.org/medias/150/117/161174/format_web/festival-international-du-film-d-animation-d-annecy-2018.jpg",
+          "desc": "Cristal d'or et Prix du public au Festival international du film d'animation d'Annecy en 2016"
         },
         {
           "keyWord": "César",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2f/C%C3%A9sars_2017_6.jpg",
-	    "desc": "Récompense décernée pour le meilleur film d'animation et la meilleure adaptation en 2017."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2f/C%C3%A9sars_2017_6.jpg",
+          "desc": "Récompense décernée pour le meilleur film d'animation et la meilleure adaptation en 2017."
         },
         {
           "keyWord": "Courgette",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/3/30/0.2014_Cucurbita_pepo_subsp._pepo_convar._giromontiina_-_Sanok.JPG",
-	    "desc": "L'actrice principale !"
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/3/30/0.2014_Cucurbita_pepo_subsp._pepo_convar._giromontiina_-_Sanok.JPG",
+          "desc": "L'actrice principale !"
         }
       ]
     },
     {
       "finalAnswer": "BRIGNAIS",
       "emptyWord": "........",
-      "content": "Si vous prenez le train de 15h07, vous y serez pour le goûter.",
-      "type": "motus",
+      "wordType": "une ville",
+      "gameType": "motus",
+      "finalContent": [
+        "Vous partez à Brignais ?",
+        "Si vous prenez le train de 15h07, vous y serez pour le goûter.",
+        "Bon Voyage !"
+      ],
       "clues": [
         {
           "keyWord": "La guerre de 100 ans",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/8/81/Brigniais.jpg",
-	    "desc": "La bataille portant le nom de cette commune eu lieu durant la guerre de Cent Ans le 6 avril 1362.<br />Les Grandes compagnies mercenaires battèrent l'armée royale française commandée par Jacques 1er de Bourbon, comte de la Marche et connétable de France."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/8/81/Brigniais.jpg",
+          "desc": "La bataille portant le nom de cette commune eu lieu durant la guerre de Cent Ans le 6 avril 1362.<br />Les Grandes compagnies mercenaires battèrent l'armée royale française commandée par Jacques 1er de Bourbon, comte de la Marche et connétable de France."
         },
         {
           "keyWord": "Sa gare en 1993",
-            "picture": "https://c2.staticflickr.com/4/3941/15449767249_6d784e3c61_b.jpg",
-	    "desc": "Les autorails bicaisses « X 4500 » ont transporter les usagés de français de 1963 à 2010."
+          "picture": "https://c2.staticflickr.com/4/3941/15449767249_6d784e3c61_b.jpg",
+          "desc": "Les autorails bicaisses « X 4500 » ont transporter les usagés de français de 1963 à 2010."
         },
         {
           "keyWord": "Aqueduc",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Brignais_-_Aqueduc_du_Gier_-1.JPG",
-	    "desc": "A la fin du 1er siècle, passant par cette commune, l’aqueduc romain du Gier, se développait sur une longueur de 86 km."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Brignais_-_Aqueduc_du_Gier_-1.JPG",
+          "desc": "A la fin du 1er siècle, passant par cette commune, l’aqueduc romain du Gier, se développait sur une longueur de 86 km."
         },
         {
           "keyWord": "Omnibus",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/0/0c/SF_859_-_BRIGNAIS_-_La_Place.JPG",
-	    "desc": "La ville fut desservie par les omnibus de la Compagnie Lyonnaise d'Omnibus, voitures et voies ferrées (CLO) puis les tramways de l'OTL dès 1856 jusqu'aux années 1930."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/0/0c/SF_859_-_BRIGNAIS_-_La_Place.JPG",
+          "desc": "La ville fut desservie par les omnibus de la Compagnie Lyonnaise d'Omnibus, voitures et voies ferrées (CLO) puis les tramways de l'OTL dès 1856 jusqu'aux années 1930."
         },
         {
           "keyWord": "Blason",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/4/43/Blason_ville_fr_Brignais_%28Rh%C3%B4ne%29.svg",
-	    "desc": "Représente un dextrochère d’or tenant une épée et accompagnée en pointe d’un croissant contourné, de la croix de guerre et d’une rose, le tout d’or."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/4/43/Blason_ville_fr_Brignais_%28Rh%C3%B4ne%29.svg",
+          "desc": "Représente un dextrochère d’or tenant une épée et accompagnée en pointe d’un croissant contourné, de la croix de guerre et d’une rose, le tout d’or."
         },
         {
           "keyWord": "Vue de la ville",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/9/92/Brignais_vue_du_pont_vieux.jpg",
-	    "desc": "Commune située à 10 gares de Saint-Paul."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/9/92/Brignais_vue_du_pont_vieux.jpg",
+          "desc": "Commune située à 10 gares de Saint-Paul."
         },
         {
           "keyWord": "Le pont",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Brignais_Garon.jpg",
-	    "desc": "Il permet de passer le « Garon », rivière traversant notre commune."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Brignais_Garon.jpg",
+          "desc": "Il permet de passer le « Garon », rivière traversant notre commune."
         }
       ]
     },
     {
       "finalAnswer": "L'ARBRESLE",
       "emptyWord": ".'........",
-      "content": "Si vous prenez le train de 14h42, vous y serez pour le goûter.",
-      "type": "motus",
+      "wordType": "une commune",
+      "gameType": "motus",
+      "finalContent": [
+        "Vous partez à L'arbresle ?",
+        "Si vous prenez le train de 14h42, vous y serez pour le goûter.",
+        "Bon voyage !"
+      ],
       "clues": [
         {
           "keyWord": "Machine à coudre",
-            "picture": "http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg",
-	    "desc": "La proximité de cette commune avec Lyon lui permet de bénéficier dès 1815 de l'expansion du tissage local."
+          "picture": "http://www.arts-et-metiers.net/sites/arts-et-metiers.net/files/styles/objet_collection/public/cnam_0000327_001.jpg",
+          "desc": "La proximité de cette commune avec Lyon lui permet de bénéficier dès 1815 de l'expansion du tissage local."
         },
         {
           "keyWord": "Pont",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg",
-	    "desc": "Le Pont de la Madeleine est un pont en arc, pont routier (pont-route) et pont en maçonnerie qui a été achevé(e) en 1738."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/1/15/L%27Arbresle_-_La_Br%C3%A9venne.jpg",
+          "desc": "Le Pont de la Madeleine est un pont en arc, pont routier (pont-route) et pont en maçonnerie qui a été achevé(e) en 1738."
         },
         {
           "keyWord": "Château",
-            "picture": "http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg",
-	    "desc": "Le bourg est fortifié par l'abbé Dalmace au xie siècle et devient une des principales places fortes protégeant l'abbaye."
+          "picture": "http://medieval.mrugala.net/Architecture/France,_Rhone,_L%27Arbresle/L'Arbresle%20-%20Chateau%20-%20Donjon%20(02).jpg",
+          "desc": "Le bourg est fortifié par l'abbé Dalmace au xie siècle et devient une des principales places fortes protégeant l'abbaye."
         },
         {
           "keyWord": "La Brévenne",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG",
-	    "desc": "Cette commune, se situe au confluent de la Brévenne et de la Turdine, à la jonction des monts du Lyonnais et du Beaujolais."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/2/25/Sain-Bel-02.JPG",
+          "desc": "Cette commune, se situe au confluent de la Brévenne et de la Turdine, à la jonction des monts du Lyonnais et du Beaujolais."
         },
         {
           "keyWord": "Blason",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg",
-	    "desc": "Au moyen-âge, la science héraldique naissait comme la langue romane, un jeu de mots, une faible analogie de sons, suffirent pour déterminer son écusson : un arbre et des ailes."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Blason_ville_fr_L%27Arbresle_%28Rh%C3%B4ne%29.svg",
+          "desc": "Au moyen-âge, la science héraldique naissait comme la langue romane, un jeu de mots, une faible analogie de sons, suffirent pour déterminer son écusson : un arbre et des ailes."
         },
         {
           "keyWord": "Vue de la ville",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG",
-	    "desc": "Commune située à 10 gares de Saint-Paul."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Arbr_2.JPG",
+          "desc": "Commune située à 10 gares de Saint-Paul."
         }
       ]
     },
     {
       "finalAnswer": "LENTILLY",
       "emptyWord": "........",
-      "content": "Si vous prenez le train de 14h42, vous y serez pour le goûter.",
-      "type": "motus",
+      "wordType": "une commune",
+      "gameType": "motus",
+      "finalContent": [
+        "Vous allez à Lentilly ?",
+        "Si vous prenez le train de 14h42, vous y serez pour le goûter.",
+        "Bon voyage !"
+      ],
       "clues": [
         {
           "keyWord": "Le Château de Cruzol",
-            "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/Lentilly_-_Tours_de_Cruzol.jpg",
-	    "desc": "Monument le plus célèbre de cette commune, la première mention du château de Cruzols remonte à 1340."
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/Lentilly_-_Tours_de_Cruzol.jpg",
+          "desc": "Monument le plus célèbre de cette commune, la première mention du château de Cruzols remonte à 1340."
         },
         {
           "keyWord": "Le mont Mercruy",
           "picture": "https://c1.staticflickr.com/4/3741/9932845804_e1eeec3958_b.jpg",
-	    "desc": "L'histoire de cette commune remonte à la préhistoire.<br />Le sommet du Mont Mercruy a été occupé par les Celtes, les Gaulois et les Romains."
+          "desc": "L'histoire de cette commune remonte à la préhistoire.<br />Le sommet du Mont Mercruy a été occupé par les Celtes, les Gaulois et les Romains."
         },
         {
           "keyWord": "Tirailleur Sénégalais",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/d/db/Morocco%2C_Fes.jpg",
-	    "desc": "Sur cette commune, le 20 juin 1940, 18 tirailleurs sénégalais français ayant été fait prisonniers sont massacrés par les SS de la division Totenkopf."
+          "desc": "Sur cette commune, le 20 juin 1940, 18 tirailleurs sénégalais français ayant été fait prisonniers sont massacrés par les SS de la division Totenkopf."
         },
         {
           "keyWord": "Le blason",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Blason_ville_fr_Lentilly_%28Rh%C3%B4ne%29.svg",
-	    "desc": "L'écu se référant à la dicte Baronnie est \"D'azur au dauphin d'or\""
+          "desc": "L'écu se référant à la dicte Baronnie est \"D'azur au dauphin d'or\""
         },
         {
           "keyWord": "Vue du village",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/1/19/1200pix-CM-vue-generale-1-11-2009_%289a%29.jpg",
-	    "desc": "Commune située à 8 gares de Saint-Paul."
+          "desc": "Commune située à 8 gares de Saint-Paul."
         },
         {
           "keyWord": "Daniel REBILLARD",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Daniel_Rebillard_1969_Paraguay_stamp.jpg",
-	    "desc": "Cet habitant de la commune remporte le titre de champion olympique de poursuite (course cycliste) en 1968."
+          "desc": "Cet habitant de la commune remporte le titre de champion olympique de poursuite (course cycliste) en 1968."
         },
         {
           "keyWord": "Graveur",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Jjboissieu.jpg",
-	    "desc": "Personnalité de cette commune, Jean-Jacques de Boissieu, réalisa quelques planches pour l’Encyclopédie de Diderot."
+          "desc": "Personnalité de cette commune, Jean-Jacques de Boissieu, réalisa quelques planches pour l’Encyclopédie de Diderot."
         }
       ]
     }

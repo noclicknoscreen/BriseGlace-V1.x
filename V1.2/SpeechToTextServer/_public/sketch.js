@@ -4,6 +4,7 @@ var wordTyped;
 var myFinalAnswer;
 
 var isGameStarted;
+var firstStart;
 
 var drawFeedBack;
 
@@ -125,10 +126,10 @@ function draw() {
 
         var result = false;
 
-        if(enigmaType() === 'motus'){
+        if(enigmaGameType() === 'motus'){
           result = motusTranscript(transcrData);
           // result = hangmanTranscript(transcrData);
-        }else if (enigmaType() === 'hangman') {
+        }else if (enigmaGameType() === 'hangman') {
           result = hangmanTranscript(transcrData);
         }
 
@@ -181,17 +182,17 @@ function draw() {
     var tmpAnswer = "";
 
     for (var i = 0 ; i < wordTab.length ; ++i) {
-	if (upTranscrData.search(wordTab[i]) >= 0)
-	    for (var j = 0 ; j < wordTab[i].length ; ++j) {
-		tmpAnswer += wordTab[i][j];
-	    }
-	else
-	    for (var j = 0 ; j < wordTab[i].length ; ++j) {
-		tmpAnswer += motusAnswer[motusAnswerIdx + j];
-	    }
-	motusAnswerIdx += wordTab[i].length + 1;
-	if (motusAnswerIdx < motusAnswer.length)
-	    tmpAnswer += ' ';
+      if (upTranscrData.search(wordTab[i]) >= 0)
+      for (var j = 0 ; j < wordTab[i].length ; ++j) {
+        tmpAnswer += wordTab[i][j];
+      }
+      else
+      for (var j = 0 ; j < wordTab[i].length ; ++j) {
+        tmpAnswer += motusAnswer[motusAnswerIdx + j];
+      }
+      motusAnswerIdx += wordTab[i].length + 1;
+      if (motusAnswerIdx < motusAnswer.length)
+      tmpAnswer += ' ';
     }
 
     motusAnswerIdx = 0;
@@ -200,17 +201,17 @@ function draw() {
     tmpAnswer = "";
 
     for (var i = 0 ; i < wordTab.length ; ++i) {
-	var j = 0;
-	while (j < wordTab[i].length) {
-	    if (i < dataWordTab.length && j < dataWordTab[i].length && dataWordTab[i][j] == wordTab[i][j])
-		tmpAnswer += wordTab[i][j];
-	    else
-		tmpAnswer += motusAnswer[motusAnswerIdx + j];
-	    ++j;
-	}
-	motusAnswerIdx += wordTab[i].length + 1;
-	if (motusAnswerIdx < motusAnswer.length)
-	    tmpAnswer += ' ';
+      var j = 0;
+      while (j < wordTab[i].length) {
+        if (i < dataWordTab.length && j < dataWordTab[i].length && dataWordTab[i][j] == wordTab[i][j])
+        tmpAnswer += wordTab[i][j];
+        else
+        tmpAnswer += motusAnswer[motusAnswerIdx + j];
+        ++j;
+      }
+      motusAnswerIdx += wordTab[i].length + 1;
+      if (motusAnswerIdx < motusAnswer.length)
+      tmpAnswer += ' ';
     }
 
     motusAnswer = tmpAnswer;
@@ -224,25 +225,25 @@ function draw() {
 
   function suppressAccents(term){
 
-  term=term.replace("á","a");
-  term=term.replace("Á","A");
-  term=term.replace("é","e");
-  term=term.replace("É","E");
-  term=term.replace("í","i");
-  term=term.replace("Í","I");
-  term=term.replace("ó","o");
-  term=term.replace("Ó","O");
-  term=term.replace("ú","u");
-  term=term.replace("Ú","U");
-  term=term.replace("ñ","n");
-  term=term.replace("Ñ","N");
-  return term;
+    term=term.replace("á","a");
+    term=term.replace("Á","A");
+    term=term.replace("é","e");
+    term=term.replace("É","E");
+    term=term.replace("í","i");
+    term=term.replace("Í","I");
+    term=term.replace("ó","o");
+    term=term.replace("Ó","O");
+    term=term.replace("ú","u");
+    term=term.replace("Ú","U");
+    term=term.replace("ñ","n");
+    term=term.replace("Ñ","N");
+    return term;
 
   }
 
   function compareAnswers(_data, _finalAnswer){
 
-      // on recherche si le mot est trouvé
+    // on recherche si le mot est trouvé
     var pos = _data.toUpperCase().search(_finalAnswer.toUpperCase());
     console.log('Compare motus=' + _data.toUpperCase() + ' <-> answer=' + _finalAnswer.toUpperCase() + ' result=' + pos);
 
@@ -264,6 +265,19 @@ function draw() {
   var timerFreshStart;
   function freshStart(){
 
+    // Pick a new enigma ------------------------------------------------------------
+    newEnigma();
+    if(firstStart === true){
+      setFirstLine('Vous êtes joueur ?...\nMoi oui.');
+      setSecondLine('Parlez-moi dans l\'oreille pour gagner des lettres !');
+      setThirdLine('');
+      firstStart = false;
+    }else{
+      setFirstLine('Re-jouons ensemble...');
+      setSecondLine('Trouvons ' + enigmaWordType().toString() + ' grâce aux photos !');
+      setThirdLine('');
+    }
+
     myFinalAnswer = finalAnswer();
     motusAnswer = emptyWord();
 
@@ -275,9 +289,8 @@ function draw() {
     hideMasterFlapper();
     hideNote();
     // ---
-    showMessage();
-    // setFirstLine('Bravo !');
-    // setSecondLine('Attention à ne pas rater votre train.');
+    showAllMessages();
+    hideMessageBottom();
 
     isGameStarted = false;
 
@@ -293,12 +306,14 @@ function draw() {
     showGallery();
     startGallery(clues());
 
+    showMessageBottom();
+
     freshStartNote();
     showNote();
     showMasterFlapper();
 
     // ---
-    hideMessage();
+    hideAllMessages();
 
     isGameStarted = true;
 
@@ -315,29 +330,15 @@ function draw() {
     // --
     hideNote();
       // ---
-      // choose an indice and print his desc
-      document.getElementById("GalleryPic").innerHTML = '';
-      showMessage();
-      // setFirstLine('Bravo !');
-      // setSecondLine('Attention à ne pas rater votre train.');
+    showAllMessages();
+    hideMessageBottom();
+    setFirstLine(enigmaFinalContent()[0].toString());
+    setSecondLine(enigmaFinalContent()[1].toString());
+    setThirdLine(enigmaFinalContent()[2].toString());
 
-      setFirstLine('Vous partez à ' + finalAnswer().toString() + ' ?');
-      setSecondLine(enigmaContent().toString());
-      setThirdLine('Bon Voyage !');
-
-      var messageBottom = document.getElementById('messageBottomLine');
-      messageBottom.innerHTML = '';
-
-
-      timerRelaunch = setTimeout(function(){
-	  setFirstLine('Re-jouons ensemble...');
-	  setSecondLine('Trouvons le mot caché grâce aux photos !');
-	  setThirdLine('');
-	  newEnigma();
-	  freshStart();
-
-      }, 10000);
-
+    timerRelaunch = setTimeout(function(){
+      freshStart();
+    }, 10000);
 
       // clearTimeout(timerRelaunch);
       // clearTimeout(timerFreshStart);
@@ -346,5 +347,6 @@ function draw() {
 
   function enigmaLoaded(){
     //console.log('Enigma callback called !!!!! answer is : ' + finalAnswer());
+    firstStart = true;
     freshStart();
   }

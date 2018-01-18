@@ -9,9 +9,16 @@ function setThirdLine(_thirdLine){
   document.getElementById('ThirdLine').innerHTML = _thirdLine;
 };
 
-function showMessage(){
+function showAllMessages(){
     w3.show("#Message");
 };
-function hideMessage(){
+function hideAllMessages(){
     w3.hide("#Message");
 };
+
+function showMessageBottom(){
+    w3.show("#MessageBottom");
+};
+function hideMessageBottom(){
+    w3.hide("#MessageBottom");
+}

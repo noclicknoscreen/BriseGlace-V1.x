@@ -66,55 +66,24 @@ function clues() {
   return theEnigma.clues;
 };
 
-function enigmaContent() {
-  return theEnigma.content;
+// -----------------------------------------------------------------------
+// Return an array of the 3 final sentences to display
+// -----------------------------------------------------------------------
+function enigmaFinalContent() {
+  return theEnigma.finalContent;
 };
-
-function enigmaType() {
-  return theEnigma.type;
+// -----------------------------------------------------------------------
+// Return the name of the word we looked for
+// e.g. une commune, un film, etc.
+// -----------------------------------------------------------------------
+function enigmaWordType() {
+  return theEnigma.wordType;
 };
-
-//
-// // Public --------------------------------------------------------------------------------------------------------
-// enigmas.prototype.nextEnigma = function() {
-//
-// };
-//
-// enigmas.prototype.hintPicture = function(_index) {
-// };
-//
-// enigmas.prototype.hintAnswer = function(_index) {
-// };
-//
-// enigmas.prototype.hintKeyword = function(_index) {
-// };
-//
-// enigmas.prototype.nextHint = function() {
-//
-//   this.idxHint++;
-//
-//   if(this.idxHint > this.enigma.hints.length){
-//     this.idxHint = 0;
-//   }
-//
-//   console.log("L'indice en cours est : " + this.idxHint);
-//
-// };
-//
-//
-// enigmas.prototype.emptyWord = function() {
-//   return this.enigma.emptyWord;
-// };
-//
-// enigmas.prototype.currentAnswer = function() {
-//
-//   if(this.idxHint < this.enigma.hints.length){
-//     return this.enigma.hints[this.idxHint].answer;
-//   }else{
-//     return "toto-tutu";
-//   }
-//
-// };
-
-
-// Private --------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------
+// Return the type of the game
+// - hangman
+// - motus
+// -----------------------------------------------------------------------
+function enigmaGameType() {
+  return theEnigma.gameType;
+};

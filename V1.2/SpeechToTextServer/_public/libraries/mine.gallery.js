@@ -2,6 +2,7 @@
 var timerPola;
 var indiceNewPola;
 var allClues;
+var cluesStack;
 
 function showGallery(){
   w3.show("#Gallery");
@@ -17,7 +18,7 @@ function startGallery(_allClues){
   // }
   allClues = _allClues;
   // stack for unexplained clues
-  var cluesStack = [];
+  cluesStack = [];
 
   var idxCreation = 0;
   document.getElementById("GalleryPic").innerHTML = '';
@@ -65,6 +66,9 @@ function popTheNextPola(){
 
   if(indiceNewPola === undefined){
     indiceNewPola = 0;
+  }
+  if(cluesStack === undefined){
+    var cluesStack = [];
   }
 
   // Pop a pola, then pop another every 10 seconds
