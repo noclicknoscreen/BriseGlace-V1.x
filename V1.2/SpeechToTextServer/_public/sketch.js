@@ -325,7 +325,7 @@ function makeFadeOut(name, time) {
     // --
     hideGallery();
     hideMasterFlapper();
-    hideNote();
+    //hideNote();
     // ---
     showAllMessages();
     hideMessageBottom();
@@ -334,6 +334,7 @@ function makeFadeOut(name, time) {
 
     timerFreshStart = setTimeout(function(){
       showMasterFlapper();
+      showMessageBottom();
       clearTimeout(timerFreshStart);
     }, 3000);
 
@@ -347,7 +348,7 @@ function makeFadeOut(name, time) {
     showMessageBottom();
 
     freshStartNote();
-    showNote();
+    //showNote();
     showMasterFlapper();
 
     // ---
@@ -366,7 +367,7 @@ function makeFadeOut(name, time) {
     startFlapper(finalAnswer());
 
     // --
-    hideNote();
+    //hideNote();
       // ---
     showAllMessages();
     hideMessageBottom();

@@ -10,7 +10,9 @@ AudioInput in;
 DmxP512 dmxOutput;
 int universeSize=128;
 
-String DMXPRO_PORT="/dev/tty.usbserial-EN160112";//case matters ! on windows port must be upper cased.
+// MAC PORT
+//String DMXPRO_PORT="/dev/tty.usbserial-EN160112";//case matters ! on windows port must be upper cased.
+String DMXPRO_PORT="/dev/ttyUSB0";
 int DMXPRO_BAUDRATE=115000;
 
 
