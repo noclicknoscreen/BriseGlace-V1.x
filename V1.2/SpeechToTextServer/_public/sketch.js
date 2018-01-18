@@ -8,7 +8,13 @@ var firstStart;
 
 var drawFeedBack;
 
+var audioIn;
+
 function setup() {
+
+  // Audio setup (for visual feedback)
+  // audioIn = new p5.AudioIn()
+  // audioIn.start();
 
   loadEnigmas('assets/Enigmas/fullBunchEnigmas.json', enigmaLoaded);
 
@@ -37,31 +43,13 @@ function setup() {
 function draw() {
 
   background('#fff');
+  //
+  // micLevel = audioIn.getLevel();
+  // ellipse(width/2, height/2, micLevel*100, micLevel*100);
+  //
+  // console.log("Mic level : " + micLevel);
 
-  if(drawFeedBack == true){
-    fill('#f0f');
-    nostroke();
-    rect(width/2, height/2, 10, 10);}
-  };
-
-  function keyReleased(){
-
-    console.log("Key !!!! : " + key);
-
-    if (keyCode == ENTER || keyCode == RETURN) {
-      addOneAnswer(wordTyped);
-      wordTyped = '';
-    }else{
-      wordTyped += key;
-    }
-
-    if (keyCode == ' ') {
-      var fs = fullscreen();
-      fullscreen(!fs);
-    }
-
-    return false; // prevent default
-  }
+};
 
   /* ---------------------------------------------
   Socket events
