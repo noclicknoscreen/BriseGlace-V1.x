@@ -2,7 +2,7 @@
 .gallery{
 
   background:#fff;
-  color: #063984;
+  color: #000000;
 
   text-align:center;
   font-family: "DK Crayon Crumble";
@@ -54,4 +54,30 @@
     -moz-transform:translate(0px,-1000px);
     -webkit-transform:translate(0px,-1000px);
   }*/
+}
+
+@keyframes fadeIn {
+    0%{
+	opacity: 0;
+    }
+    100%{
+	opactity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    100%{
+	opacity: 0;
+    }
+}
+
+#PicDesc
+{
+    position: fixed;
+    left: 500px;
+    top: 200px;
+    height: auto;
+    width: 1200px;
+    text-align: left;
+    font-size: 1.4em;
 }

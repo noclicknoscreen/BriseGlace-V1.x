@@ -94,6 +94,23 @@ function draw() {
   ];
   var idxMessageBottomYes = 0;
 
+function makeFadeIn(name, time) {
+  var original = document.getElementById(name);
+  original.style.animationName = 'fadeIn';
+  original.style.animationDuration = '' + time + 's';
+  original.style.animationTimingFunction="ease-in-out" ;
+  original.style.animationFillMode="forwards" ;
+}
+
+function makeFadeOut(name, time) {
+  var original = document.getElementById(name);
+  original.style.opacity = '1';
+  original.style.animationName = 'fadeOut';
+  original.style.animationDuration = '' + time + 's';
+  original.style.animationTimingFunction="ease-in-out" ;
+  original.style.animationFillMode="forwards" ;
+}
+
   function newTranscription(transcrData){
 
     console.log('[Trancription recue] : ' + transcrData);
@@ -110,9 +127,31 @@ function draw() {
 
       if(isGameStarted === true){
 
-        popTheNextPola();
+	var toExplain = getUnexplainedClue();
+	var timeout = 0;
 
-        var result = false;
+	if (toExplain == null) {
+	  popTheNextPola();
+	  console.log("next");
+	} else {
+	  // there is a clue to explain
+	  console.log("explain");
+
+	  var fadeOutDuration = 2;
+	  makeFadeOut("GalleryPic", fadeOutDuration);
+	  setTimeout(function () {
+	    // hide main gallery
+	    hideGallery();
+
+	    //pop pola and description corresponding to the clue and make animation
+	    popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 100, floor(random(-1 * 10, 10))], false, "ExternPic");
+	    document.getElementById("PicDesc").innerHTML = toExplain.desc;
+	    makeFadeIn("clue", 2);
+	  }, fadeOutDuration * 1000);
+	  timeout = 10;
+	}
+
+	var result = false;
 
         if(enigmaGameType() === 'motus'){
           result = motusTranscript(transcrData);
@@ -121,12 +160,23 @@ function draw() {
           result = hangmanTranscript(transcrData);
         }
 
-        if(result===true){
-          endTheGame();
-        }else {
+	setTimeout(function () {
+	  var fadeOutDuration = 2;
+	  makeFadeOut("clue", fadeOutDuration);
+	  setTimeout(function () {
+	    document.getElementById("clue").style.animation = "";
+	    document.getElementById("PicDesc").innerHTML = "";
+	    document.getElementById("ExternPic").innerHTML = "";
+	    makeFadeIn("GalleryPic", 2);
+	    showGallery();
+            if(result===true){
+              endTheGame();
+            }
+	  }, fadeOutDuration * 1000);
+	}, timeout * 1000);
+        if(!result){
           addOneAnswer(transcrData);
         }
-
       }else{
         startForReal();
         addOneAnswer(transcrData);
