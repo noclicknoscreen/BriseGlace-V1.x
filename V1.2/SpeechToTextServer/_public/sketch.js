@@ -122,23 +122,39 @@ function draw() {
 
       if(isGameStarted === true){
 
-        popTheNextPola();
+	var toExplain = getUnexplainedClue();
+	var timeout = 0;
 
-        var result = false;
+	if (toExplain == null) {
+	  popTheNextPola();
+	  console.log("next");
+	} else {
+	  console.log("explain");
+	  hideGallery();
+	  popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 100, 0], false, "ExternPic");
+	  document.getElementById("PicDesc").innerHTML = toExplain.desc;
+	  timeout = 5;
+	}
 
-        if(enigmaGameType() === 'motus'){
-          result = motusTranscript(transcrData);
-          // result = hangmanTranscript(transcrData);
-        }else if (enigmaGameType() === 'hangman') {
-          result = hangmanTranscript(transcrData);
-        }
+	setTimeout(function () {
+	  document.getElementById("ExternPic").innerHTML = "";
+	  document.getElementById("PicDesc").innerHTML = "";
+	  showGallery();
+	  var result = false;
 
-        if(result===true){
-          endTheGame();
-        }else {
-          addOneAnswer(transcrData);
-        }
+          if(enigmaGameType() === 'motus'){
+            result = motusTranscript(transcrData);
+            // result = hangmanTranscript(transcrData);
+          }else if (enigmaGameType() === 'hangman') {
+            result = hangmanTranscript(transcrData);
+          }
 
+          if(result===true){
+            endTheGame();
+          }else {
+            addOneAnswer(transcrData);
+          }
+	}, timeout * 1000);
       }else{
         startForReal();
         addOneAnswer(transcrData);

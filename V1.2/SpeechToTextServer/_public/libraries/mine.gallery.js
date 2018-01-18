@@ -5,10 +5,13 @@ var allClues;
 var cluesStack;
 
 function showGallery(){
-  w3.show("#Gallery");
+  w3.show("#GalleryPic");
 };
 function hideGallery(){
-  w3.hide("#Gallery");
+  for (var elem of document.getElementById("GalleryPic").children) {
+    elem.children[0].style.animation = "";
+  }
+  w3.hide("#GalleryPic");
 };
 
 function startGallery(_allClues){
@@ -68,12 +71,13 @@ function popTheNextPola(){
     indiceNewPola = 0;
   }
   if(cluesStack === undefined){
-    var cluesStack = [];
+    cluesStack = [];
   }
 
   // Pop a pola, then pop another every 10 seconds
-  popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
   cluesStack.push(allClues[indiceNewPola]);
+  console.log("clues stack got a new one");
+  popAPola(allClues[indiceNewPola].keyWord, allClues[indiceNewPola].picture,indiceNewPola++);
 
   if(indiceNewPola >= allClues.length){
     indiceNewPola = 0;
@@ -81,13 +85,16 @@ function popTheNextPola(){
 
 }
 
+
+// return the next unexplained clue
 function getUnexplainedClue() {
-    var returned = null;
-    if (cluesStack.length) {
-	returned = cluesStack[0];
-	cluesStack.splice(0, 1);
-    }
-    return (returned);
+  var returned = null;
+  console.log("What a length : " + cluesStack.length);
+  if (cluesStack.length) {
+    returned = cluesStack[0];
+    cluesStack.splice(0, 1);
+  }
+  return (returned);
 }
 
 /*
@@ -95,7 +102,7 @@ function getUnexplainedClue() {
 ** _coord -> allow to choose position and angle. if null, position and angle are chosen randomly
 ** _animated -> choose to animate or not the polaroid entry
 */
-function popAPola(_text, _link, _idxCreated, _coord = null, _animated = true) {
+function popAPola(_text, _link, _idxCreated, _coord = null, _animated = true, _father = "GalleryPic") {
 
   console.log('Adding clues [text,link,index] : ['+_text+','+_link+','+_idxCreated+']')
 
@@ -222,7 +229,7 @@ function popAPola(_text, _link, _idxCreated, _coord = null, _animated = true) {
   newMasterDiv.appendChild(newShadow);
   newLi.appendChild(newMasterDiv);
 
-  document.getElementById("GalleryPic").appendChild(newLi);
+  document.getElementById(_father).appendChild(newLi);
 
 };
 
