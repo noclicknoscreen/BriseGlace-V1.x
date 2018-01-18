@@ -275,7 +275,7 @@ function draw() {
     // --
     hideGallery();
     hideMasterFlapper();
-    hideNote();
+    //hideNote();
     // ---
     showAllMessages();
     hideMessageBottom();
@@ -284,6 +284,7 @@ function draw() {
 
     timerFreshStart = setTimeout(function(){
       showMasterFlapper();
+      showMessageBottom();
       clearTimeout(timerFreshStart);
     }, 3000);
 
@@ -297,7 +298,7 @@ function draw() {
     showMessageBottom();
 
     freshStartNote();
-    showNote();
+    //showNote();
     showMasterFlapper();
 
     // ---
@@ -316,7 +317,7 @@ function draw() {
     startFlapper(finalAnswer());
 
     // --
-    hideNote();
+    //hideNote();
       // ---
     showAllMessages();
     hideMessageBottom();
