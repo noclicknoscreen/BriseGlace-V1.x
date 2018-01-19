@@ -52,6 +52,7 @@ void draw() {
   ellipse(width/2, height/2, radius, radius);
   
   dmxOutput.set(1,dmxBrightness);
+  dmxOutput.set(2,100);
   
   println("analyse : " + Float.toString(analyse) + "\tradius : " + Float.toString(radius) + "\tdmxBrightness : " + Float.toString(dmxBrightness)); 
   

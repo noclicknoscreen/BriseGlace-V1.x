@@ -412,7 +412,7 @@ function makeFadeOut(name, time) {
 
     startFlapper(finalAnswer());
     freshStartNote();
-
+    hideGallery();
     // --
     //hideNote();
       // ---
