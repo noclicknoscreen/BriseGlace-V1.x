@@ -411,7 +411,7 @@ function makeFadeOut(name, time) {
     motusAnswer = '';
 
     startFlapper(finalAnswer());
-
+    hideGallery();
     // --
     //hideNote();
       // ---
