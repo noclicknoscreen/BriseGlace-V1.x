@@ -45,7 +45,7 @@ var messageBottomCheering = [
   "On ne va pas s'arrêter en si bon chemin ..."
 ];
 var idxMessageBottomCheering = 0;
-var timeBetweenCheeringMessages = 6;
+var timeBetweenCheeringMessages = 10;
 // this boolean allow to ignore cheering message at the begining and each time an other message was displayed
 var ignoreMessageCheering = true;
 
@@ -164,67 +164,69 @@ function makeFadeOut(name, time) {
         idxMessageBottomYes = 0;
       }
 
-      if(isGameStarted === true){
+      if(!isGameStarted)
+	startForReal();
 
-	var toExplain = getUnexplainedClue();
-	var timeout = 0;
 
-	if (toExplain == null) {
-	  popTheNextPola();
-	  console.log("next");
-	} else {
-	  // there is a clue to explain
-	  console.log("explain");
+      var toExplain = getUnexplainedClue();
+      var timeout = 0;
 
-	  // make an effect to hide main gallery
-	  var fadeOutDuration = 2;
-	  makeFadeOut("GalleryPic", fadeOutDuration);
-	  setTimeout(function () {
-	    // hide main gallery
-	    hideGallery();
+      var result = false;
 
-	    // pop pola and description corresponding to the clue and make animation
-	    popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 200, floor(random(-1 * 10, 10))], false, "ExternPic");
-	    document.getElementById("PicDesc").innerHTML = toExplain.desc;
-	    makeFadeIn("clue", 2);
-	  }, fadeOutDuration * 1000);
-	  timeout = 10;
-	}
+      if(enigmaGameType() === 'motus'){
+        result = motusTranscript(transcrData);
+        // result = hangmanTranscript(transcrData);
+      }else if (enigmaGameType() === 'hangman') {
+        result = hangmanTranscript(transcrData);
+      }
 
-	var result = false;
+      if (toExplain == null) {
+	popTheNextPola();
+	console.log("next");
+      } else {
+	// there is a clue to explain
+	console.log("explain");
 
-        if(enigmaGameType() === 'motus'){
-          result = motusTranscript(transcrData);
-          // result = hangmanTranscript(transcrData);
-        }else if (enigmaGameType() === 'hangman') {
-          result = hangmanTranscript(transcrData);
-        }
-
-	// timeout allowing to keep pola description displayed
+	// make an effect to hide main gallery
+	var fadeOutDuration = 2;
+	if (result)
+	  fadeOutDuration = 0;
+	makeFadeOut("GalleryPic", fadeOutDuration);
 	setTimeout(function () {
+	  // hide main gallery
+	  hideGallery();
 
-	  // clear description with an effect
-	  var fadeOutDuration = 2;
-	  makeFadeOut("clue", fadeOutDuration);
-	  setTimeout(function () {
-	    // clear totaly description and make main gallery back
-	    document.getElementById("clue").style.animation = "";
-	    document.getElementById("PicDesc").innerHTML = "";
-	    document.getElementById("ExternPic").innerHTML = "";
-	    makeFadeIn("GalleryPic", 2);
-	    showGallery();
-            if(result===true){
-              endTheGame();
-            }
-	  }, fadeOutDuration * 1000);
-	}, timeout * 1000);
-        if(!result){
-          addOneAnswer(transcrData);
-        }
-      }else{
-        startForReal();
+	  // pop pola and description corresponding to the clue and make animation
+	  popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 200, floor(random(-1 * 10, 10))], false, "ExternPic");
+	  document.getElementById("PicDesc").innerHTML = toExplain.desc;
+	  makeFadeIn("clue", 2);
+	}, fadeOutDuration * 1000);
+	if (!result)
+	  timeout = 10;
+      }
+
+      // timeout allowing to keep pola description displayed
+      setTimeout(function () {
+
+	// clear description with an effect
+	var fadeOutDuration = 2;
+	if (result)
+	  fadeOutDuration = 0;
+	makeFadeOut("clue", fadeOutDuration);
+	setTimeout(function () {
+	  // clear totaly description and make main gallery back
+	  document.getElementById("clue").style.animation = "";
+	  document.getElementById("PicDesc").innerHTML = "";
+	  document.getElementById("ExternPic").innerHTML = "";
+	  makeFadeIn("GalleryPic", 2);
+	  showGallery();
+          if(result===true){
+            endTheGame();
+          }
+	}, fadeOutDuration * 1000);
+      }, timeout * 1000);
+      if(!result){
         addOneAnswer(transcrData);
-        popTheNextPola();
       }
     }
 
