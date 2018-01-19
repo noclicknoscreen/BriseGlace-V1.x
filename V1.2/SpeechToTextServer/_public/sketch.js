@@ -10,7 +10,67 @@ var drawFeedBack;
 
 var audioIn;
 
+
+/*
+**
+** Messages array
+**
+*/
+var messageBottomEmpty = [
+  "Parlez un peu plus fort, s'il vous plait !",
+  "Comment ?",
+  "Je n'ai pas entendu...",
+  "Rapprochez-vous de mon oreille.",
+  "Que dites-vous ?",
+  "Je n'ai pas bien compris."
+];
+var idxMessageBottomEmpty = 0;
+
+var messageBottomYes = [
+  "Bien joué.",
+  "Essayons ce mot.",
+  "Je n'aurais pas dit ça...",
+  "Essayons pour voir.",
+  "Bien tenté.",
+  "Curieuse proposition !",
+  "Vous chauffez.",
+  "Vous y êtes presque.",
+  "Encore un effort."
+];
+var idxMessageBottomYes = 0;
+
+var messageBottomCheering = [
+  "MESSAGE ENCOURAGEMENT 1",
+  "MESSAGE ENCOURAGEMENT 2",
+  "MESSAGE ENCOURAGEMENT 3",
+  "MESSAGE ENCOURAGEMENT 4",
+  "MESSAGE ENCOURAGEMENT 5"
+];
+var idxMessageBottomCheering = 0;
+var timeBetweenCheeringMessages = 4;
+// this boolean allow to ignore cheering message at the begining and each time an other message was displayed
+var ignoreMessageCheering = true;
+
+function writeCheeringMessage() {
+
+  console.log("attempt to write cheering message ...");
+  if (ignoreMessageCheering) {
+    console.log("another message take the place. wait for the next time !");
+    ignoreMessageCheering = false;
+    return ;
+  }
+  console.log("isok");
+  var messageBottom = document.getElementById('messageBottomLine');
+  messageBottom.innerHTML = messageBottomCheering[idxMessageBottomCheering];
+
+  idxMessageBottomCheering++;
+  if(idxMessageBottomCheering >= messageBottomCheering.length){
+    idxMessageBottomCheering = 0;
+  }
+}
+
 function setup() {
+
 
   // Audio setup (for visual feedback)
   // audioIn = new p5.AudioIn()
@@ -38,6 +98,10 @@ function setup() {
   // freshStart();
   drawFeedBack = false;
 
+
+  // launch routine to write cheering messages
+  setInterval(writeCheeringMessage, timeBetweenCheeringMessages * 1000);
+
 }
 
 function draw() {
@@ -54,45 +118,20 @@ function draw() {
   /* ---------------------------------------------
   Socket events
   ----------------------------------------------- */
-  var messageBottomEmpty = [
-    "Parlez un peu plus fort, s'il vous plait !",
-    "Comment ?",
-    "Je n'ai pas entendu...",
-    "Rapprochez-vous de mon oreille.",
-    "Que dites-vous ?",
-    "Je n'ai pas bien compris."
-  ];
-  var idxMessageBottomEmpty = 0;
-
   function emptyTranscription(){
 
     console.log('[Trancription vide]');
 
     var messageBottom = document.getElementById('messageBottomLine');
     messageBottom.innerHTML = messageBottomEmpty[idxMessageBottomEmpty];
-
+    // messageBottomEmpty is just been written, so ignore cheering message
+    ignoreMessageCheering = true;
     idxMessageBottomEmpty++;
     if(idxMessageBottomEmpty >= messageBottomEmpty.length){
       idxMessageBottomEmpty = 0;
     }
 
   }
-
-  /* ---------------------------------------------
-  Socket events
-  ----------------------------------------------- */
-  var messageBottomYes = [
-    "Bien joué.",
-    "Essayons ce mot.",
-    "Je n'aurais pas dit ça...",
-    "Essayons pour voir.",
-    "Bien tenté.",
-    "Curieuse proposition !",
-    "Vous chauffez.",
-    "Vous y êtes presque.",
-    "Encore un effort."
-  ];
-  var idxMessageBottomYes = 0;
 
 function makeFadeIn(name, time) {
   var original = document.getElementById(name);
@@ -119,6 +158,8 @@ function makeFadeOut(name, time) {
 
       var messageBottom = document.getElementById('messageBottomLine');
       messageBottom.innerHTML = messageBottomYes[idxMessageBottomYes];
+      // messageBottomYes is just been written, so ignore cheering message
+      ignoreMessageCheering = true;
 
       idxMessageBottomYes++;
       if(idxMessageBottomYes >= messageBottomYes.length){
@@ -137,13 +178,14 @@ function makeFadeOut(name, time) {
 	  // there is a clue to explain
 	  console.log("explain");
 
+	  // make an effect to hide main gallery
 	  var fadeOutDuration = 2;
 	  makeFadeOut("GalleryPic", fadeOutDuration);
 	  setTimeout(function () {
 	    // hide main gallery
 	    hideGallery();
 
-	    //pop pola and description corresponding to the clue and make animation
+	    // pop pola and description corresponding to the clue and make animation
 	    popAPola(toExplain.keyWord, toExplain.picture, -1, [150, 200, floor(random(-1 * 10, 10))], false, "ExternPic");
 	    document.getElementById("PicDesc").innerHTML = toExplain.desc;
 	    makeFadeIn("clue", 2);
@@ -160,10 +202,14 @@ function makeFadeOut(name, time) {
           result = hangmanTranscript(transcrData);
         }
 
+	// timeout allowing to keep pola description displayed
 	setTimeout(function () {
+
+	  // clear description with an effect
 	  var fadeOutDuration = 2;
 	  makeFadeOut("clue", fadeOutDuration);
 	  setTimeout(function () {
+	    // clear totaly description and make main gallery back
 	    document.getElementById("clue").style.animation = "";
 	    document.getElementById("PicDesc").innerHTML = "";
 	    document.getElementById("ExternPic").innerHTML = "";
