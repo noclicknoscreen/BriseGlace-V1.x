@@ -358,7 +358,7 @@ function makeFadeOut(name, time) {
       firstStart = false;
     }else{
       setFirstLine('Re-jouons ensemble...');
-      setSecondLine('Trouvons ' + enigmaWordType().toString() + ' grâce aux photos !');
+      setSecondLine('Parlez-moi dans l\'oreille pour trouver ' + enigmaWordType().toString() + ' !');
       setThirdLine('');
     }
 
