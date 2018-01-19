@@ -18,15 +18,18 @@ var clientDir = './_public';
 var io = require('socket.io');
 var mySocket = io(server);
 
+var currentAuthorizedId = 0;
+
 app.use(express.static(clientDir));
 mySocket.sockets.on('connection', newConnection);
 
 function newConnection(socket){
 
+  ++currentAuthorizedId;
   console.log('Nouvelle connection : ' + socket.id);
   //socket.on('listen', listenX);
 
-  startRecording();
+  startRecording(currentAuthorizedId);
 
 }
 function listenX(socket){
@@ -40,9 +43,11 @@ function listenX(socket){
 // ------------------------------------------------------
 
 // The name of the audio file to transcribe
-function startRecording()
+function startRecording(id)
 {
 
+  if (id < currentAuthorizedId)
+    return ;
   // if(recordTimeout !== undefined){
   //   clearTimeout(recordTimeout);
   // }
@@ -73,7 +78,7 @@ function startRecording()
   .on('end', function () {
     console.log('Fin du streaming.');
     mySocket.emit('talking');
-    startRecognition(tmpFileName);
+    startRecognition(tmpFileName, id);
     mySocket.emit('endTalking');
     // Then restart
     //startRecording();
@@ -100,9 +105,10 @@ const client = new speech.SpeechClient({
   projectId: projectId,
 });
 
-function startRecognition(myPath)
+function startRecognition(myPath, id)
 {
-
+  if (id < currentAuthorizedId)
+    return ;
   console.log('Lancement reconnaissance sur ce fichier : ' + myPath);
 
   // Stops the timeout, it will restart after a new startRecording
@@ -153,7 +159,7 @@ function startRecognition(myPath)
 
     }
 
-    startRecording();
+    startRecording(id);
 
   })
   .catch(err => {
