@@ -40,14 +40,12 @@ var messageBottomYes = [
 var idxMessageBottomYes = 0;
 
 var messageBottomCheering = [
-  "MESSAGE ENCOURAGEMENT 1",
-  "MESSAGE ENCOURAGEMENT 2",
-  "MESSAGE ENCOURAGEMENT 3",
-  "MESSAGE ENCOURAGEMENT 4",
-  "MESSAGE ENCOURAGEMENT 5"
+  "Pas d'idées ? Demandez à votre voisin !",
+  "Un mot = des lettres !",
+  "On ne va pas s'arrêter en si bon chemin ..."
 ];
 var idxMessageBottomCheering = 0;
-var timeBetweenCheeringMessages = 4;
+var timeBetweenCheeringMessages = 6;
 // this boolean allow to ignore cheering message at the begining and each time an other message was displayed
 var ignoreMessageCheering = true;
 
