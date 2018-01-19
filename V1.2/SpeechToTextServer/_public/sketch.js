@@ -353,7 +353,7 @@ function makeFadeOut(name, time) {
     newEnigma();
     if(firstStart === true){
       setFirstLine('Vous êtes joueur ?...\nMoi oui.');
-      setSecondLine('Parlez-moi dans l\'oreille pour gagner des lettres !');
+      setSecondLine('Parlez-moi dans l\'oreille pour trouver ' + enigmaWordType().toString() + ' !');
       setThirdLine('');
       firstStart = false;
     }else{
