@@ -11,13 +11,13 @@
   color: #AAACAF;
 
   font-family: "DK Crayon Crumble";
-  font-size:28px;
+  font-size:20px;
 
   text-align:left;
   text-transform: uppercase;
 
   letter-spacing: 5px;
-  line-height: 97%;
+  line-height: 130%;
 
   z-index : 3;
 
@@ -27,7 +27,7 @@
   position: fixed;
   list-style-type:none;
 
-  top:160px;
+  top:170px;
   left:130px;
 
   width:400px;
