@@ -41,7 +41,7 @@ var idxMessageBottomYes = 0;
 
 var messageBottomCheering = [
   "Pas d'idées ? Demandez à votre voisin !",
-  "Un mot = des lettres !",
+  "Un mot à l'oreil = des lettres !",
   "On ne va pas s'arrêter en si bon chemin ..."
 ];
 var idxMessageBottomCheering = 0;
