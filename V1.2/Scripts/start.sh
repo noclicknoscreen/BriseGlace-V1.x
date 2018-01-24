@@ -9,6 +9,11 @@ cd "../SpeechToTextServer"
 sleep 1
 gnome-terminal -e "node GoogleSpeech_FileServer.js"
 
+# Run speech to text server
+cd "../Scripts"
+sleep 1
+./startProcessing.sh &
+
 #!/bin/sh
 # Run chromium start
 cd "../Scripts"
