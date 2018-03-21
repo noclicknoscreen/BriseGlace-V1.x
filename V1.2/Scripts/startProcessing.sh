@@ -1,2 +1,2 @@
 
-processing-java --output=/tmp --sketch=../audioFeedback_Processing --run
+processing-java --sketch=../audioFeedback_Processing --run
