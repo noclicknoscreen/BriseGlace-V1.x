@@ -6,18 +6,18 @@ cd "$(echo $0 | rev | cut -d "/" -f 2- | rev)"
 # Run speech to text server
 cd "../SpeechToTextServer"
 # nohup node GoogleSpeech_FileServer.js &
-sleep 1
+sleep 3
 gnome-terminal -e "node GoogleSpeech_FileServer.js"
 
-# Run speech to text server
+# Run processing (Speech to DMX)
 cd "../Scripts"
-sleep 1
-./startProcessing.sh &
+sleep 3
+gnome-terminal -e "./startProcessing.sh &"
 
 #!/bin/sh
 # Run chromium start
 cd "../Scripts"
-sleep 1
+sleep 10
 ./startChromium.sh &
 
 # Run window manager
